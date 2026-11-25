@@ -1,6 +1,7 @@
 import { useEffect, useRef, type CSSProperties, type ReactNode } from 'react';
 import gsap from 'gsap';
 import { media } from '@/lib/asset';
+import { StepStrip, stripIn } from '../shared34/StepStrip';
 import './maw.css';
 
 /**
@@ -22,30 +23,15 @@ export function MawStep({ index, title, className = '', children, after }: {
       <div className="mws-kicker p34-kicker label"><i /><b>Make-A-Wish</b> · {String(index + 1).padStart(2, '0')} {title}</div>
       <div className="mws-scene"><div className="mws-push">{children}</div></div>
       {after}
-      <MawStrip active={index} />
-    </div>
-  );
-}
-
-export function MawStrip({ active }: { active: number }) {
-  return (
-    <div className="mws-strip">
-      {MAW_STEPS.map((s, i) => (
-        <div key={s} className={`mws-si ${i < active ? 'is-done' : ''} ${i === active ? 'is-on' : ''}`}>
-          <span className="mws-si-fill" />
-          <span className="label">{String(i + 1).padStart(2, '0')}</span>
-          <b>{s}</b>
-        </div>
-      ))}
+      <StepStrip steps={MAW_STEPS} active={index} />
     </div>
   );
 }
 
 /** Beat-0 entry shared by every step: kicker in, the strip's active segment fills. */
 export function stepIntro(tl: gsap.core.Timeline, root: HTMLElement) {
-  const q = gsap.utils.selector(root);
-  tl.from(q('.mws-kicker'), { opacity: 0, x: -16, duration: 0.7 }, 0);
-  tl.from(q('.mws-si.is-on .mws-si-fill'), { scaleX: 0, duration: 0.9, ease: 'power3.inOut' }, 0.1);
+  tl.from(gsap.utils.selector(root)('.mws-kicker'), { opacity: 0, x: -16, duration: 0.7 }, 0);
+  stripIn(tl, root);
 }
 
 /** Remotion's <Push>: a slow scale over the scene. Ambient, so it lives outside the beat timeline. */

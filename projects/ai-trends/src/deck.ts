@@ -24,6 +24,8 @@ import S3Divider from './slides/S3Divider';
 import S3PhotoWorld from './slides/S3PhotoWorld';
 import S3Blockout from './slides/S3Blockout';
 import S3Pitches from './slides/S3Pitches';
+import S3AgoBrief from './slides/ago/S3AgoBrief';
+import S3AgoPhotos from './slides/ago/S3AgoPhotos';
 import S3ColourLab from './slides/S3ColourLab';
 import S3Idropper from './slides/S3Idropper';
 import S3Experience from './slides/S3Experience';
@@ -68,6 +70,8 @@ export const slides: SlideDef[] = [
   S3PhotoWorld,
   S3Blockout,
   S3Pitches,
+  S3AgoBrief,
+  S3AgoPhotos,
   S3ColourLab,
   S3Experience,
   S3Doordash,

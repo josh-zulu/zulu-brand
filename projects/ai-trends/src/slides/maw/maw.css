@@ -9,18 +9,6 @@
 }
 .mws-push { position: absolute; inset: 0; transform-origin: 50% 50%; }
 
-/* progress strip: where we are in the five steps */
-.mws-strip { position: absolute; left: 140px; right: 140px; top: 950px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; z-index: 3; }
-.mws-si { position: relative; padding-top: 16px; display: flex; align-items: baseline; gap: 12px; border-top: 2px solid var(--zak-line-strong); }
-.mws-si .label { font-size: 14px; color: var(--zak-stone-2); }
-.mws-si b { font-family: var(--zak-font-text); font-weight: 500; font-size: 21px; letter-spacing: -0.01em; color: var(--zak-stone-2); }
-.mws-si-fill { position: absolute; left: 0; right: 0; top: -2px; height: 2px; transform-origin: 0 50%; transform: scaleX(0); }
-.mws-si.is-done .mws-si-fill { transform: scaleX(1); background: var(--zak-stone); }
-.mws-si.is-done b { color: var(--zak-stone); }
-.mws-si.is-on .mws-si-fill { transform: scaleX(1); background: var(--zak-signal); box-shadow: 0 0 14px rgba(0, 228, 130, 0.45); }
-.mws-si.is-on .label { color: var(--zak-signal); }
-.mws-si.is-on b { color: var(--zak-paper); }
-
 .mws-chip {
   display: inline-block; white-space: nowrap; line-height: 1;
   font-family: var(--zak-font-mono); text-transform: uppercase; letter-spacing: 0.04em;
