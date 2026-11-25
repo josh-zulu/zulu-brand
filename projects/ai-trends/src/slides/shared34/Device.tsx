@@ -30,6 +30,20 @@ export interface PhoneScreenProps {
   style?: CSSProperties;
 }
 
+/**
+ * Our own GIF mockups (public/media/ago/*.mp4) shown whole, iPhone bezel and status bar included.
+ * The GIFs have a near-black ground outside the bezel, so the stack is clipped to the phone's outline.
+ */
+export function MockPhone({ width = 350, className = '', style, children }: {
+  width?: number; className?: string; style?: CSSProperties; children: ReactNode;
+}) {
+  return (
+    <div className={`p34-mock ${className}`} style={{ width, ...style }}>
+      {children}
+    </div>
+  );
+}
+
 export function PhoneScreen({ src, mode, on = true, still = 2, rate = 1, className = '', style }: PhoneScreenProps) {
   const v = useRef<HTMLVideoElement>(null);
   const live = mode === 'live';

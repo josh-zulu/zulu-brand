@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { defineSlide, type SlideProps } from '@/engine/types';
 import { useBeats } from '@/engine/useBeats';
 import { revealLines } from '@/lib/motion';
-import { Device, PhoneScreen } from './shared34/Device';
+import { MockPhone, PhoneScreen } from './shared34/Device';
 import './S3Idropper.css';
 
 /**
@@ -15,9 +15,9 @@ import './S3Idropper.css';
  *  beat 2  "and it finds…"        the match
  */
 const SCREENS = [
-  { src: 'source/image34.mp4', still: 3.6, glow: 'rgba(96, 128, 196, 0.30)' },
-  { src: 'source/image22.mp4', still: 4.5, glow: 'rgba(40, 70, 220, 0.36)' },
-  { src: 'source/image12.mp4', still: 3.5, glow: 'rgba(60, 90, 200, 0.30)' },
+  { src: 'ago/idropper-intro.mp4', still: 3.6, glow: 'rgba(96, 128, 196, 0.30)' },
+  { src: 'ago/idropper-sample.mp4', still: 4.5, glow: 'rgba(40, 70, 220, 0.36)' },
+  { src: 'ago/idropper-match.mp4', still: 3.5, glow: 'rgba(60, 90, 200, 0.30)' },
 ];
 
 function S3Idropper({ step, mode }: SlideProps) {
@@ -67,11 +67,11 @@ function S3Idropper({ step, mode }: SlideProps) {
         {SCREENS.map((s, i) => <div key={i} className="id-glow" style={{ background: `radial-gradient(closest-side, ${s.glow}, transparent 72%)` }} />)}
         <div className="id-float">
           <div className="id-hand">
-            <Device width={350} mode={mode}>
+            <MockPhone width={400}>
               {SCREENS.map((s, i) => (
                 <PhoneScreen key={i} className="id-screen" src={s.src} mode={mode} still={s.still} on={step === i} />
               ))}
-            </Device>
+            </MockPhone>
           </div>
         </div>
       </div>
