@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:02:36.797Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Aerial photograph looking straight down at ocean waves breaking on black volcanic sand, white foam patterns, no text",
+    "aspect_ratio": "1:1"
+  },
+  "requestId": "01a213a8-9c44-7af0-80e1-4a2cfd8c328a",
+  "seconds": 10
+}

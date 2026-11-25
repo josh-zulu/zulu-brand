@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:19:03.224Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Editorial product photograph, straight-on frontal view, centred: a slim landscape digital picture frame standing on a dark walnut desk against a charcoal wall, matte black bezel, the screen showing a flat plain light grey start screen, soft window light from the left, shallow depth of field, charcoal and warm wood tones, generous negative space around the device, no text, no logos",
+    "aspect_ratio": "4:3"
+  },
+  "requestId": "01a213b7-a31f-7f33-8bdd-8338433bcac2",
+  "seconds": 12
+}

@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:19:04.477Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Photograph on 35mm film: a contemporary dancer frozen mid-leap in a vast empty concrete warehouse, positioned right of centre, a cloud of white chalk dust suspended in the air all around her at different distances, shafts of low morning light from tall industrial windows, rough concrete pillars in the near foreground and receding far into the distance, deep perspective, muted warm greys with soft highlights, editorial, natural film grain, the left third of the frame quiet and dark, no text, no logos",
+    "aspect_ratio": "16:9"
+  },
+  "requestId": "01a213b7-a1fd-7153-a2b0-a522000ea8dc",
+  "seconds": 13
+}

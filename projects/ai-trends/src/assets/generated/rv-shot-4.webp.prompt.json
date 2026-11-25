@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:22:04.990Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Film still from a cinematic city bike commercial, shot on 35mm: medium side shot of a woman in a rust-coloured jacket riding a sage-green city bike along a park path under a tunnel of autumn trees, backlit by low sun through light haze, warm leaves, muted palette, natural grain, no text, no logos",
+    "aspect_ratio": "16:9"
+  },
+  "requestId": "01a213ba-69c2-7ed3-8e86-a390563e6f4b",
+  "seconds": 11
+}

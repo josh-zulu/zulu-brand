@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:02:56.361Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Bold flat graphic illustration poster of a steaming coffee cup shaped like a small cabin in snowy hills, limited palette of cream, rust and deep navy, no text",
+    "aspect_ratio": "4:5"
+  },
+  "requestId": "01a213a8-d670-79a1-b980-84adc9d28d7f",
+  "seconds": 15
+}

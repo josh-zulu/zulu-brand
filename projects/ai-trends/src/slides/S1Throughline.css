@@ -1,0 +1,49 @@
+.throughline { position: absolute; inset: 0; }
+
+/* left: the three beats on a rail */
+.tl-rail { position: absolute; left: 147px; top: 236px; width: 2px; height: 512px; }
+.tl-rail-track, .tl-rail-fill { position: absolute; inset: 0; transform-origin: 50% 0; }
+.tl-rail-track { background: var(--zak-line); }
+.tl-rail-fill { background: var(--zak-signal); transform: scaleY(0); opacity: 0.7; }
+.tl-blocks { position: absolute; left: 140px; top: 214px; width: 700px; display: grid; gap: 64px; }
+.tl-block { display: grid; gap: 12px; padding-left: 52px; }
+.tl-role { display: flex; align-items: center; gap: 16px; margin-left: -60px; color: var(--zak-paper-2); font-size: 18.9px; }
+.tl-node { width: 16px; height: 16px; border-radius: 50%; background: var(--zak-ink-4); box-shadow: 0 0 0 6px var(--zak-ink); flex: none; }
+.tl-head { font-size: 70px; }
+.tl-lede { font-size: 30px; color: var(--zak-stone); }
+
+/* right: the demo panel */
+.tl-panel {
+  position: absolute; left: 900px; top: 130px; width: 880px; height: 820px; border-radius: 32px;
+  background: linear-gradient(180deg, #1c1b1b, #181717); box-shadow: 0 0 0 1px var(--zak-line), 0 50px 120px rgba(0,0,0,.45);
+  overflow: hidden;
+}
+.tl-user {
+  position: absolute; right: 48px; top: 64px; max-width: 560px; padding: 22px 28px; border-radius: 28px 28px 8px 28px;
+  background: var(--zak-paper); color: var(--zak-graphite); font-size: 28px; line-height: 1.3; transform-origin: 100% 100%;
+}
+.tl-ai { position: absolute; left: 48px; top: 210px; width: 680px; min-height: 180px; padding: 30px 32px; }
+.tl-ai-bg { position: absolute; inset: 0; border-radius: 8px 28px 28px 28px; background: var(--zak-ink-3); }
+.tl-ai-label { position: relative; display: flex; align-items: center; gap: 10px; margin-bottom: 14px; font-size: 15px; }
+.tl-ai-label i { width: 9px; height: 9px; border-radius: 50%; background: var(--zak-signal); }
+.tl-typing { position: relative; display: flex; gap: 8px; height: 40px; align-items: center; }
+.tl-typing i { width: 11px; height: 11px; border-radius: 50%; background: var(--zak-paper-2); }
+.tl-reply-wrap { position: relative; font-size: 40px; line-height: 1.25; font-weight: 500; letter-spacing: -0.015em; color: var(--zak-paper); }
+.tl-reply-split { position: absolute; left: 0; top: 0; right: 0; }
+.tl-reply-split .tl-w { display: inline-block; white-space: nowrap; }
+.tl-reply-split .ch { display: inline-block; }
+
+.tl-board { position: absolute; left: 0; top: 0; pointer-events: none; }
+.tl-board-label { position: absolute; left: 62px; top: 20px; font-size: 13px; color: var(--zak-stone-2); }
+
+.tl-tile {
+  position: absolute; background-size: cover; background-position: center; background-color: var(--zak-ink-3);
+  will-change: left, top, width, height, transform;
+}
+
+.tl-poster { position: absolute; left: 90px; top: 586px; width: 700px; }
+.tl-poster-line { font-size: 96px; line-height: 0.95; color: var(--zak-paper); min-height: 92px; white-space: nowrap; }
+.tl-poster-caret { visibility: hidden; height: 0.8em; width: 0.32em; vertical-align: -0.02em; }
+.tl-poster-label { margin-top: 18px; font-size: 16px; color: var(--zak-paper-2); }
+
+.throughline .agent-cursor { transform-origin: 0 0; z-index: 30; }

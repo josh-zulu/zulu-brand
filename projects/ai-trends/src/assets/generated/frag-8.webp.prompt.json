@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:02:43.023Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Macro photograph of green-veined white marble with fine gold veins, polished surface, no text",
+    "aspect_ratio": "1:1"
+  },
+  "requestId": "01a213a8-a231-73c1-a0cd-079a10e697de",
+  "seconds": 15
+}

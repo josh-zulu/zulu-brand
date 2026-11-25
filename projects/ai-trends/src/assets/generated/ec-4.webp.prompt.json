@@ -1,0 +1,12 @@
+{
+  "createdAt": "2026-11-25T17:21:41.641Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-pro",
+  "input": {
+    "prompt": "Risograph print illustration of a cyclist on a city bike riding along a seaside promenade with a lighthouse in the distance, two-colour overprint in fluorescent pink and deep teal blue on off-white recycled paper, visible grain, halftone texture and slight misregistration, loose confident drawing, generous empty paper on the left side for type, no text, no letters, no logos",
+    "aspect_ratio": "16:9",
+    "resolution": "2K"
+  },
+  "requestId": "01a213b9-d16b-7401-9f9b-fae95f8559cc",
+  "seconds": 27
+}

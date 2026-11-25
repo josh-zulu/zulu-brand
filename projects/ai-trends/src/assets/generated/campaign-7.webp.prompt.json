@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:03:08.026Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Soft risograph-style print illustration of a person walking a dog through snow holding a coffee cup, two-colour pink and blue overprint texture, no text",
+    "aspect_ratio": "4:5"
+  },
+  "requestId": "01a213a9-1093-7e51-b776-c97b5d74497a",
+  "seconds": 11
+}

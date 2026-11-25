@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:21:55.039Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Film still from a cinematic city bike commercial, shot on 35mm: close-up of a woman's hands in a rust-coloured jacket sleeve gripping the leather handlebar grips of a matte sage-green city bike, shallow depth of field, soft cool morning light, muted teal palette with warm accents, natural grain, no text, no logos",
+    "aspect_ratio": "16:9"
+  },
+  "requestId": "01a213ba-3c74-7c30-a383-77a4e0ee5e7f",
+  "seconds": 13
+}

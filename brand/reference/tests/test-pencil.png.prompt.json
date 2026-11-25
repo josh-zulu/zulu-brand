@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:00:17.844Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Minimal editorial still life: a single graphite pencil resting on warm off-white paper, a thin hand-drawn line trailing from its tip, soft window light, generous negative space, muted tones, shot on medium format film",
+    "aspect_ratio": "16:9"
+  },
+  "requestId": "01a213a6-6f65-7260-a6c7-d374a3675cad",
+  "seconds": 13
+}

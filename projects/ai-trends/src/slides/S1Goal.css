@@ -1,0 +1,82 @@
+.gl { position: absolute; inset: 0; }
+
+.gl-head { position: absolute; left: 140px; top: 128px; font-size: 92px; white-space: nowrap; }
+.gl-lede { position: absolute; left: 140px; top: 252px; width: 1640px; font-size: 34px; }
+
+.gl-clip { position: absolute; left: 140px; top: 374px; width: 960px; height: 584px; }
+
+.gl-panel { position: absolute; left: 1170px; top: 374px; width: 610px; height: 584px; display: flex; flex-direction: column; }
+.gl-row { display: flex; align-items: center; justify-content: space-between; height: 24px; }
+.gl-state { position: relative; height: 24px; overflow: hidden; display: inline-block; min-width: 140px; text-align: right; }
+.gl-state > span { position: absolute; right: 0; top: 0; line-height: 24px; }
+.gl-state-run, .gl-state-done { opacity: 0; }
+.gl-state-run { color: var(--zak-signal-2); }
+.gl-state-done { color: var(--zak-signal); }
+
+.gl-goal { display: flex; gap: 24px; align-items: flex-start; margin-top: 22px; }
+.gl-box {
+  position: relative; flex: none; width: 52px; height: 52px; border-radius: 50%; margin-top: 2px;
+  background: rgba(0, 0, 0, 0.35); box-shadow: var(--zak-deboss-dark), inset 0 0 0 2px var(--zak-line-strong);
+}
+.gl-box-fill { position: absolute; inset: 0; border-radius: 50%; background: var(--zak-signal); transform: scale(0); }
+.gl-check { position: absolute; inset: 0; width: 52px; height: 52px; }
+.gl-check path { fill: none; stroke: var(--zak-ink); stroke-width: 4.5; stroke-linecap: round; stroke-linejoin: round; }
+.gl-goal-text {
+  position: relative; font-family: var(--zak-font-text); font-weight: 500; font-size: 40px; line-height: 1.18; letter-spacing: -0.02em;
+  color: var(--zak-paper); text-wrap: balance;
+}
+/* inline background strike: on two lines it sweeps line one, then line two */
+.gl-strike { background: linear-gradient(var(--zak-signal), var(--zak-signal)) no-repeat 0 58% / 0% 3px; }
+
+.gl-progress { display: flex; align-items: center; gap: 20px; margin-top: 30px; }
+.gl-pill { position: relative; flex: 1; height: 14px; overflow: hidden; }
+.gl-fill { position: absolute; inset: 3px; border-radius: 999px; background: var(--zak-signal); transform: scaleX(0); transform-origin: 0 50%; }
+.gl-count { width: 72px; text-align: right; font-size: 20px; color: var(--zak-stone); }
+
+.gl-log-head { margin-top: 42px; padding-top: 22px; height: auto; border-top: 1px solid var(--zak-line); }
+.gl-log-title { display: inline-flex; align-items: center; gap: 12px; }
+.gl-live { width: 10px; height: 10px; border-radius: 50%; background: var(--zak-stone-2); display: inline-block; }
+.gl-done-note { opacity: 0; color: var(--zak-stone); }
+
+.gl-log { position: relative; margin-top: 16px; flex: 1; }
+.gl-empty { position: absolute; left: 0; top: 10px; font-family: var(--zak-font-mono); font-size: 26px; }
+.gl-line {
+  display: flex; align-items: center; gap: 18px; height: 46px; opacity: 0;
+  font-family: var(--zak-font-mono); font-size: 25px; color: var(--zak-stone);
+}
+.gl-t { width: 84px; flex: none; font-size: 19px; color: var(--zak-stone-2); }
+.gl-mark { position: relative; width: 26px; height: 26px; flex: none; }
+.gl-spin {
+  position: absolute; inset: 2px; border-radius: 50%; border: 2.5px solid rgba(77, 208, 225, 0.25); border-top-color: var(--zak-signal-2);
+  animation: gl-spin 0.8s linear infinite; opacity: 0;
+}
+@keyframes gl-spin { to { transform: rotate(360deg); } }
+.gl-ok { position: absolute; inset: 0; display: grid; place-items: center; font-style: normal; font-size: 22px; font-weight: 700; color: var(--zak-signal); opacity: 0; }
+.gl-line.is-done .gl-msg { font-weight: 600; }
+
+/* ── the agent's workspace (replaces the clip) ── */
+.gl-win { position: absolute; left: 140px; top: 374px; width: 960px; height: 584px; border-radius: var(--zak-radius-frame); overflow: hidden;
+  background: #121111; box-shadow: 0 40px 120px rgba(0,0,0,.55), 0 0 0 1px var(--zak-line); }
+.gl-win-bar { height: 44px; display: flex; align-items: center; gap: 16px; padding: 0 18px; background: #232222; border-bottom: 1px solid rgba(255,255,255,.06); }
+.gl-win-bar .dots { display: flex; gap: 8px; }
+.gl-win-bar .dots i { width: 12px; height: 12px; border-radius: 50%; background: #4a4847; }
+.gl-win-title { font-family: var(--zak-font-mono); font-size: 15px; color: var(--zak-stone); }
+.gl-ws { position: absolute; left: 0; right: 0; top: 44px; bottom: 0;
+  background-image: radial-gradient(rgba(248,247,244,.07) 1px, transparent 1px); background-size: 22px 22px; }
+.gl-cap { position: absolute; font-family: var(--zak-font-mono); font-size: 11px; letter-spacing: .06em; color: var(--zak-stone-2); white-space: nowrap; }
+.gl-master { position: absolute; left: 28px; top: 40px; width: 272px; height: 153px; border-radius: 6px; overflow: hidden; background-size: cover; background-position: center 60%; }
+.gl-master::after { content: ''; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px rgba(255,255,255,.12); border-radius: 6px; }
+.gl-mhead { position: absolute; left: 14px; bottom: 12px; font-family: var(--zak-font-display); font-weight: 300; text-transform: uppercase; font-size: 30px; line-height: .9; color: var(--zak-paper); text-shadow: 0 2px 12px rgba(0,0,0,.4); }
+.gl-scan { position: absolute; left: 28px; top: 40px; width: 272px; height: 3px; background: var(--zak-signal-2); box-shadow: 0 0 14px var(--zak-signal-2); opacity: 0; }
+.gl-brief { position: absolute; left: 28px; top: 232px; width: 272px; padding: 14px 16px; border-radius: 10px; background: var(--zak-ink-3);
+  font-family: var(--zak-font-mono); font-size: 13px; line-height: 1.6; color: var(--zak-paper-2); }
+.gl-brief b { color: var(--zak-paper); font-weight: 600; }
+.gl-slot { position: absolute; border-radius: 4px; outline: 1.5px dashed rgba(248,247,244,.22); outline-offset: -1px; }
+.gl-fillimg { position: absolute; inset: 0; border-radius: 4px; overflow: hidden; background-size: cover; clip-path: inset(0 100% 0 0); }
+.gl-fhead { position: absolute; left: 8%; bottom: 10%; font-family: var(--zak-font-display); font-weight: 300; text-transform: uppercase; line-height: .9; color: var(--zak-paper); white-space: nowrap; text-shadow: 0 1px 8px rgba(0,0,0,.45); }
+.gl-flag { position: absolute; inset: -3px; border-radius: 6px; box-shadow: 0 0 0 2px #e9b44c; opacity: 0; }
+.gl-badge { position: absolute; right: -7px; top: -7px; width: 18px; height: 18px; border-radius: 50%; background: var(--zak-signal); color: var(--zak-ink);
+  font-size: 11px; font-weight: 800; display: grid; place-items: center; transform: scale(0); }
+.gl-sweep { position: absolute; top: 28px; bottom: 60px; width: 90px; left: 320px; opacity: 0;
+  background: linear-gradient(90deg, transparent, rgba(77,208,225,.16), transparent); }
+.gl-ws .agent-cursor { transform-origin: 0 0; }

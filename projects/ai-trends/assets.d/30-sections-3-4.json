@@ -1,0 +1,61 @@
+{
+  "assets": [
+    {
+      "id": "world-photo",
+      "slide": "s3-photo-world",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "16:9",
+      "out": "src/assets/generated/world-photo.png",
+      "prompt": "Editorial photograph of a sunlit stone colonnade around a quiet courtyard: weathered columns close in the foreground on the left, a lemon tree and a small stone fountain in the middle distance, an open archway at the far end glowing with bright afternoon light, strong deep perspective with a clear foreground, middle ground and background, warm natural light, soft shadows, 35mm film grain, no people, no text, no logos"
+    },
+    {
+      "id": "world-depth",
+      "slide": "s3-photo-world",
+      "tool": "fal",
+      "mode": "edit",
+      "model": "nano-banana-2-edit",
+      "aspect": "16:9",
+      "out": "src/assets/generated/world-depth.png",
+      "refs": [
+        "src/assets/generated/world-photo.png"
+      ],
+      "prompt": "Turn this exact photograph into a monocular depth map: a smooth grayscale image where the closest surfaces are pure white and the farthest surfaces are black, identical composition and framing, no texture, no lighting, no colour, clean soft gradients, no text"
+    },
+    {
+      "id": "blockout-still",
+      "slide": "s3-blockout",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "16:9",
+      "out": "src/assets/generated/blockout-still.png",
+      "prompt": "Render of an untextured 3D blockout in Blender's solid viewport shading: matte light-grey clay primitives forming a cinematic wide shot of a lone figure standing on a rooftop ledge at the edge of a city of simple box buildings, a cylindrical water tower and thin antenna masts, low camera angle, soft studio matcap lighting, no textures, no colour, no interface, no text"
+    },
+    {
+      "id": "final-still",
+      "slide": "s3-blockout",
+      "tool": "fal",
+      "mode": "edit",
+      "model": "nano-banana-2-edit",
+      "aspect": "16:9",
+      "out": "src/assets/generated/final-still.png",
+      "refs": [
+        "src/assets/generated/blockout-still.png"
+      ],
+      "prompt": "Re-render this exact frame as a finished film still. Keep the camera, lens, framing and every shape exactly where it is: same buildings, same water tower position, same antenna masts, same rooftop ledge, same small figure in the same spot. Only change the materials and light: photoreal concrete, brick and weathered wood, a person in a dark long coat, blue hour sky, warm lit windows across the city, light haze, natural cinematic colour grade, 35mm film grain, no text, no logos"
+    },
+    {
+      "id": "blockout-clay",
+      "slide": "s3-blockout",
+      "tool": "fal",
+      "mode": "edit",
+      "model": "nano-banana-2-edit",
+      "aspect": "16:9",
+      "out": "src/assets/generated/blockout-clay.png",
+      "refs": [
+        "src/assets/generated/final-still.png"
+      ],
+      "prompt": "Convert this exact image into an untextured 3D blockout as seen in a Blender solid viewport: every object stays in exactly the same position, size and perspective, but is rendered as matte light-grey clay primitives with simple flat studio shading and thin dark edges. Buildings become plain grey boxes, the water tower a plain cylinder, the person a simple grey mannequin. No textures, no lit windows, no colour, plain light-grey sky, no text"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:19:16.401Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Photograph of a sunrise seen through the window of a fast train, the landscape outside blurred with motion, warm low light streaking across the glass, reflections, soft focus, editorial, natural grain, no text, no logos",
+    "aspect_ratio": "16:9"
+  },
+  "requestId": "01a213b7-d17e-7040-81e5-3e4f918e8fa4",
+  "seconds": 13
+}

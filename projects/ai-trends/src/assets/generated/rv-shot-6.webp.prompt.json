@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:22:08.125Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Film still from a cinematic city bike commercial, shot on 35mm: wide high-angle shot of a coastal road winding along the sea as the sun breaks through clouds, a single small cyclist in a rust-coloured jacket on a sage-green bike, long soft shadows, calm and expansive, muted teal and warm gold palette, natural grain, no text, no logos",
+    "aspect_ratio": "16:9"
+  },
+  "requestId": "01a213ba-75ca-7563-a8ea-21cfc3c2081f",
+  "seconds": 11
+}

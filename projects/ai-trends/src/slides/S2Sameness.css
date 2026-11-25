@@ -1,0 +1,47 @@
+/* Slide 14 · The catch (sea of sameness). Prefix: .sm- */
+.sameness { position: absolute; inset: 0; }
+
+.sm-head {
+  position: absolute; left: 140px; top: 136px; width: 1240px; z-index: 4;
+  font-size: 100px; text-wrap: balance;
+}
+.sm-catch { color: var(--zak-stone); }
+
+/* The numbers */
+.sm-stats { position: absolute; left: 140px; right: 140px; top: 452px; display: grid; grid-template-columns: 700px 700px; gap: 80px; z-index: 1; }
+.sm-stat { display: flex; flex-direction: column; will-change: opacity, filter; }
+.sm-num { font-size: 240px; line-height: 0.84; color: var(--zak-paper); display: flex; align-items: flex-start; font-variant-numeric: tabular-nums; }
+.sm-num-val { display: inline-block; }
+.sm-pct { font-size: 0.42em; line-height: 1; margin-top: 0.1em; margin-left: 0.05em; color: var(--zak-paper-2); }
+.sm-stat-text { font-size: 36px; line-height: 1.25; letter-spacing: -0.01em; color: var(--zak-paper); margin: 30px 0 0; max-width: 600px; text-wrap: balance; }
+.sm-src { margin: 22px 0 0; max-width: 640px; text-wrap: balance; }
+
+/* The sea (shared with slide 15) */
+.sm-sea { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; z-index: 2; transform-origin: 50% 50%; pointer-events: none; }
+.sm-tile {
+  position: absolute; overflow: hidden; border-radius: 6px; background: #3b1d63;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); will-change: transform, opacity;
+}
+.sm-tile img, .sm-tile .gen-tile { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.sm-tile.is-flip img { transform: scaleX(-1); }
+/* Default-AI ad copy: centred, bold, glowing, a gradient pill. Deliberately generic. */
+.sm-ad-head {
+  position: absolute; left: 10px; right: 10px; top: 13px; text-align: center;
+  font-family: 'Poppins', 'Inter', 'Helvetica Neue', Arial, sans-serif; font-weight: 800; font-size: 17px; line-height: 1.05; letter-spacing: -0.01em;
+  color: #fff; text-shadow: 0 0 14px rgba(196, 120, 255, 0.95), 0 2px 6px rgba(40, 0, 80, 0.45);
+}
+.sm-ad-cta {
+  position: absolute; left: 50%; bottom: 13px; transform: translateX(-50%); white-space: nowrap;
+  font-family: 'Poppins', 'Inter', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.02em;
+  padding: 5px 13px 6px; border-radius: 999px; color: #fff;
+  background: linear-gradient(90deg, #a855f7, #22d3ee); box-shadow: 0 4px 14px rgba(168, 85, 247, 0.6);
+}
+
+/* Keeps the headline above water once the sea arrives */
+.sm-scrim {
+  z-index: 3; opacity: 0; pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(22, 21, 21, 0.94) 0%, rgba(22, 21, 21, 0.86) 24%, rgba(22, 21, 21, 0.35) 42%, rgba(22, 21, 21, 0) 56%),
+    linear-gradient(0deg, rgba(22, 21, 21, 0.8) 0%, rgba(22, 21, 21, 0) 13%),
+    linear-gradient(90deg, rgba(22, 21, 21, 0.35) 0%, rgba(22, 21, 21, 0) 70%);
+}

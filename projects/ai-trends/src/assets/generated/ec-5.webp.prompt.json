@@ -1,0 +1,12 @@
+{
+  "createdAt": "2026-11-25T17:22:06.285Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-pro",
+  "input": {
+    "prompt": "Minimal studio product photograph of a matte sage-green city bicycle in exact side profile standing on a seamless warm terracotta paper backdrop, one hard directional light casting a long crisp shadow to the right, bike placed low in the lower half of the frame, generous empty backdrop above for type, premium print advertising, high detail, no text, no logos",
+    "aspect_ratio": "16:9",
+    "resolution": "2K"
+  },
+  "requestId": "01a213ba-3761-7030-bcce-6611fd122a82",
+  "seconds": 26
+}

@@ -1,0 +1,112 @@
+/* S2Figma: a canvas where frames assemble from components, then the clip takes over. */
+.fg { position: absolute; inset: 0; }
+.fg-text { position: absolute; left: 140px; top: 260px; width: 560px; display: flex; flex-direction: column; gap: 32px; z-index: 2; }
+.fg-head { font-size: 80px; }
+.fg-lede { font-size: 30px; }
+
+/* ── canvas ── */
+.fg-canvas {
+  position: absolute; left: 700px; top: 0; right: 0; bottom: 0; overflow: hidden;
+  background: #1c1b1b;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 60px);
+          mask-image: linear-gradient(90deg, transparent 0, #000 60px);
+}
+.fg-dots { background: radial-gradient(circle at center, rgba(248, 247, 244, 0.15) 1.2px, transparent 1.6px) 0 0 / 28px 28px; }
+
+.fg-prompt {
+  position: absolute; left: calc(790px - 700px); top: 196px; width: 700px; padding: 16px 20px 18px;
+  border-radius: 16px; background: rgba(36, 35, 34, 0.92); box-shadow: 0 0 0 1px var(--zak-line), 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+.fg-prompt-top { display: flex; justify-content: space-between; margin-bottom: 10px; }
+.fg-prompt-top .label { font-size: 13px; }
+.fg-lib { opacity: 0; color: var(--zak-paper-2); }
+.fg-prompt-text { font-size: 22px; line-height: 1.38; color: var(--zak-paper); min-height: 2.76em; }
+.fg-prompt-text .caret { width: 0.42em; height: 0.95em; }
+.fg-status { position: absolute; right: 20px; bottom: 16px; display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--zak-signal); opacity: 0; }
+.fg-status i { width: 7px; height: 7px; border-radius: 50%; background: var(--zak-signal); }
+
+.fg-board { position: absolute; left: -700px; top: 0; width: 1608px; height: 562px; will-change: transform; }
+.fg-flabel { position: absolute; font-family: var(--zak-font-text); font-size: 17px; color: var(--zak-stone); white-space: nowrap; }
+.fg-frame {
+  position: absolute; overflow: hidden; background: #f8f7f4; color: var(--zak-graphite);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+.fg-cols { position: absolute; inset: 0 24px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; pointer-events: none; }
+.fg-col { background: rgba(0, 228, 130, 0.12); }
+.fg-part { position: absolute; }
+.fg-img-ph { background: linear-gradient(135deg, #8aa59a, #d9c7a4); }
+.fg-cover { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 12px; }
+
+.fg-nav { display: flex; align-items: center; gap: 36px; }
+.fg-wordmark { font-family: var(--zak-font-display); font-weight: 400; font-size: 22px; letter-spacing: 0.16em; text-transform: uppercase; }
+.fg-wordmark.sm { font-size: 15px; }
+.fg-links { display: flex; gap: 26px; font-size: 15px; color: #4a4844; flex: 1; }
+.fg-btn {
+  display: inline-flex; align-items: center; height: 46px; padding: 0 22px; border-radius: 999px;
+  background: var(--zak-graphite); color: var(--zak-paper); font-size: 16px; font-weight: 500; white-space: nowrap;
+}
+.fg-btn.sm { height: 36px; padding: 0 18px; font-size: 14px; }
+.fg-btn.ghost { background: transparent; color: var(--zak-graphite); box-shadow: inset 0 0 0 1.5px rgba(25, 25, 25, 0.35); margin-left: 10px; }
+.fg-title .fg-h1 { font-size: 50px; font-weight: 600; letter-spacing: -0.035em; line-height: 0.98; }
+.fg-title p { margin: 18px 0 0; font-size: 16px; line-height: 1.45; color: #5a5853; }
+.fg-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.fg-card, .fg-mcard { display: flex; gap: 14px; align-items: center; padding: 12px; border-radius: 14px; background: #ecebe6; }
+.fg-card .fg-thumb { width: 130px; height: 110px; }
+.fg-thumb { object-fit: cover; border-radius: 10px; display: block; flex: none; }
+.fg-card b, .fg-mcard b { display: block; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
+.fg-card span, .fg-mcard span { display: block; font-size: 14px; color: #5a5853; margin-top: 4px; }
+.fg-mnav { display: flex; align-items: center; justify-content: space-between; }
+.fg-burger { display: flex; flex-direction: column; gap: 5px; }
+.fg-burger i { width: 20px; height: 2px; background: var(--zak-graphite); border-radius: 2px; }
+.fg-mtitle { font-size: 30px; font-weight: 600; letter-spacing: -0.03em; line-height: 1; }
+.fg-mcard { padding: 10px; gap: 12px; }
+.fg-mcard .fg-thumb { width: 92px; height: 84px; }
+.fg-mcard b { font-size: 17px; }
+.fg-mcard span { font-size: 12px; }
+
+/* agent selection: signal outline, corner handles, component name */
+.fg-sel { position: absolute; border: 2px solid var(--zak-signal); pointer-events: none; }
+.fg-sel i { position: absolute; width: 9px; height: 9px; background: #fff; border: 2px solid var(--zak-signal); }
+.fg-sel i:nth-child(1) { left: -6px; top: -6px; } .fg-sel i:nth-child(2) { right: -6px; top: -6px; }
+.fg-sel i:nth-child(3) { left: -6px; bottom: -6px; } .fg-sel i:nth-child(4) { right: -6px; bottom: -6px; }
+.fg-sel span {
+  position: absolute; left: -2px; top: -30px; padding: 3px 9px; border-radius: 4px; white-space: nowrap;
+  font-family: var(--zak-font-mono); font-size: 14px; font-weight: 600; background: var(--zak-signal); color: var(--zak-ink);
+}
+
+/* clip slot = the desktop frame. Missing file: a quiet tag over the assembled design. */
+.fg-clip.clip-frame { position: absolute; inset: 0; border-radius: 0; background: transparent; box-shadow: none; z-index: 5; opacity: 0; }
+.fg-clip .clip-placeholder { background: rgba(22, 21, 21, 0.06); place-items: end start; }
+.fg-clip .clip-ph-scan { opacity: 0.6; }
+.fg-clip .clip-ph-inner {
+  flex-direction: row; gap: 14px; margin: 0 0 18px 18px; padding: 9px 16px; border-radius: 999px;
+  background: rgba(10, 10, 10, 0.78); box-shadow: 0 0 0 1px var(--zak-line);
+}
+.fg-clip .clip-ph-inner .label { font-size: 12px; }
+.fg-clip .clip-ph-name { font-size: 14px; }
+.fg-clip .clip-ph-hint { display: none; }
+
+/* bottom toolbar: a nod to the canvas tool, not a copy */
+.fg-toolbar {
+  position: absolute; left: calc(1340px - 700px); bottom: 64px; transform: translateX(-50%);
+  display: flex; align-items: center; gap: 6px; padding: 8px; border-radius: 16px;
+  background: #2a2828; box-shadow: 0 0 0 1px var(--zak-line), 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+.fg-tool { width: 38px; height: 38px; border-radius: 10px; position: relative; }
+.fg-tool.on { background: rgba(0, 228, 130, 0.16); }
+.fg-tool::after { content: ''; position: absolute; inset: 12px; border: 2px solid var(--zak-paper-2); border-radius: 2px; }
+.fg-tool.t-move::after { border-radius: 0; border: none; inset: 10px 12px; background: var(--zak-paper-2); clip-path: polygon(0 0, 100% 55%, 50% 60%, 30% 100%); }
+.fg-tool.t-frame::after { inset: 10px; border-radius: 0; border-color: var(--zak-signal); border-width: 0; background:
+  linear-gradient(var(--zak-signal), var(--zak-signal)) 30% 0 / 2px 100% no-repeat,
+  linear-gradient(var(--zak-signal), var(--zak-signal)) 70% 0 / 2px 100% no-repeat,
+  linear-gradient(var(--zak-signal), var(--zak-signal)) 0 30% / 100% 2px no-repeat,
+  linear-gradient(var(--zak-signal), var(--zak-signal)) 0 70% / 100% 2px no-repeat; }
+.fg-tool.t-shape::after { border-radius: 50%; }
+.fg-tool.t-pen::after { border: none; inset: 11px; background: var(--zak-paper-2); clip-path: polygon(50% 0, 100% 60%, 60% 100%, 40% 100%, 0 60%); }
+.fg-tool.t-text::after { border: none; inset: 10px 12px; background:
+  linear-gradient(var(--zak-paper-2), var(--zak-paper-2)) 0 0 / 100% 3px no-repeat,
+  linear-gradient(var(--zak-paper-2), var(--zak-paper-2)) 50% 0 / 3px 100% no-repeat; }
+.fg-tool-sep { width: 1px; height: 24px; background: var(--zak-line-strong); margin: 0 6px; }
+.fg-tool-ai { font-size: 13px; color: var(--zak-signal); padding: 0 10px 0 4px; }
+
+.fg-canvas .agent-cursor { left: -700px; }

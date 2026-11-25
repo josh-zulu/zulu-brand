@@ -1,0 +1,14 @@
+{
+  "createdAt": "2026-11-25T17:22:22.317Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2/edit",
+  "input": {
+    "prompt": "Transform this photograph into an X-ray scan of the same device in exactly the same position and size: the casing becomes translucent and reveals the circuit board, chips, ribbon cables, battery cells, speaker and display layers inside, rendered in cool cyan-white light on deep black like a radiograph, fine engineering detail, the desk and wall fade to black, identical framing, no text, no labels",
+    "aspect_ratio": "4:3",
+    "image_urls": [
+      "/Users/josh.maldonado/Zulu Agent/projects/ai-trends/src/assets/generated/hack-device.png"
+    ]
+  },
+  "requestId": "01a213ba-8f27-7503-82e1-fd092c2031cd",
+  "seconds": 19
+}

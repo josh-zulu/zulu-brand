@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:19:16.382Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Aerial photograph looking down at a single winding road through a dark pine forest at first light, mist drifting between the trees, one car's headlights on the road, deep greens and charcoal, quiet, natural grain, no text, no logos",
+    "aspect_ratio": "16:9"
+  },
+  "requestId": "01a213b7-d5a6-7ff0-b1bc-71efd20d2d1e",
+  "seconds": 12
+}

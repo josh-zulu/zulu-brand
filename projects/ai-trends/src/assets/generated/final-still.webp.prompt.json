@@ -1,0 +1,14 @@
+{
+  "createdAt": "2026-11-25T17:25:54.277Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2/edit",
+  "input": {
+    "prompt": "Re-render this exact frame as a finished film still. Keep the camera, lens, framing and every shape exactly where it is: same buildings, same water tower position, same antenna masts, same rooftop ledge, same small figure in the same spot. Only change the materials and light: photoreal concrete, brick and weathered wood, a person in a dark long coat, blue hour sky, warm lit windows across the city, light haze, natural cinematic colour grade, 35mm film grain, no text, no logos",
+    "aspect_ratio": "16:9",
+    "image_urls": [
+      "/Users/josh.maldonado/Zulu Agent/projects/ai-trends/src/assets/generated/blockout-still.png"
+    ]
+  },
+  "requestId": "01a213bd-e13b-73e0-8148-15d54904759f",
+  "seconds": 13
+}

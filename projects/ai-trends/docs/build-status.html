@@ -1,0 +1,105 @@
+<title>AI Trends Build Status</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Schibsted+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one column, a status board you scan top to bottom. Single dark look (ZAK ink). */
+:root{--ink:#161515;--ink2:#1f1e1e;--line:rgba(248,247,244,.12);--paper:#f8f7f4;--stone:#9e9d99;--signal:#00e482;--cyan:#4dd0e1;--amber:#e9b44c;
+--display:'Oswald','Arial Narrow',sans-serif;--text:'Schibsted Grotesk','Helvetica Neue',sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;color-scheme:dark}
+body{background:var(--ink);color:var(--paper);font-family:var(--text);font-size:16px;line-height:1.5}
+.wrap{max-width:880px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:40px}
+h1{font-family:var(--display);font-weight:300;text-transform:uppercase;font-size:clamp(40px,8vw,72px);line-height:.95;margin:0;letter-spacing:.01em}
+h2{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--stone);margin:0 0 14px;font-weight:500}
+p{margin:0;max-width:65ch}
+.lede{color:#cfcec9;font-size:18px;margin-top:14px}
+.upd{font-family:var(--mono);font-size:12px;color:var(--stone);margin-top:10px}
+.row{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+.row>div{min-width:0}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:999px;justify-self:start;align-self:start;white-space:nowrap}
+.done{background:rgba(0,228,130,.14);color:var(--signal)}
+.run{background:rgba(77,208,225,.14);color:var(--cyan)}
+.you{background:rgba(233,180,76,.16);color:var(--amber)}
+.name{font-weight:600}
+.slides{color:var(--stone);font-size:14px;margin-top:2px}
+ol,ul{margin:0;padding-left:20px;display:grid;gap:8px}
+code{font-family:var(--mono);font-size:13px;background:var(--ink2);padding:1px 6px;border-radius:4px}
+@media (max-width:520px){.row{grid-template-columns:1fr;gap:8px}}
+</style>
+<div class="wrap">
+  <header>
+    <h1>AI Trends build</h1>
+    <p class="lede">The deck runs locally at <code>localhost:5180</code>. I built the engine, tools and the story's spine myself, then split the remaining slides across five helper agents, one per section, so they could be built at the same time. I'm the lead: I review each section as it comes back and fix anything shared.</p>
+    <p class="upd">Updated Wed 25 Nov · All 5 helpers finished · Review edits in progress</p>
+  </header>
+
+  <section>
+    <h2>Who is building what</h2>
+    <div class="row"><span class="pill done">Done</span><div><div class="name">Lead (me): engine, tools, story spine</div><div class="slides">Opener · 1A through-line · 1B the part that stays human · 6C close. Plus Fal, ElevenLabs, Codex and media tools, skills, CLAUDE.md.</div></div></div>
+    <div class="row"><span class="pill done">Done · reviewed</span><div><div class="name">Helper 3: section 2, the turn</div><div class="slides">14 sea of sameness · 15 taste (Default AI vs With Impeccable) · 16 the chain</div></div></div>
+    <div class="row"><span class="pill done">Done</span><div><div class="name">Helper 1: agenda and section 1</div><div class="slides">Agenda numbers roll in like an odometer · divider over a desk of agents at work · 6 a to-do ticks itself off beside a live log · 7 live dictation: your voice becomes a waveform, the ramble becomes a structured brief (press D for the offline run)</div></div></div>
+    <div class="row"><span class="pill done">Done</span><div><div class="name">Helper 2: section 2 tools</div><div class="slides">Divider: five tool chips plug into a ZAK slot · 9 Blender viewport builds a scene · 10 Figma frames assemble, then the clip · 11 tasks cascade, a budget chart draws itself · 12 film stills snap onto a timeline · 13 five end cards fan out, one is picked and warmed with a sentence</div></div></div>
+    <div class="row"><span class="pill done">Done</span><div><div class="name">Helper 4: sections 3 and 4</div><div class="slides">Photo you can walk into (real depth parallax) · blockout-to-film wipe · AGO pitch rail · a working Colour Lab that scores by real colour distance · phone flows for iDropper and DoorDash · Make-A-Wish process with its 84 real shots</div></div></div>
+    <div class="row"><span class="pill done">Done</span><div><div class="name">Helper 5: section 5 and the end</div><div class="slides">4DV orbit (real parallax) · world grows from a photo · links collapse into one AI answer · one brand update reaches every agent · AgentOps review · device teardown · 6A deck peels into its real layers (prompts, code, images, edits) · 6B three cards flip in · Questions</div></div></div>
+  </section>
+
+  <section>
+    <h2>Waiting on you</h2>
+    <div class="row"><span class="pill you">Rehearse</span><div>Run slide 7 once on the presenting laptop and allow the microphone, so the browser remembers it on the day.</div></div>
+    <div class="row"><span class="pill you">Footage</span><div>Slides 27–32 in the source deck look like poster frames of screen recordings that never made it into the PowerPoint. Helper 4 rebuilt that moment as an animation; if the original recordings exist, they belong there.</div></div>
+    <div class="row"><span class="pill you">Sign in</span><div>Run <code>codex login</code> once in Terminal (choose "Sign in with ChatGPT"). Codex is now the default for every new image; until you sign in, helpers use existing images or stand-ins and list what they'd still like generated.</div></div>
+    <div class="row"><span class="pill you">Approve</span><div>Copy that isn't in your outline, on slides 14–16: the Alder ad line "Forty years in the rock.", the generic tile slogans ("Refresh your world"), and the chain's status labels.</div></div>
+    <div class="row"><span class="pill you">Key</span><div><code>ANTHROPIC_API_KEY</code> in <code>.env</code> is still empty. Without it, slide 7's dictation demo uses a prepared brief instead of Claude.</div></div>
+    <div class="row"><span class="pill you">Footage</span><div>The demo clips named in the outline (Blender, Figma, Asana, NetSuite, Resolve, agent task, chain backup). Drop them into <code>projects/ai-trends/public/media/clips/</code>; until then each slide shows a labelled placeholder.</div></div>
+  </section>
+
+  <section>
+    <h2>What to expect while they work</h2>
+    <ul>
+      <li>Open deck tabs reload whenever a helper saves a slide. Your place is kept.</li>
+      <li>Slides still being built show the approved copy in a plain layout.</li>
+      <li>Press <code>O</code> in the deck to see every slide at once.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Final checks done</h2>
+    <ol>
+      <li>Generated images converted to WebP (7.2 MB for the whole deck).</li>
+      <li>Production build passes; all 38 slides render in the overview with no errors.</li>
+      <li>Next: watch it at full speed on a big screen and tell me what to change.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Your review edits</h2>
+    <div class="row"><span class="pill done">Done</span><div>Slide 4 (1A): labels now Chat, Generated, Agentic (5% bigger); third line "This year it became a coworker."</div></div>
+    <div class="row"><span class="pill done">Done</span><div>Slide 7: "Ready" and the timer now sit inside the mic pill.</div></div>
+    <div class="row"><span class="pill done">Done</span><div>Slide 9: the chat prompt always stays inside its bubble and the panel.</div></div>
+    <div class="row"><span class="pill done">Done</span><div>Slide 10: "Agentic design · Figma" over "You direct. It designs with you."; Adobe footnote removed.</div></div>
+    <div class="row"><span class="pill done">Done</span><div>Slide 16: now "One meeting, every tool". Notes flow to Asana, Figma and Slides in three clicks; no loop back, no backup recording.</div></div>
+    <div class="row"><span class="pill done">Done</span><div>Rehearsal panel: a small "Slides" button (bottom left, or the \ key) lists every slide. Click to jump; tap J, K or H to assign who presents it. Saved to the project and shown in the presenter window, with a handoff cue. Hidden in fullscreen.</div></div>
+    <div class="row"><span class="pill done">Done</span><div>New slide 2, "Digital team": Josh Maldonado (Director of Digital &amp; Innovation), Kyle Collins (Web Developer), Hiep Vu (AI Production Specialist) in circle headshots. Photos and titles from LinkedIn.</div></div>
+    <div class="row"><span class="pill done">Done</span><div>Panel: each slide has a Copy button for pasting its reference into chat.</div></div>
+    <div class="row"><span class="pill done">Done</span><div>Slide 6B "Start tomorrow" removed.</div></div>
+    <div class="row"><span class="pill done">Done</span><div>Slide 7: own motion graphic. The agent resizes one banner into 12 ad placements, checks its work, fixes two crops, and the to-do ticks off.</div></div>
+    <div class="row"><span class="pill done">Done</span><div>"Answers, not links" removed.</div></div>
+    <div class="row"><span class="pill done">Done</span><div>New last slide: ZAK mark assembles, "Bring us the hard digital problems." with Josh, Kyle and Hiep.</div></div>
+    <div class="row"><span class="pill done">Done</span><div>Step-inside slides (4DV and photo-to-world): the fake depth trick is replaced with real 3D scenes from World Labs (a forge with frozen sparks, and a Marble-made bedroom), rendered live and credited on the slide. No Fal spend.</div></div>
+  </section>
+
+  <section>
+    <h2>Fal spend so far</h2>
+    <p>Before your note, Fal made <b>81 images</b> (all helpers confirm none since): 17 by me (opener textures, 1A campaign images) and the rest by helpers, mostly the cheap nano-banana-2 model with 8 on the pricier Pro model. Rough cost is a few dollars; your Fal dashboard has the exact figure. All helpers were told to stop using Fal, and the repo docs now default to Codex.</p>
+  </section>
+
+  <section>
+    <h2>How it's built</h2>
+    <div class="row"><span class="pill done">Deck</span><div>Vite + React + TypeScript web app. Every slide is a 1920×1080 canvas scaled to the screen. GSAP drives all motion, one timeline per slide cut into click beats. Presenter view, overview and keyboard/clicker control are custom.</div></div>
+    <div class="row"><span class="pill done">Brand</span><div>Zulu tokens from the master deck: Oswald Light, Schibsted Grotesk, JetBrains Mono (Google Fonts), charcoal and paper, signal green for the machine.</div></div>
+    <div class="row"><span class="pill done">Images</span><div><b>Codex CLI</b> on your ChatGPT plan (default from now on). Fal (nano-banana) was used for the first 81 images.</div></div>
+    <div class="row"><span class="pill done">Audio</span><div><b>ElevenLabs</b>: sound effects, music, voice clean-up, and live transcription for the dictation slide.</div></div>
+    <div class="row"><span class="pill done">Live demo</span><div><b>Claude API</b> (Opus 5.5) turns the dictated ramble into a structured brief. It needs the Anthropic key; it works offline with a prepared brief.</div></div>
+    <div class="row"><span class="pill done">3D</span><div><b>Spark</b>, World Labs' open-source 3D (Gaussian splat) renderer, showing two World Labs sample scenes on the step-inside slides.</div></div>
+    <div class="row"><span class="pill done">Media</span><div>ffmpeg, bundled with the project, for clip encoding, GIF to MP4 and WebP images.</div></div>
+    <div class="row"><span class="pill done">Built by</span><div>Claude Code: me as lead, plus five helper agents working section by section from the shared CLAUDE.md, brand guide and skills.</div></div>
+  </section>
+</div>

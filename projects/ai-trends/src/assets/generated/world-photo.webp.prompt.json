@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:23:01.385Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Editorial photograph of a sunlit stone colonnade around a quiet courtyard: weathered columns close in the foreground on the left, a lemon tree and a small stone fountain in the middle distance, an open archway at the far end glowing with bright afternoon light, strong deep perspective with a clear foreground, middle ground and background, warm natural light, soft shadows, 35mm film grain, no people, no text, no logos",
+    "aspect_ratio": "16:9"
+  },
+  "requestId": "01a213bb-4594-73f2-85ad-fcaa3cdb8294",
+  "seconds": 11
+}

@@ -1,0 +1,18 @@
+.photo-world { position: absolute; inset: 0; }
+.pw-copy { position: absolute; left: 140px; top: 0; bottom: 0; width: 600px; display: flex; flex-direction: column; justify-content: center; gap: 36px; }
+.pw-headline { font-size: 80px; }
+.pw-lede { font-size: 34px; }
+
+.pw-window { position: absolute; left: 780px; top: 259px; width: 1000px; height: 562px; }
+.pw-print {
+  position: absolute; inset: 0; overflow: hidden; border: 18px solid #f2f0ea; border-radius: 4px; background: #0b0b0b;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0, 0, 0, 0.3); transform-origin: 50% 55%; will-change: transform;
+}
+.pw-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transform: scale(1.06); }
+.pw-missing { background: linear-gradient(160deg, #3a3837, #161515); }
+.pw-gl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; opacity: 0; }
+.pw-gl:not(.is-ready) { visibility: hidden; }
+.pw-clip { position: absolute; inset: 0; opacity: 0; }
+
+.pw-splat { position: absolute; inset: 0; width: 100%; height: 100%; }
+.pw-credit { position: absolute; right: 72px; top: 132px; font-size: 13px; color: var(--zak-stone); }

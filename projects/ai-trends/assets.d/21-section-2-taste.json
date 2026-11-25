@@ -1,0 +1,238 @@
+{
+  "assets": [
+    {
+      "id": "sameness-1",
+      "slide": "s2-sameness",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "4:5",
+      "out": "src/assets/generated/sameness-1.png",
+      "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. Pale mint-green can, lime slices and ice cubes floating around it, water splash below. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can."
+    },
+    {
+      "id": "sameness-2",
+      "slide": "s2-sameness",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "4:5",
+      "out": "src/assets/generated/sameness-2.png",
+      "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. Silver can, lemon slices and ice cubes floating around it, crown splash below. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can."
+    },
+    {
+      "id": "sameness-3",
+      "slide": "s2-sameness",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "4:5",
+      "out": "src/assets/generated/sameness-3.png",
+      "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. Pale mint-green can, mint leaves and lime wedges floating, a swirl of water spiralling around it. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can."
+    },
+    {
+      "id": "sameness-4",
+      "slide": "s2-sameness",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "4:5",
+      "out": "src/assets/generated/sameness-4.png",
+      "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. White can, raspberries and ice cubes floating around it, splash below. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can."
+    },
+    {
+      "id": "sameness-5",
+      "slide": "s2-sameness",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "4:5",
+      "out": "src/assets/generated/sameness-5.png",
+      "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. Pale iridescent pastel can, lime slices floating, streams of bubbles rising. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can."
+    },
+    {
+      "id": "sameness-6",
+      "slide": "s2-sameness",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "4:5",
+      "out": "src/assets/generated/sameness-6.png",
+      "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. Pale mint-green can, cucumber slices and ice cubes floating, ring of splashing water. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can."
+    },
+    {
+      "id": "sameness-7",
+      "slide": "s2-sameness",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "4:5",
+      "out": "src/assets/generated/sameness-7.png",
+      "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. Silver can, pink grapefruit slices floating, water droplets frozen in mid-air. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can."
+    },
+    {
+      "id": "sameness-8",
+      "slide": "s2-sameness",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "4:5",
+      "out": "src/assets/generated/sameness-8.png",
+      "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. Pale mint-green can, blueberries and mint leaves floating, splash below. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can."
+    },
+    {
+      "id": "sameness-9",
+      "slide": "s2-sameness",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "4:5",
+      "out": "src/assets/generated/sameness-9.png",
+      "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. Teal can, lime slices and ice cubes floating, a curling wave of water rising behind it. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can."
+    },
+    {
+      "id": "sameness-10",
+      "slide": "s2-sameness",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "4:5",
+      "out": "src/assets/generated/sameness-10.png",
+      "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. Pale mint-green can, lemon and lime slices orbiting it, soft glow. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can."
+    },
+    {
+      "id": "sameness-11",
+      "slide": "s2-sameness",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "4:5",
+      "out": "src/assets/generated/sameness-11.png",
+      "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. White can, strawberries and ice cubes floating around it, splash below. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can."
+    },
+    {
+      "id": "sameness-12",
+      "slide": "s2-sameness",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "4:5",
+      "out": "src/assets/generated/sameness-12.png",
+      "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. Pale mint-green can, orange slices and ice cubes floating around it. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can."
+    },
+    {
+      "id": "sameness-13",
+      "slide": "s2-sameness",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "4:5",
+      "out": "src/assets/generated/sameness-13.png",
+      "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. Silver can, lime wedges and mint leaves floating, crown splash below. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can."
+    },
+    {
+      "id": "sameness-14",
+      "slide": "s2-sameness",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "4:5",
+      "out": "src/assets/generated/sameness-14.png",
+      "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. Pale mint-green can, only ice cubes floating, a big splash of water wrapping around it. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can."
+    },
+    {
+      "id": "sameness-15",
+      "slide": "s2-sameness",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "4:5",
+      "out": "src/assets/generated/sameness-15.png",
+      "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. Lilac can, blackberries and lime slices floating, rising bubbles. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can."
+    },
+    {
+      "id": "sameness-16",
+      "slide": "s2-sameness",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "4:5",
+      "out": "src/assets/generated/sameness-16.png",
+      "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. Pale mint-green can, watermelon cubes and ice cubes floating around it. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can."
+    },
+    {
+      "id": "sameness-17",
+      "slide": "s2-sameness",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "4:5",
+      "out": "src/assets/generated/sameness-17.png",
+      "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. Pale mint-green can, lime slices and ice cubes floating, lens flare from the top left. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can."
+    },
+    {
+      "id": "sameness-18",
+      "slide": "s2-sameness",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "4:5",
+      "out": "src/assets/generated/sameness-18.png",
+      "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. Silver can, raspberries and mint leaves floating, splash below. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can."
+    },
+    {
+      "id": "sameness-19",
+      "slide": "s2-sameness",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "4:5",
+      "out": "src/assets/generated/sameness-19.png",
+      "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. Pale mint-green can, kiwi slices and ice cubes floating around it. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can."
+    },
+    {
+      "id": "sameness-20",
+      "slide": "s2-sameness",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "4:5",
+      "out": "src/assets/generated/sameness-20.png",
+      "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. Pale mint-green can, lime slices, ice cubes and a splash, hexagonal bokeh highlights. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can."
+    },
+    {
+      "id": "taste-impeccable-a",
+      "slide": "s2-taste",
+      "tool": "fal",
+      "model": "nano-banana-pro",
+      "aspect": "4:3",
+      "out": "src/assets/generated/taste-impeccable-a.png",
+      "prompt": "Editorial advertising photograph, shot on medium-format film. A single matte pale sage-green aluminium can of sparkling water stands on a wet slab of dark grey granite at the edge of a still, cold northern lake at first light. Low mist drifts over the water; a soft line of black spruce on the far shore. Real condensation beads on the can. Cool natural overcast light with a faint warm glow at the horizon. The can sits on the right third of the frame; the left two-thirds is calm open mist and water, generous negative space. Restrained palette of slate, sage and bone. Fine film grain, true to life, quiet and premium. A small minimal label on the can reads ALDER in black serif capitals, nothing else. No other text, no logos."
+    },
+    {
+      "id": "taste-impeccable-b",
+      "slide": "s2-taste",
+      "tool": "fal",
+      "model": "nano-banana-pro",
+      "aspect": "4:3",
+      "out": "src/assets/generated/taste-impeccable-b.png",
+      "prompt": "Editorial still-life photograph for a premium sparkling spring water. A matte pale sage-green aluminium can and a short clear tumbler of sparkling water with rising bubbles stand on a rough slab of pink Canadian Shield granite. Hard, low morning sunlight from the left casts long crisp shadows across a warm bone-coloured plaster wall. Objects sit on the right third of the frame; generous empty wall on the left. Tactile textures, real condensation, natural colour, medium-format film look with fine grain, quiet and confident. A small minimal label on the can reads ALDER in black serif capitals, nothing else. No other text, no logos."
+    },
+    {
+      "id": "sfx-sameness-flood",
+      "slide": "s2-sameness",
+      "tool": "eleven",
+      "mode": "sfx",
+      "duration": 2.5,
+      "out": "public/media/sfx/sameness-flood.mp3",
+      "prompt": "A soft rising rush of many small glossy cards snapping down onto a table in a fast accelerating wave, airy and subtle, cinematic UI sound, no music"
+    },
+    {
+      "id": "sfx-taste-wipe",
+      "slide": "s2-taste",
+      "tool": "eleven",
+      "mode": "sfx",
+      "duration": 1.2,
+      "out": "public/media/sfx/taste-wipe.mp3",
+      "prompt": "A single smooth quiet swipe of heavy matte paper sliding across a wooden desk, warm, close-miked, elegant, minimal"
+    },
+    {
+      "id": "sfx-chain-pulse",
+      "slide": "s2-chain",
+      "tool": "eleven",
+      "mode": "sfx",
+      "duration": 0.8,
+      "out": "public/media/sfx/chain-pulse.mp3",
+      "prompt": "A short soft electronic pulse travelling past, a clean low digital blip with a gentle airy whoosh, subtle premium UI sound"
+    },
+    {
+      "id": "sfx-chain-complete",
+      "slide": "s2-chain",
+      "tool": "eleven",
+      "mode": "sfx",
+      "duration": 1.5,
+      "out": "public/media/sfx/chain-complete.mp3",
+      "prompt": "A warm gentle two-note confirmation chime, soft and digital, premium UI success sound, understated, not cheesy"
+    }
+  ]
+}

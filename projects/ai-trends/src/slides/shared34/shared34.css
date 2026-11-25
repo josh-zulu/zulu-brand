@@ -1,0 +1,76 @@
+/* Shared by the section 3–4 slides (prefix p34-). */
+
+/* ───────── Phone screen (crops the baked iPhone bezel out of the source mockups) ───────── */
+.p34-screen {
+  position: relative; overflow: hidden; background: #050505;
+  aspect-ratio: 536 / 1140;
+  /* circular corners: 15.5% of the width horizontally = 7.29% of the height vertically */
+  border-radius: 15.5% / 7.29%;
+}
+.p34-screen video {
+  position: absolute; display: block; object-fit: fill;
+  left: -5.224%; top: -7.544%; width: 110.075%; height: 109.474%;
+}
+
+/* ───────── Device: brand-neutral slab, sizes in em (1em = width / 100) ───────── */
+.p34-device {
+  position: relative; width: var(--dw); font-size: calc(var(--dw) / 100);
+  padding: 5.4em 3.3em 3.6em; border-radius: 17.6em / 8.6em;
+  background: linear-gradient(155deg, #2b2a29 0%, #121111 26%, #0b0b0b 70%, #1b1a1a 100%);
+  box-shadow:
+    inset 0 0 0 0.35em #050505,
+    inset 0 0.25em 0.4em rgba(255, 255, 255, 0.08),
+    0 0 0 1px rgba(248, 247, 244, 0.13),
+    0 4em 9em rgba(0, 0, 0, 0.6),
+    0 1.2em 2.4em rgba(0, 0, 0, 0.45);
+}
+.p34-bezel-top { position: absolute; top: 1.85em; left: 0; right: 0; display: flex; justify-content: center; align-items: center; gap: 2.2em; }
+.p34-cam { width: 1.7em; height: 1.7em; border-radius: 50%; background: radial-gradient(circle at 38% 35%, #2c3440 0 22%, #07090c 55%); box-shadow: inset 0 0.15em 0.3em rgba(0,0,0,.9), 0 0 0 0.12em rgba(255,255,255,.06); }
+.p34-spk { width: 11em; height: 1.2em; border-radius: 999px; background: #050505; box-shadow: var(--zak-deboss-dark); }
+.p34-glass { position: relative; border-radius: 15.5% / 7.29%; overflow: hidden; box-shadow: 0 0 0 0.3em #000; }
+.p34-glass > .p34-screen { width: 100%; }
+.p34-glass > .p34-screen + .p34-screen { position: absolute; inset: 0; }
+.p34-sleep {
+  position: absolute; inset: 0; opacity: 0; pointer-events: none;
+  background: radial-gradient(120% 70% at 30% 10%, #1a1a1a 0%, #070707 55%, #030303 100%);
+}
+.p34-glare { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(118deg, rgba(255,255,255,0.075) 0%, rgba(255,255,255,0.02) 28%, transparent 42%); }
+
+/* ───────── AGO pitch kicker (slides 21–24) ───────── */
+.p34-kicker { display: flex; align-items: center; gap: 14px; }
+.p34-kicker b { font-weight: 500; color: var(--zak-paper); }
+.p34-kicker i { width: 8px; height: 8px; border-radius: 50%; background: var(--zak-signal); flex: none; }
+
+/* ───────── Process rail ───────── */
+.p34-rail { position: relative; display: grid; grid-template-columns: repeat(var(--n), 1fr); }
+.p34-rail-track {
+  position: absolute; top: 46px; height: 2px; margin-top: -1px;
+  left: calc(50% / var(--n)); right: calc(50% / var(--n));
+  background: repeating-linear-gradient(90deg, var(--zak-line-strong) 0 6px, transparent 6px 14px);
+}
+.p34-rail-fill { position: absolute; inset: 0; background: var(--zak-signal); transform-origin: 0 50%; transform: scaleX(0); box-shadow: 0 0 14px rgba(0, 228, 130, 0.45); }
+.p34-rail-pulse {
+  position: absolute; top: 50%; left: 0; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%;
+  background: var(--zak-signal); box-shadow: 0 0 0 6px rgba(0, 228, 130, 0.18), 0 0 24px rgba(0, 228, 130, 0.7); opacity: 0;
+}
+.p34-step { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 14px; }
+.p34-node {
+  position: relative; z-index: 1; width: 92px; height: 92px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--zak-ink-2); box-shadow: var(--zak-deboss-dark), 0 0 0 1px var(--zak-line);
+}
+.p34-node img { width: 46px; height: 46px; display: block; filter: grayscale(1) brightness(1.5) opacity(0.38); }
+.p34-node-ring { position: absolute; inset: -7px; border-radius: 50%; border: 1.5px solid var(--zak-signal); opacity: 0; box-shadow: 0 0 22px rgba(0, 228, 130, 0.35); }
+.p34-step-num { margin-top: 22px; font-size: 15px; }
+.p34-step-title { margin-top: 8px; font-family: var(--zak-font-text); font-weight: 500; font-size: 30px; letter-spacing: -0.015em; color: var(--zak-paper); opacity: 0.4; }
+.p34-step-sub { margin-top: 6px; font-size: 21px; line-height: 1.32; color: var(--zak-stone); max-width: 300px; opacity: 0.4; text-wrap: balance; }
+
+/* ───────── "Clip to add" hint, only in preview mode (presenter view / overview), never on the audience stage ───────── */
+.p34-cliphint {
+  position: absolute; left: 14px; bottom: 14px; z-index: 5; display: flex; gap: 8px; align-items: center;
+  font-family: var(--zak-font-mono); font-size: 14px; letter-spacing: 0.08em; color: var(--zak-paper);
+  background: rgba(0, 0, 0, 0.66); padding: 6px 10px; border-radius: 999px;
+}
+.p34-cliphint::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--zak-signal-2); }
+
+/* ───────── Clip slot with a still stand-in ───────── */
+.p34-cos { position: relative; overflow: hidden; }

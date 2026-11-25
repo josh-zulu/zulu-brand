@@ -1,0 +1,75 @@
+.rv { position: absolute; inset: 0; }
+.rv-scene { position: absolute; inset: 0; perspective: 5200px; perspective-origin: 50% 45%; }
+.rv-stack { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-style: preserve-3d; transform-origin: 50% 50%; }
+.rv-layer {
+  --rv-ring: rgba(248, 247, 244, 0);
+  position: absolute; inset: 0; overflow: hidden; backface-visibility: hidden;
+  box-shadow: inset 0 0 0 2px var(--rv-ring); border-radius: 6px;
+}
+.rv-anchor { position: absolute; left: 0; top: 0; width: 1px; height: 1px; }
+.rv-layer-k { position: absolute; left: 72px; top: 56px; font-size: 22px; }
+
+/* 01 prompts: every .prompt.json sidecar in the repo */
+.rv-l-prompts { background: rgba(16, 16, 16, 0.94); }
+.rv-prompts { position: absolute; left: 72px; right: 72px; top: 120px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.rv-pc { height: 200px; padding: 20px 22px; border-radius: 16px; background: var(--zak-ink-2); box-shadow: inset 0 0 0 1px var(--zak-line); overflow: hidden; display: flex; flex-direction: column; gap: 10px; }
+.rv-pc-h { display: flex; justify-content: space-between; font-family: var(--zak-font-mono); font-size: 15px; }
+.rv-pc-h b { color: var(--zak-signal); font-weight: 600; }
+.rv-pc-h span { color: var(--zak-stone-2); }
+.rv-pc p { margin: 0; font-size: 19px; line-height: 1.35; color: var(--zak-paper-2); display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* 02 code: the real source */
+.rv-l-code { background: rgba(14, 14, 14, 0.95); }
+.rv-code { position: absolute; left: 72px; right: 72px; top: 120px; bottom: 40px; columns: 3; column-gap: 56px; font-family: var(--zak-font-mono); font-size: 15px; line-height: 1.5; white-space: pre; overflow: hidden; }
+.rv-code div { overflow: hidden; text-overflow: clip; color: rgba(207, 206, 201, 0.78); }
+.rv-code div.is-c { color: var(--zak-stone-2); }
+.rv-code div.is-k { color: var(--zak-paper); }
+
+/* 03 generated images */
+.rv-l-assets { background: rgba(18, 18, 18, 0.94); }
+.rv-assets { position: absolute; left: 72px; right: 72px; top: 120px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
+.rv-ac { position: relative; height: 266px; border-radius: 12px; overflow: hidden; background: var(--zak-ink-3); }
+.rv-ac img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.rv-ac span { position: absolute; left: 10px; bottom: 10px; padding: 4px 9px; border-radius: 999px; background: rgba(0, 0, 0, 0.6); font-family: var(--zak-font-mono); font-size: 13px; color: var(--zak-paper); }
+
+/* 04 human edits: paper, graphite, no machine colour */
+.rv-l-human { background: var(--zak-paper); color: var(--zak-graphite); }
+.rv-l-human .rv-layer-k { color: var(--zak-stone-2); }
+.rv-human { position: absolute; left: 72px; right: 72px; top: 120px; display: grid; grid-template-columns: 1.25fr 1fr; gap: 80px; }
+.rv-human h4 { margin: 0 0 22px; font-family: var(--zak-font-mono); font-size: 16px; font-weight: 500; letter-spacing: var(--zak-track-label); text-transform: uppercase; color: var(--zak-stone-2); }
+.rv-edit { display: grid; grid-template-columns: 74px 1fr; gap: 4px 18px; padding: 16px 0; border-top: 1px solid var(--zak-line-paper); }
+.rv-edit em { grid-row: span 2; font-style: normal; font-family: var(--zak-font-mono); font-size: 13px; letter-spacing: var(--zak-track-label); text-transform: uppercase; color: var(--zak-stone-2); padding-top: 6px; }
+.rv-edit s { font-size: 26px; color: var(--zak-stone); text-decoration-thickness: 2px; text-decoration-color: var(--zak-graphite); }
+.rv-edit b { font-size: 30px; font-weight: 500; letter-spacing: -0.02em; }
+.rv-note { margin: 0 0 18px; padding-left: 20px; border-left: 3px solid var(--zak-graphite); font-size: 21px; line-height: 1.4; color: #3a3836; }
+
+/* 05 the slide itself */
+.rv-l-slide { background: var(--zak-ink); }
+.rv-slide { position: absolute; left: 140px; top: 0; bottom: 0; width: 1500px; display: flex; flex-direction: column; justify-content: center; gap: 44px; }
+.rv-head { font-size: 112px; max-width: 1400px; }
+.rv-lede { font-size: 44px; max-width: 1240px; }
+.rv-lede-b { display: block; }
+
+/* flat labels for the exploded stack */
+.rv-labels { position: absolute; inset: 0; pointer-events: none; }
+.rv-lab { position: absolute; left: 0; top: 0; display: flex; align-items: center; gap: 14px; opacity: 0; white-space: nowrap; }
+.rv-lab i { display: block; width: 64px; height: 1px; background: var(--zak-line-strong); }
+.rv-lab b { font-family: var(--zak-font-mono); font-size: 17px; font-weight: 600; letter-spacing: var(--zak-track-label); text-transform: uppercase; color: var(--zak-paper); }
+.rv-lab span { font-family: var(--zak-font-mono); font-size: 15px; color: var(--zak-stone); }
+
+/* receipts */
+.rv-receipts { position: absolute; right: 140px; top: 170px; width: 640px; display: flex; flex-direction: column; gap: 22px; }
+.rv-rc { padding: 24px 28px; border-radius: 22px; background: var(--zak-ink-2); box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), inset 0 0 0 1px var(--zak-line); opacity: 0; }
+.rv-rc-k { display: flex; justify-content: space-between; margin-bottom: 14px; font-size: 14px; }
+.rv-rc-k span:last-child { color: var(--zak-stone-2); }
+.rv-rc-prompt { display: grid; grid-template-columns: 132px 1fr; gap: 20px; align-items: start; }
+.rv-rc-prompt img { width: 132px; height: 88px; object-fit: cover; border-radius: 10px; display: block; }
+.rv-rc-prompt p { margin: 0; font-size: 19px; line-height: 1.38; color: var(--zak-paper-2); display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.rv-rc-meta { margin-top: 12px; font-family: var(--zak-font-mono); font-size: 14px; color: var(--zak-signal); }
+.rv-rc-edit { display: flex; flex-direction: column; gap: 8px; }
+.rv-rc-edit s { font-size: 26px; color: var(--zak-stone); text-decoration-thickness: 2px; }
+.rv-rc-edit b { font-size: 32px; font-weight: 500; letter-spacing: -0.02em; color: var(--zak-paper); }
+.rv-rc-time { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.rv-rc-time div { display: flex; flex-direction: column; gap: 6px; }
+.rv-rc-time b { font-family: var(--zak-font-display); font-weight: 300; font-size: 64px; line-height: 1; color: var(--zak-paper); }
+.rv-rc-time span { font-size: 18px; color: var(--zak-stone); line-height: 1.3; }

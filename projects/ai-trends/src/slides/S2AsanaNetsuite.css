@@ -1,0 +1,87 @@
+/* S2AsanaNetsuite: one frame, two tools. Sentence → tasks, question → chart, then the recordings. */
+.asn { position: absolute; inset: 0; }
+.asn-text { position: absolute; left: 140px; top: 270px; width: 580px; display: flex; flex-direction: column; gap: 34px; }
+.asn-head { font-size: 80px; }
+.asn-lede { font-size: 30px; }
+.asn-lede .asn-s1, .asn-lede .asn-s2 { color: var(--zak-paper-2); }
+
+.asn-frame {
+  position: absolute; left: 780px; top: 233px; width: 1000px; border-radius: var(--zak-radius-frame); overflow: hidden;
+  background: var(--zak-ink-2); box-shadow: 0 40px 120px rgba(0, 0, 0, 0.55), 0 0 0 1px var(--zak-line);
+}
+.asn-fhead { height: 52px; display: flex; align-items: center; justify-content: space-between; padding: 0 18px 0 10px; background: #232222; border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+.asn-tabs { position: relative; display: flex; gap: 8px; }
+.asn-tab { position: relative; z-index: 1; height: 34px; display: grid; place-items: center; font-size: 16px; font-weight: 500; color: var(--zak-stone); }
+.asn-tab-a { width: 124px; color: var(--zak-paper); }
+.asn-tab-n { width: 152px; }
+.asn-tab-hl { position: absolute; left: 0; top: 0; width: 124px; height: 34px; border-radius: 10px; background: #343231; }
+.asn-st { position: relative; width: 340px; height: 1.2em; font-size: 13px; }
+.asn-st > span { position: absolute; right: 0; top: 0; white-space: nowrap; color: var(--zak-signal); opacity: 0; }
+
+.asn-body { position: relative; height: 562px; overflow: hidden; }
+
+/* ── Asana ── */
+.asn-input {
+  position: absolute; left: 32px; top: 28px; right: 32px; height: 66px; display: flex; align-items: center; gap: 14px; padding: 0 22px;
+  border-radius: 14px; background: var(--zak-ink-3); box-shadow: inset 0 0 0 1px var(--zak-line);
+  font-size: 23px; color: var(--zak-paper); white-space: nowrap;
+}
+.asn-chev { color: var(--zak-signal); font-family: var(--zak-font-mono); }
+.asn-input .caret { width: 0.42em; height: 0.95em; margin-left: -10px; }
+.asn-ghost {
+  position: absolute; left: 77px; top: 44px; font-size: 23px; color: var(--zak-paper); white-space: nowrap; pointer-events: none;
+  will-change: transform, opacity, filter;
+}
+.asn-thead {
+  position: absolute; left: 32px; right: 32px; top: 122px; height: 30px; display: grid; grid-template-columns: 1fr 230px 110px;
+  padding: 0 18px 0 58px; font-size: 12px; border-bottom: 1px solid var(--zak-line);
+}
+.asn-row {
+  position: absolute; left: 32px; right: 32px; height: 56px; display: grid; grid-template-columns: 26px 1fr 230px 110px; align-items: center; gap: 14px;
+  padding: 0 18px; border-radius: 12px; background: rgba(248, 247, 244, 0.035);
+}
+.asn-check { width: 24px; height: 24px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--zak-stone-2); }
+.asn-task { font-size: 21px; color: var(--zak-paper); white-space: nowrap; }
+.asn-owner { display: flex; align-items: center; gap: 12px; }
+.asn-ava {
+  width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; flex: none;
+  font-family: var(--zak-font-mono); font-size: 12px; font-weight: 600; color: var(--zak-paper); background: var(--zak-ink-4);
+}
+.asn-owner-name { font-size: 18px; color: var(--zak-paper-2); white-space: nowrap; }
+.asn-date { font-family: var(--zak-font-mono); font-size: 17px; color: var(--zak-paper-2); text-align: right; }
+
+/* ── NetSuite ── */
+.asn-bubble {
+  position: absolute; left: 528px; top: 30px; width: 440px; padding: 16px 22px; transform-origin: 0 0;
+  font-size: 26px; font-weight: 500; letter-spacing: -0.01em; color: var(--zak-paper); min-height: 70px;
+}
+.asn-bubble-bg { position: absolute; inset: 0; z-index: -1; border-radius: 20px 20px 6px 20px; background: var(--zak-ink-3); box-shadow: inset 0 0 0 1px var(--zak-line); }
+.asn-think { position: absolute; left: 32px; top: 112px; font-size: 14px; color: var(--zak-signal-2); }
+.asn-grid { position: absolute; inset: 0; }
+.asn-grid line { stroke: var(--zak-line); stroke-width: 1; }
+.asn-budget { position: absolute; top: 140px; height: 330px; border-left: 2px dashed rgba(248, 247, 244, 0.55); }
+.asn-budget .label { position: absolute; left: 10px; top: -6px; font-size: 12px; color: var(--zak-paper-2); }
+.asn-crow { position: absolute; left: 0; right: 0; height: 30px; }
+.asn-cname { position: absolute; left: 32px; top: 0; line-height: 30px; font-size: 19px; color: var(--zak-paper-2); white-space: nowrap; }
+.asn-bar { position: absolute; top: 3px; height: 24px; border-radius: 0 4px 4px 0; background: var(--zak-ink-4); }
+.asn-crow.is-over .asn-bar { background: var(--zak-paper); }
+.asn-crow.is-over .asn-cname { color: var(--zak-paper); }
+.asn-val { position: absolute; top: 0; line-height: 30px; font-family: var(--zak-font-mono); font-size: 17px; color: var(--zak-stone); }
+.asn-crow.is-over .asn-val { color: var(--zak-paper); }
+.asn-answer {
+  position: absolute; left: 32px; bottom: 34px; display: flex; align-items: center; gap: 12px;
+  font-family: var(--zak-font-mono); font-size: 16px; color: var(--zak-paper);
+}
+.asn-answer i { width: 8px; height: 8px; border-radius: 50%; background: var(--zak-signal); box-shadow: 0 0 10px rgba(0, 228, 130, 0.7); }
+
+/* clip slots fill the body. Missing file: a quiet tag over the animation. */
+.asn-clip.clip-frame { position: absolute; inset: 0; border-radius: 0; background: transparent; box-shadow: none; opacity: 0; }
+.asn-clip .clip-placeholder { background: rgba(22, 21, 21, 0.25); place-items: start end; }
+.asn-clip .clip-ph-scan { opacity: 0.6; }
+.asn-clip .clip-ph-inner {
+  flex-direction: row; gap: 14px; margin: 18px 18px 0 0; padding: 9px 16px; border-radius: 999px;
+  background: rgba(10, 10, 10, 0.78); box-shadow: 0 0 0 1px var(--zak-line);
+}
+.asn-clip .clip-ph-inner .label { font-size: 12px; }
+.asn-clip .clip-ph-name { font-size: 14px; }
+.asn-clip .clip-ph-hint { display: none; }

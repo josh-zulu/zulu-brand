@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:02:28.072Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Overhead photograph of dense tropical monstera and fern leaves, deep greens, dappled sunlight, crisp detail, no text",
+    "aspect_ratio": "1:1"
+  },
+  "requestId": "01a213a8-6711-7663-8527-2ca1694a559e",
+  "seconds": 15
+}

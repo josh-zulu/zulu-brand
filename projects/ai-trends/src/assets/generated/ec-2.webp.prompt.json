@@ -1,0 +1,12 @@
+{
+  "createdAt": "2026-11-25T17:25:39.368Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-pro",
+  "input": {
+    "prompt": "Full-bleed flat graphic illustration in a mid-century Swiss poster style, composed edge to edge with no border, no frame and no inset panel: a sage-green city bicycle in exact side profile on a long flat horizon line that runs across the whole width, one huge simple pale sun disc rising behind it, flat ground of warm ochre, sky of deep forest green, accents of cream and near-black, crisp geometric shapes, subtle printed paper texture, the bike in the lower right, large calm empty sky across the top half and left side for type, no text, no letters, no logos",
+    "aspect_ratio": "16:9",
+    "resolution": "2K"
+  },
+  "requestId": "01a213bd-7874-7a12-83c0-7d2dffb77896",
+  "seconds": 25
+}

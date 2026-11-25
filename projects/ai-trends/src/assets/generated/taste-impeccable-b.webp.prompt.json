@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:23:32.925Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-pro",
+  "input": {
+    "prompt": "Editorial still-life photograph for a premium sparkling spring water. A matte pale sage-green aluminium can and a short clear tumbler of sparkling water with rising bubbles stand on a rough slab of pink Canadian Shield granite. Hard, low morning sunlight from the left casts long crisp shadows across a warm bone-coloured plaster wall. Objects sit on the right third of the frame; generous empty wall on the left. Tactile textures, real condensation, natural colour, medium-format film look with fine grain, quiet and confident. A small minimal label on the can reads ALDER in black serif capitals, nothing else. No other text, no logos.",
+    "aspect_ratio": "4:3"
+  },
+  "requestId": "01a213bb-a2ec-7e50-8202-da311c126b18",
+  "seconds": 19
+}

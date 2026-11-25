@@ -1,0 +1,60 @@
+# Source deck: Zulu AI Trends - Dec 2026.pptx (text + media per slide)
+
+Extracted for reference. Sections 3–5 copy (Kyle and Hiep) stays as written here. Media converted to web formats in `public/media/source/` (GIFs → .mp4 with the same image number).
+
+- **Slide 1**: ZULU AI WORKING GROUP -  · AI TRENDS · Last updated: · November 19, 2026 · 
+- **Slide 2**: Intro: the year AI started doing the work (5min) · From chatting with AI to agents doing real work  · Talking instead of typing (dictation) · Dentsu: 79% of CMOs worry optimising for algorithms could create a “sea of sameness” · Canva: 69% of consumers expect future ads to look like the same AI-generated “slop” · What AI can do in our tools now (10min) · Google Workspace, Asana + NetSuite, · Figma (+ Adobe in 2027), Blender, DaVinci Resolve (Hiep) · Motion design (HyperFrames, Remotion), (Hiep) · Impeccable, brand and design systems, our own skills · Peak: chaining them live (Asana → Figma → Slides → Asana) · 
+- **Slide 3**: New ways to make things · Figma + Claude · Blender blockouts steering AI video · Using AI for prototyping and pitch deck plus ups (Kyle) · Work we made (5-10min) · MAW LBB submission (Kyle),  · RGC Random Tower (Kyle),  · Silence The Hate,  · Booking.com ·  Global Campaign · Gatsby launch Motion Graphics (PC) (Hiep) · Bloomberg Pitch - Claude -Davinci MCP (Hiep) · Gatsby 3D Modelling - Blender integration (PC) (Hiep) · What’s next (15min) · 4DV.ai shown live; real-time video and generated worlds (Atlas, Genie) · Worlds from photos (World Labs Atlas, Marble) · AI search, agency global context, AgentOps · Agents can look inside the tech we use (hardware hacking, REA) · Questions · Lead-in: this deck was built with AI · 
+- **Slide 4**: 1 · The Year AI Started Working · 4 · Work We Made · 2 · What AI Can Do Now · 5 · What's Next · 3 · New Ways to Make Things · 6 · Questions · 
+- **Slide 5**: Background image or GIF goes here · 1 · THE YEAR AI STARTED WORKING · 
+- **Slide 6**: 1 · The Year AI Started Working · AI stopped talking and started doing. ·  This year we hand it the work. It opens our files, uses our tools and finishes the job. · Clip to add: an agent finishing a real task on its own · 
+- **Slide 7**: 1 · The Year AI Started Working · Talking instead of typing. ·  Say the brief out loud, and AI turns it into a clear, structured request. · Live demo: dictate a messy brief, show the clean result · 
+- **Slide 8**: Background image or GIF goes here · 2 · WHAT AI CAN DO NOW · 
+- **Slide 9**: 2 · What AI Can Do Now · Two years we were learning to prompt LLMs. Last year we were learning to create generative. This year agentic workflows are doing the work for us. · Clip: blender-connector.mp4 (45s) · 
+- **Slide 10**: 2 · What AI Can Do Now · AI designs right on the Figma canvas. ·  Describe the screen and watch it appear. · Clip: figma-agent-builds-on-canvas.mp4 (36s) · Adobe’s official connector arrives in 2027. · 
+- **Slide 11**: 2 · What AI Can Do Now · Describe the project. AI sets up the rest. ·  Every task, date and owner in Asana, and NetSuite answers “Which clients are over budget?” from real numbers. · Clip: asana-ai-teammates-at-work.mp4 (32s) · Clip: netsuite-top-customers-dashboard.mp4 (48s) · 
+- **Slide 12**: 2 · What AI Can Do Now · Hand it raw footage. Get back a rough cut. · Clip: resolve-ai-assistant.mp4 (46s) · 
+- **Slide 13**: 2 · What AI Can Do Now · Five animated end cards from one brief. ·  Pick a favourite, then change it with a sentence. · Clip to add: five end-card directions playing side by side · 
+- **Slide 14**: 2 · What AI Can Do Now · 79% · of CMOs worry that optimising for algorithms could create a “sea of sameness.” · Source: Dentsu Creative, 2025 CMO Report (1,950+ senior marketers, 14 markets) · 69% · of consumers expect future ads to look and feel like the same AI-generated “slop.” · Source: Canva, 2026 State of Marketing and AI, with The Harris Poll (3,547 consumers, 7 countries) · 
+- **Slide 15**: 2 · What AI Can Do Now · AI design that doesn’t look like AI. ·  Same brief, twice. · Default AI · With Impeccable · 
+- **Slide 16**: 2 · What AI Can Do Now · One meeting, every tool. ·  Meeting notes become an Asana project, Figma wireframes and a Slides deck, then Asana gets the updates. Live. · Live demo. Backup to add: sped-up recording of the chain · 
+- **Slide 17**: Background image or GIF goes here · 3 · NEW WAYS TO MAKE THINGS · 
+- **Slide 18**: 3 · New Ways to Make Things · Take one photo. Walk around inside it. ·  AI builds a 3D world from it that we can explore and film. · Clip to add: a photo turning into a 3D world (World Labs Marble) · 
+- **Slide 19**: 3 · New Ways to Make Things · Rough 3D becomes a finished film. ·  We block out the shot in Blender. AI renders the final look. · Blockout · Final film · 
+- **Slide 20**: 3 · New Ways to Make Things · PITCHES THEY · CAN PLAY WITH · From brief to working prototype in an afternoon. · The brief · Plus a PDF of the new artworks · Gather photos · From our Art Rate Monitor work and the AGO website · The lab · Test the colour matching · The prototype · A real app clients can try · GIF mockups · The experience before it exists · 
+  - media: image34.mp4 image5.png image4.png image23.mp4 image14.png image17.png image6.png image12.mp4 
+- **Slide 21**: AGO PITCH · COLOUR LAB · TEST THE IDEA · BEFORE WE · PITCH IT · Pick any colour and see which works in the collection match it, scored out of 100. · 
+  - media: image2.png image7.png 
+- **Slide 22**: AGO PITCH · IDROPPER PROTOTYPE · PUT A WORKING · PROTOTYPE IN · THEIR HAND · Snap a photo, tap a colour, and it finds the matching work in the AGO collection. · 
+  - media: image2.png 
+- **Slide 23**: AGO PITCH · IDROPPER · SHOW THE EXPERIENCE BEFORE IT EXISTS · Open the app · Sample a colour · Get your match · Claim a VIP preview · Or just send a DM · 
+  - media: image34.mp4 image22.mp4 image12.mp4 image11.mp4 image31.mp4 
+- **Slide 24**: AGO PITCH · AGO-TO-GO ON DOORDASH · DROP THE IDEA INTO APPS PEOPLE ALREADY USE · Search “burgers” · Find the gallery · Check out · Ticket in your wallet · 
+  - media: image23.mp4 image32.mp4 image21.mp4 image18.mp4 
+- **Slide 25**: Background image or GIF goes here · 4 · WORK WE MADE · 
+- **Slide 26**: 4 · Work We Made · MAKE-A-WISH: · WISHES ARE MEDICINE · How we built our Fast Company World Changing Ideas award site with Claude. · The inputs · Transcript, brief, brand, footage · Clip library · 84 shots, sorted by scene · Figma · Wireframe and scene options · Animatic · Every scene in motion · The site · Built from the animatic · 
+  - media: image16.png image36.mp4 image9.png image6.png image1.png image19.png image10.png image27.png 
+- **Slide 27**: 
+  - media: image25.jpg 
+- **Slide 28**: 
+  - media: image20.jpg 
+- **Slide 29**: 
+  - media: image26.jpg 
+- **Slide 30**: 
+  - media: image33.jpg 
+- **Slide 31**: 
+  - media: image29.jpg 
+- **Slide 32**: 
+  - media: image28.jpg 
+- **Slide 33**: Background image or GIF goes here · 5 · WHAT'S NEXT · 
+- **Slide 34**: 5 · What's Next · Video you can step inside. ·  Move the camera around a moment after it’s been filmed. · Live demo: 4DV.ai · 
+- **Slide 35**: 5 · What's Next · Made as you watch. ·  Video and 3D worlds generated in real time from a sentence or a photo. · Clip to add: a world generated live (Genie) · 
+- **Slide 36**: 5 · What's Next · Answers, not links. · People ask ChatGPT, Claude and Perplexity instead of searching. Brands need to show up in those answers. · 
+- **Slide 37**: 5 · What's Next · Every agent knows every client. · One up-to-date place for client and brand knowledge that every agent reads first. · 
+- **Slide 38**: 5 · What's Next · Managing agents becomes a job. · The 4A’s calls it AgentOps: setting agents up, checking their work and keeping them on brand. · 
+- **Slide 39**: 5 · What's Next · Agents can look inside the tech we use. ·  Point one at an app or a device and it works out how it was built. Then it can write new code for the device, so it does what we want instead of what the maker shipped. · Clip to add: hardware hacks (smart TV, camera firmware, picture frames) · Clip to add: REA working out how an app was built · 
+- **Slide 40**: Background image or GIF goes here · 6 · QUESTIONS · 
+- **Slide 41**: {{BODY}} · {{N}} · {{TITLE}} · {{MEDIA}} · 
+- **Slide 42**: {{N}} · {{TITLE}} · {{SUB}} · 
+- **Slide 43**: The year in AI. · From chatting with AI to agents that do real work on their own · Connectors (MCP): AI plugging straight into the tools we use, like Figma, Asana, Google Workspace, Adobe and Blender · Not all AI is chat: models like Jev make fast decisions instead of writing text · Tools and workflows we adopted. · Claude and Claude Code: the core AI tools behind most of the workflows below · Wireframes to website (Figma connector): Claude drafts wireframes, a designer develops them in Figma, then Claude builds the site from the Figma designs · Motion design (HyperFrames, Remotion): describe the animation, Claude builds it, and changes are a sentence away · Generative image and video: tools and workflows from the AI creator · To fill in: other tools and workflows from the team · Work we made. · Real projects where AI was part of the process · Projects where AI was part of the campaign itself · To fill in: projects to feature · Making AI ours. · Without guidance, AI produces generic work · Design systems give agents brand rules to follow, and agents help build and maintain them · Agency global context: one central, up-to-date place for client and brand knowledge that every agent uses · AI search. · People now ask ChatGPT, Claude and Perplexity instead of searching Google · Clients need to show up in those AI answers · What's coming next. · Real-time video generation · Worlds generated from a sentence ( · Google Project Genie · ) · Managing AI agents becomes a job, which the 4A's calls "AgentOps" ( · 4A's · ) · What you can do tomorrow. · To fill in: one or two simple things everyone can try · 
+- **Slide 44**: 

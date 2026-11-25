@@ -1,0 +1,69 @@
+/* S2Resolve: scattered clips → a timeline in order → the rough cut in the viewer. */
+.rsv { position: absolute; inset: 0; }
+.rsv-head { position: absolute; left: 140px; top: 136px; width: 860px; font-size: 80px; }
+
+/* ── viewer (authored at 1100×619, scaled in) ── */
+.rsv-viewer {
+  position: absolute; left: 0; top: 0; border-radius: 22px; overflow: hidden; z-index: 2; will-change: transform;
+  background: #111; box-shadow: 0 40px 120px rgba(0, 0, 0, 0.55), 0 0 0 1px var(--zak-line);
+}
+.rsv-vhead { height: 40px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; background: #232222; border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+.rsv-vhead .label { font-size: 15px; }
+.rsv-vlabels { position: relative; width: 420px; height: 1.2em; }
+.rsv-vlabels > span { position: absolute; right: 0; top: 0; white-space: nowrap; color: var(--zak-paper-2); opacity: 0; }
+.rsv-vbody { position: relative; overflow: hidden; background: #0c0c0c; }
+.rsv-vempty { position: absolute; inset: 0; display: grid; place-items: center; font-size: 18px; color: var(--zak-stone-2); }
+.rsv-vshot { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.rsv-ph { background: linear-gradient(135deg, #2b3a3c, #6d5b49); }
+.rsv-tc {
+  position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); padding: 6px 14px; border-radius: 999px;
+  font-family: var(--zak-font-mono); font-size: 20px; color: var(--zak-paper); background: rgba(0, 0, 0, 0.55); letter-spacing: 0.04em;
+}
+.rsv-clip.clip-frame { position: absolute; inset: 0; border-radius: 0; background: transparent; box-shadow: none; opacity: 0; z-index: 3; }
+.rsv-clip .clip-placeholder { background: rgba(12, 12, 12, 0.35); place-items: end start; }
+.rsv-clip .clip-ph-scan { opacity: 0.6; }
+.rsv-clip .clip-ph-inner {
+  flex-direction: row; gap: 14px; margin: 0 0 22px 22px; padding: 10px 18px; border-radius: 999px;
+  background: rgba(10, 10, 10, 0.78); box-shadow: 0 0 0 1px var(--zak-line);
+}
+.rsv-clip .clip-ph-inner .label { font-size: 13px; }
+.rsv-clip .clip-ph-name { font-size: 16px; }
+.rsv-clip .clip-ph-hint { display: none; }
+
+/* ── timeline ── */
+.rsv-tl { position: absolute; height: 240px; border-radius: 18px; background: var(--zak-ink-2); box-shadow: 0 0 0 1px var(--zak-line); }
+.rsv-tl-top { height: 32px; display: flex; align-items: center; justify-content: space-between; padding: 0 18px; border-bottom: 1px solid var(--zak-line); }
+.rsv-tl-top .label { font-size: 12px; }
+.rsv-status { position: relative; width: 420px; height: 1.2em; }
+.rsv-status > span { position: absolute; right: 0; top: 0; white-space: nowrap; }
+.rsv-status-run { color: var(--zak-signal-2); }
+.rsv-status-done { color: var(--zak-signal); }
+.rsv-ruler { position: relative; height: 28px; }
+.rsv-tick { position: absolute; bottom: 0; height: 8px; border-left: 1px solid var(--zak-line-strong); font-family: var(--zak-font-mono); font-size: 11px; color: var(--zak-stone-2); white-space: nowrap; }
+.rsv-tick.major { height: 26px; padding: 0 0 0 6px; line-height: 16px; }
+.rsv-track { position: relative; display: flex; align-items: center; }
+.rsv-track.v1 { height: 112px; }
+.rsv-track.a1 { height: 56px; }
+.rsv-tname { width: 64px; flex: none; text-align: center; font-size: 13px; }
+.rsv-track.v1::after { content: ''; position: absolute; left: 64px; right: 0; top: 4px; bottom: 4px; border-radius: 8px; background: rgba(248, 247, 244, 0.025); }
+.rsv-wave { position: absolute; left: 64px; right: 0; top: 6px; height: 44px; width: calc(100% - 64px); }
+.rsv-wave rect { fill: rgba(77, 208, 225, 0.45); }
+.rsv-playhead { position: absolute; top: 34px; bottom: 8px; width: 2px; margin-left: -1px; background: var(--zak-signal); z-index: 30; box-shadow: 0 0 10px rgba(0, 228, 130, 0.6); }
+.rsv-playhead i { position: absolute; left: -7px; top: -2px; width: 16px; height: 12px; border-radius: 3px 3px 8px 8px; background: var(--zak-signal); }
+
+/* ── the clips ── */
+.rsv-card {
+  position: absolute; border-radius: 10px; overflow: hidden; background: #222; z-index: 5; will-change: transform;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+.rsv-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.rsv-cap {
+  position: absolute; left: 10px; bottom: 10px; display: flex; gap: 10px; padding: 4px 10px; border-radius: 6px; white-space: nowrap;
+  font-family: var(--zak-font-mono); font-size: 13px; color: var(--zak-paper-2); background: rgba(0, 0, 0, 0.6);
+}
+.rsv-cap b { color: var(--zak-paper); font-weight: 500; }
+.rsv-blabel {
+  position: absolute; left: 0; right: 0; top: 0; padding: 5px 9px; opacity: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  font-family: var(--zak-font-mono); font-size: 12px; color: var(--zak-paper); background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent);
+}
+.rsv-live { position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 3px var(--zak-signal); pointer-events: none; }

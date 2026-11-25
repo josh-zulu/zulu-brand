@@ -1,0 +1,22 @@
+.close { position: absolute; inset: 0; }
+
+.cl-mini { position: absolute; left: 580px; top: 120px; width: 760px; height: 460px; transform-origin: 50% 60%; }
+.cl-board { position: absolute; inset: 0; }
+.cl-bubble {
+  position: absolute; left: 170px; top: 170px; padding: 24px 30px; border-radius: 8px 26px 26px 26px; background: var(--zak-ink-3);
+  font-size: 40px; font-weight: 500; letter-spacing: -0.015em; color: var(--zak-paper); white-space: nowrap; min-width: 120px; transform-origin: 0 0;
+}
+.cl-tile { position: absolute; background-size: cover; background-position: center; background-color: var(--zak-ink-3); }
+.cl-poster-head { position: absolute; left: 150px; top: 334px; font-size: 64px; color: var(--zak-paper); white-space: nowrap; }
+.close .agent-cursor { transform-origin: 0 0; z-index: 20; }
+
+.cl-beats { position: absolute; left: 0; right: 0; top: 690px; display: flex; justify-content: center; gap: 56px; font-size: 120px; color: var(--zak-paper); transform-origin: 50% 50%; }
+.cl-beat { display: block; }
+.cl-beat-now { color: var(--zak-signal); }
+
+.cl-paper { position: absolute; inset: 0; background: var(--zak-paper); color: var(--zak-graphite); overflow: hidden; z-index: 5; }
+.cl-paper .grain { opacity: 0.16; mix-blend-mode: multiply; }
+.cl-l1, .cl-l2 { position: absolute; left: 180px; font-size: 128px; letter-spacing: -0.035em; white-space: nowrap; }
+.cl-l1 { top: 330px; color: #6b6964; }
+.cl-l2 { top: 490px; color: var(--zak-graphite); }
+.cl-line { position: absolute; left: 0; top: 0; pointer-events: none; }

@@ -1,0 +1,26 @@
+node_modules/
+dist/
+.vite/
+.DS_Store
+
+# secrets
+.env
+.env.*
+!.env.example
+
+# heavy media lives outside git (OneDrive / shared drive); keep the folders
+projects/*/public/media/clips/*
+!projects/*/public/media/clips/.gitkeep
+projects/*/public/media/raw/
+
+# tool scratch
+.cache/
+*.log
+projects/*/assets.raw/
+
+# personal files that live in this folder but are not part of the repo
+/photo-upload.jpg
+
+# built preview and local Claude state
+projects/*/dist/
+.claude/settings.local.json

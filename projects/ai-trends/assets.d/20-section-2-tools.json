@@ -1,0 +1,170 @@
+{
+  "assets": [
+    {
+      "id": "ec-1",
+      "slide": "s2-endcards",
+      "tool": "fal",
+      "model": "nano-banana-pro",
+      "aspect": "16:9",
+      "params": {
+        "resolution": "2K"
+      },
+      "out": "src/assets/generated/ec-1.png",
+      "prompt": "Cinematic advertising photograph, end frame of a commercial for a city bike brand: a matte sage-green city bicycle leaning against a low weathered stone harbour wall beside perfectly calm water, blue hour just before sunrise, cool soft diffused light, thin mist over the water, the bike sits in the right third of the frame, wide empty pale sky and still water across the left half reserved for typography, 35mm film, gentle grain, natural colour, editorial, no people, no text, no logos"
+    },
+    {
+      "id": "ec-2",
+      "slide": "s2-endcards",
+      "tool": "fal",
+      "model": "nano-banana-pro",
+      "aspect": "16:9",
+      "params": {
+        "resolution": "2K"
+      },
+      "out": "src/assets/generated/ec-2.png",
+      "prompt": "Full-bleed flat graphic illustration in a mid-century Swiss poster style, composed edge to edge with no border, no frame and no inset panel: a sage-green city bicycle in exact side profile on a long flat horizon line that runs across the whole width, one huge simple pale sun disc rising behind it, flat ground of warm ochre, sky of deep forest green, accents of cream and near-black, crisp geometric shapes, subtle printed paper texture, the bike in the lower right, large calm empty sky across the top half and left side for type, no text, no letters, no logos"
+    },
+    {
+      "id": "ec-3",
+      "slide": "s2-endcards",
+      "tool": "fal",
+      "model": "nano-banana-pro",
+      "aspect": "16:9",
+      "params": {
+        "resolution": "2K"
+      },
+      "out": "src/assets/generated/ec-3.png",
+      "prompt": "Soft tactile 3D render of a miniature handmade clay town on gentle rolling hills, a tiny sage-green bicycle on a winding pale road that curves toward small houses, matte plasticine textures with visible fingerprints, soft pastel palette of mint, peach and cream, warm soft studio lighting, slight tilt-shift depth of field, clean empty sky across the upper third for type, no text, no logos"
+    },
+    {
+      "id": "ec-4",
+      "slide": "s2-endcards",
+      "tool": "fal",
+      "model": "nano-banana-pro",
+      "aspect": "16:9",
+      "params": {
+        "resolution": "2K"
+      },
+      "out": "src/assets/generated/ec-4.png",
+      "prompt": "Risograph print illustration of a cyclist on a city bike riding along a seaside promenade with a lighthouse in the distance, two-colour overprint in fluorescent pink and deep teal blue on off-white recycled paper, visible grain, halftone texture and slight misregistration, loose confident drawing, generous empty paper on the left side for type, no text, no letters, no logos"
+    },
+    {
+      "id": "ec-5",
+      "slide": "s2-endcards",
+      "tool": "fal",
+      "model": "nano-banana-pro",
+      "aspect": "16:9",
+      "params": {
+        "resolution": "2K"
+      },
+      "out": "src/assets/generated/ec-5.png",
+      "prompt": "Minimal studio product photograph of a matte sage-green city bicycle in exact side profile standing on a seamless warm terracotta paper backdrop, one hard directional light casting a long crisp shadow to the right, bike placed low in the lower half of the frame, generous empty backdrop above for type, premium print advertising, high detail, no text, no logos"
+    },
+    {
+      "id": "ec-1-warm",
+      "slide": "s2-endcards",
+      "tool": "fal",
+      "mode": "edit",
+      "model": "nano-banana-pro-edit",
+      "aspect": "16:9",
+      "params": {
+        "resolution": "2K"
+      },
+      "refs": [
+        "src/assets/generated/ec-1.png"
+      ],
+      "out": "src/assets/generated/ec-1-warm.png",
+      "prompt": "Make it warmer, with sunset light. Keep exactly the same composition, camera angle, framing, bicycle, stone harbour wall and horizon line. Change only the light and colour: a low golden sun just above the horizon, warm amber and soft pink sky, golden glow reflected on the calm water, warm rim light on the bike frame and the stones, long warm shadows. Keep the empty sky and water on the left for typography. No text, no logos."
+    },
+    {
+      "id": "rv-shot-1",
+      "slide": "s2-resolve",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "16:9",
+      "out": "src/assets/generated/rv-shot-1.png",
+      "prompt": "Film still from a cinematic city bike commercial, shot on 35mm anamorphic: wide establishing shot of a quiet old city street at dawn, wet cobblestones reflecting cool blue light, a lone woman in a rust-coloured jacket on a sage-green city bike small in the distance, muted teal palette with warm accents, soft haze, natural grain, no text, no logos"
+    },
+    {
+      "id": "rv-shot-2",
+      "slide": "s2-resolve",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "16:9",
+      "out": "src/assets/generated/rv-shot-2.png",
+      "prompt": "Film still from a cinematic city bike commercial, shot on 35mm: close-up of a woman's hands in a rust-coloured jacket sleeve gripping the leather handlebar grips of a matte sage-green city bike, shallow depth of field, soft cool morning light, muted teal palette with warm accents, natural grain, no text, no logos"
+    },
+    {
+      "id": "rv-shot-3",
+      "slide": "s2-resolve",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "16:9",
+      "out": "src/assets/generated/rv-shot-3.png",
+      "prompt": "Film still from a cinematic city bike commercial, shot on 35mm: low-angle close tracking shot at road level of a sage-green bicycle wheel rolling through a shallow puddle on a city street, water spray frozen mid-air, background softly blurred, cool morning light, muted teal palette, natural grain, no text, no logos"
+    },
+    {
+      "id": "rv-shot-4",
+      "slide": "s2-resolve",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "16:9",
+      "out": "src/assets/generated/rv-shot-4.png",
+      "prompt": "Film still from a cinematic city bike commercial, shot on 35mm: medium side shot of a woman in a rust-coloured jacket riding a sage-green city bike along a park path under a tunnel of autumn trees, backlit by low sun through light haze, warm leaves, muted palette, natural grain, no text, no logos"
+    },
+    {
+      "id": "rv-shot-5",
+      "slide": "s2-resolve",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "16:9",
+      "out": "src/assets/generated/rv-shot-5.png",
+      "prompt": "Film still from a cinematic city bike commercial, shot on 35mm: a woman in a rust-coloured jacket pauses at a harbour railing holding a paper cup of coffee, looking out over calm water, her sage-green city bike leaning beside her, candid and quiet, soft morning light, muted teal palette with warm accents, natural grain, no text, no logos"
+    },
+    {
+      "id": "rv-shot-6",
+      "slide": "s2-resolve",
+      "tool": "fal",
+      "model": "nano-banana-2",
+      "aspect": "16:9",
+      "out": "src/assets/generated/rv-shot-6.png",
+      "prompt": "Film still from a cinematic city bike commercial, shot on 35mm: wide high-angle shot of a coastal road winding along the sea as the sun breaks through clouds, a single small cyclist in a rust-coloured jacket on a sage-green bike, long soft shadows, calm and expansive, muted teal and warm gold palette, natural grain, no text, no logos"
+    },
+    {
+      "id": "sfx-s2-divider-plug",
+      "slide": "s2-divider",
+      "tool": "eleven",
+      "mode": "sfx",
+      "duration": 0.5,
+      "out": "public/media/sfx/s2-divider-plug.mp3",
+      "prompt": "A single short, soft, satisfying click of a quality connector plugging firmly into a socket, tight, dry, close-miked, subtle, no reverb"
+    },
+    {
+      "id": "sfx-s2-resolve-snap",
+      "slide": "s2-resolve",
+      "tool": "eleven",
+      "mode": "sfx",
+      "duration": 0.5,
+      "out": "public/media/sfx/s2-resolve-snap.mp3",
+      "prompt": "A very short soft magnetic tick, like a clip snapping onto an editing timeline, clean minimal UI sound, dry, subtle"
+    },
+    {
+      "id": "sfx-s2-endcards-deal",
+      "slide": "s2-endcards",
+      "tool": "eleven",
+      "mode": "sfx",
+      "duration": 1,
+      "out": "public/media/sfx/s2-endcards-deal.mp3",
+      "prompt": "Five quick soft paper card flicks fanning out across a table, airy, elegant, subtle, close-miked, no reverb"
+    },
+    {
+      "id": "sfx-s2-endcards-regen",
+      "slide": "s2-endcards",
+      "tool": "eleven",
+      "mode": "sfx",
+      "duration": 1.5,
+      "out": "public/media/sfx/s2-endcards-regen.mp3",
+      "prompt": "A soft warm shimmering swell that sweeps from left to right and resolves gently, subtle cinematic UI sound, no melody, no reverb tail"
+    }
+  ]
+}

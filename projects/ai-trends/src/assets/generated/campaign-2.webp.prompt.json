@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:02:53.113Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Lifestyle photograph: two mittened hands wrapped around a warm ceramic coffee cup outdoors in falling snow, shallow depth of field, warm tones against cool background, no text, no logos",
+    "aspect_ratio": "4:5"
+  },
+  "requestId": "01a213a8-d5f0-7d90-930d-575a28afab7f",
+  "seconds": 11
+}

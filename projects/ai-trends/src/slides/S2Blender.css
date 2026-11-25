@@ -1,0 +1,90 @@
+/* S2Blender: chat panel → connector → stylised 3D viewport. */
+.bl { position: absolute; inset: 0; }
+.bl-text { position: absolute; left: 140px; top: 150px; width: 600px; display: flex; flex-direction: column; gap: 30px; }
+.bl-head { font-size: 80px; }
+.bl-lede { font-size: 30px; }
+
+/* ── chat ── */
+.bl-chat {
+  position: absolute; left: 140px; top: 590px; width: 520px; height: 340px; padding: 22px 24px;
+  border-radius: 22px; background: var(--zak-ink-2); box-shadow: 0 0 0 1px var(--zak-line), 0 30px 80px rgba(0, 0, 0, 0.45);
+  display: flex; flex-direction: column; gap: 18px; overflow: hidden;
+}
+.bl-chat-head { display: flex; flex: none; justify-content: space-between; align-items: center; }
+.bl-chat-head .label { font-size: 14px; }
+.bl-conn { position: relative; display: flex; align-items: center; gap: 10px; }
+.bl-conn i { position: absolute; left: 0; top: 50%; width: 8px; height: 8px; margin-top: -4px; border-radius: 50%; }
+.bl-conn { padding-left: 18px; }
+.bl-conn-off { background: var(--zak-ink-4); }
+.bl-conn-on { background: var(--zak-signal); box-shadow: 0 0 10px rgba(0, 228, 130, 0.7); opacity: 0; }
+.bl-bubble {
+  flex: none; align-self: flex-end; max-width: min(430px, 100%); overflow-wrap: anywhere; padding: 14px 18px; border-radius: 18px 18px 6px 18px;
+  background: var(--zak-ink-3); font-size: 21px; line-height: 1.38; color: var(--zak-paper); min-height: 1.38em;
+}
+.bl-bubble .caret { width: 0.42em; height: 0.95em; }
+.bl-calls { font-family: var(--zak-font-mono); font-size: 17px; line-height: 1.6; min-height: 0; color: var(--zak-paper-2); }
+.bl-call { display: flex; gap: 14px; opacity: 0; transform: translateX(-10px); white-space: nowrap; }
+.bl-tag { position: relative; width: 16px; flex: none; }
+.bl-tag > span { position: absolute; left: 0; top: 0; }
+.bl-tag .run { color: var(--zak-signal-2); }
+.bl-tag .done { color: var(--zak-signal); opacity: 0; }
+.bl-ready { color: var(--zak-paper); }
+
+/* ── viewport ── */
+.bl-vp {
+  position: absolute; border-radius: var(--zak-radius-frame); overflow: hidden; background: #1a1919;
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.55), 0 0 0 1px var(--zak-line);
+}
+.bl-vp-head {
+  height: 44px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px 0 10px;
+  background: #232222; border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.bl-tabs { display: flex; gap: 4px; }
+.bl-tabs span { font-family: var(--zak-font-text); font-size: 15px; color: var(--zak-stone); padding: 6px 14px; border-radius: 8px; }
+.bl-tabs span.on { background: #343231; color: var(--zak-paper); }
+.bl-vp-mode { font-size: 12px; }
+.bl-body { position: relative; overflow: hidden; background: radial-gradient(90% 80% at 50% 45%, #2b2a29 0%, #1c1b1b 70%); }
+.bl-scene { position: absolute; inset: 0; display: block; }
+.bl-floor line { stroke: rgba(248, 247, 244, 0.09); stroke-width: 1; }
+.bl-floor .bl-axis-x { stroke: rgba(196, 92, 84, 0.55); stroke-width: 1.5; }
+.bl-floor .bl-axis-y { stroke: rgba(122, 163, 90, 0.5); stroke-width: 1.5; }
+.bl-wire .w { fill: none; stroke: var(--zak-paper-2); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.bl-solid { opacity: 0; }
+.bl-origin { opacity: 0; }
+.bl-origin circle { fill: none; stroke: var(--zak-signal); stroke-width: 2; }
+.bl-origin circle:first-child { fill: var(--zak-signal); stroke: none; }
+.bl-gizmo-bg { fill: rgba(255, 255, 255, 0.04); }
+.bl-gizmo line { stroke-width: 2; }
+.bl-gizmo .gx { stroke: #b4574f; } .bl-gizmo .gx-d { fill: #b4574f; }
+.bl-gizmo .gy { stroke: #6f9651; } .bl-gizmo .gy-d { fill: #6f9651; }
+.bl-gizmo .gz { stroke: #557cb8; } .bl-gizmo .gz-d { fill: #557cb8; }
+.bl-vp-label { font-family: var(--zak-font-mono); font-size: 14px; fill: var(--zak-paper-2); }
+.bl-vp-label.dim { fill: var(--zak-stone-2); }
+.bl-vp-foot {
+  height: 36px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px;
+  background: #232222; border-top: 1px solid rgba(255, 255, 255, 0.06); font-size: 12px;
+}
+.bl-status { position: relative; display: block; width: 360px; height: 1.2em; }
+.bl-status > span { position: absolute; left: 0; top: 0; white-space: nowrap; }
+.bl-status-build { color: var(--zak-signal-2); opacity: 0; }
+.bl-status-done { color: var(--zak-signal); opacity: 0; }
+
+/* the clip slot inside the viewport: footage covers the body; when missing, a quiet corner tag over the build */
+.bl-clip.clip-frame { position: absolute; inset: 0; border-radius: 0; background: transparent; box-shadow: none; opacity: 0; }
+.bl-clip .clip-placeholder { background: transparent; place-items: end start; }
+.bl-clip .clip-ph-scan { opacity: 0.6; }
+.bl-clip .clip-ph-inner {
+  flex-direction: row; gap: 14px; margin: 0 0 18px 18px; padding: 9px 16px; border-radius: 999px;
+  background: rgba(10, 10, 10, 0.72); box-shadow: 0 0 0 1px var(--zak-line);
+}
+.bl-clip .clip-ph-inner .label { font-size: 12px; }
+.bl-clip .clip-ph-name { font-size: 14px; }
+.bl-clip .clip-ph-hint { display: none; }
+
+/* ── connector ── */
+.bl-connector { position: absolute; left: 0; top: 0; pointer-events: none; overflow: visible; }
+.bl-cable, .bl-wire-in { fill: none; stroke: var(--zak-signal); stroke-width: 2.5; stroke-linecap: round; }
+.bl-wire-in { stroke-dasharray: none; }
+.bl-port { fill: var(--zak-ink); stroke: var(--zak-signal); stroke-width: 2.5; }
+.bl-plug { fill: var(--zak-ink-4); }
+.bl-pulse { fill: #eafff4; filter: drop-shadow(0 0 8px rgba(0, 228, 130, 0.95)); opacity: 0; }

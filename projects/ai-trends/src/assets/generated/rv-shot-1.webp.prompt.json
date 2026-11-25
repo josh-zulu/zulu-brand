@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:21:53.280Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Film still from a cinematic city bike commercial, shot on 35mm anamorphic: wide establishing shot of a quiet old city street at dawn, wet cobblestones reflecting cool blue light, a lone woman in a rust-coloured jacket on a sage-green city bike small in the distance, muted teal palette with warm accents, soft haze, natural grain, no text, no logos",
+    "aspect_ratio": "16:9"
+  },
+  "requestId": "01a213ba-3bf8-7d01-9fd8-85b26cf217fe",
+  "seconds": 11
+}

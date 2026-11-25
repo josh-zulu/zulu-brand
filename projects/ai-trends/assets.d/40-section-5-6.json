@@ -1,0 +1,32 @@
+{
+  "assets": [
+    { "id": "fourd-moment", "slide": "s5-4dv", "tool": "fal", "model": "nano-banana-2", "aspect": "16:9", "out": "src/assets/generated/fourd-moment.png",
+      "prompt": "Photograph on 35mm film: a contemporary dancer frozen mid-leap in a vast empty concrete warehouse, positioned right of centre, a cloud of white chalk dust suspended in the air all around her at different distances, shafts of low morning light from tall industrial windows, rough concrete pillars in the near foreground and receding far into the distance, deep perspective, muted warm greys with soft highlights, editorial, natural film grain, the left third of the frame quiet and dark, no text, no logos" },
+    { "id": "fourd-depth", "slide": "s5-4dv", "tool": "fal", "mode": "edit", "model": "nano-banana-2-edit", "aspect": "16:9", "out": "src/assets/generated/fourd-depth.png",
+      "refs": ["src/assets/generated/fourd-moment.png"],
+      "prompt": "Turn this photograph into a precise monocular depth map of exactly the same scene: smooth grayscale only, the nearest surfaces pure white, the farthest back wall pure black, the dancer, the pillars and the dust cloud in greys according to their distance from the camera, identical framing and composition, crisp edges around the dancer and the pillars, no texture, no lighting, no text" },
+
+    { "id": "realtime-world", "slide": "s5-realtime", "tool": "fal", "model": "nano-banana-2", "aspect": "16:9", "out": "src/assets/generated/realtime-world.png",
+      "prompt": "Cinematic film still, first-person eye-level view from a narrow stone footpath leading down into a misty fishing village at dawn, slate roofs and whitewashed cottages, small wooden boats in a calm harbour below, soft volumetric morning light breaking through fog, cool blue-grey palette with a few warm lit windows, photographic, natural grain, strong sense of depth that invites the viewer to walk forward, no people, no text, no logos" },
+
+    { "id": "hack-device", "slide": "s5-hacking", "tool": "fal", "model": "nano-banana-2", "aspect": "4:3", "out": "src/assets/generated/hack-device.png",
+      "prompt": "Editorial product photograph, straight-on frontal view, centred: a slim landscape digital picture frame standing on a dark walnut desk against a charcoal wall, matte black bezel, the screen showing a flat plain light grey start screen, soft window light from the left, shallow depth of field, charcoal and warm wood tones, generous negative space around the device, no text, no logos" },
+    { "id": "hack-xray", "slide": "s5-hacking", "tool": "fal", "mode": "edit", "model": "nano-banana-2-edit", "aspect": "4:3", "out": "src/assets/generated/hack-xray.png",
+      "refs": ["src/assets/generated/hack-device.png"],
+      "prompt": "Transform this photograph into an X-ray scan of the same device in exactly the same position and size: the casing becomes translucent and reveals the circuit board, chips, ribbon cables, battery cells, speaker and display layers inside, rendered in cool cyan-white light on deep black like a radiograph, fine engineering detail, the desk and wall fade to black, identical framing, no text, no labels" },
+
+    { "id": "next-1", "slide": "s5-divider", "tool": "fal", "model": "nano-banana-2", "aspect": "16:9", "out": "src/assets/generated/next-1.png",
+      "prompt": "Film photograph of a lone figure walking away from the camera along a long wooden pier into dense fog at dawn, the end of the pier disappearing into white, muted blue-grey, quiet, generous negative space, natural grain, no text, no logos" },
+    { "id": "next-2", "slide": "s5-divider", "tool": "fal", "model": "nano-banana-2", "aspect": "16:9", "out": "src/assets/generated/next-2.png",
+      "prompt": "Photograph of a sunrise seen through the window of a fast train, the landscape outside blurred with motion, warm low light streaking across the glass, reflections, soft focus, editorial, natural grain, no text, no logos" },
+    { "id": "next-3", "slide": "s5-divider", "tool": "fal", "model": "nano-banana-2", "aspect": "16:9", "out": "src/assets/generated/next-3.png",
+      "prompt": "Aerial photograph looking down at a single winding road through a dark pine forest at first light, mist drifting between the trees, one car's headlights on the road, deep greens and charcoal, quiet, natural grain, no text, no logos" },
+
+    { "id": "sfx-s6-tomorrow-flip", "slide": "s6-tomorrow", "tool": "eleven", "mode": "sfx", "duration": 0.8, "out": "public/media/sfx/s6-tomorrow-flip.mp3",
+      "prompt": "A single thick paper card flipped over and laid down on a table, soft papery flick then a gentle low tap, close, dry, minimal" },
+    { "id": "sfx-s6-reveal-peel", "slide": "s6-reveal", "tool": "eleven", "mode": "sfx", "duration": 1.5, "out": "public/media/sfx/s6-reveal-peel.mp3",
+      "prompt": "Soft layered whoosh as several sheets of glass slide apart in space, airy, elegant, subtle cinematic UI sound, no music" },
+    { "id": "sfx-s6-reveal-snap", "slide": "s6-reveal", "tool": "eleven", "mode": "sfx", "duration": 1, "out": "public/media/sfx/s6-reveal-snap.mp3",
+      "prompt": "Satisfying soft magnetic snap as stacked panels click back together into one, warm, short, minimal UI sound" }
+  ]
+}

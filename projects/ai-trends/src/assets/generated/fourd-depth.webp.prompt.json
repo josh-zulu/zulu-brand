@@ -1,0 +1,14 @@
+{
+  "createdAt": "2026-11-25T17:22:22.131Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2/edit",
+  "input": {
+    "prompt": "Turn this photograph into a precise monocular depth map of exactly the same scene: smooth grayscale only, the nearest surfaces pure white, the farthest back wall pure black, the dancer, the pillars and the dust cloud in greys according to their distance from the camera, identical framing and composition, crisp edges around the dancer and the pillars, no texture, no lighting, no text",
+    "aspect_ratio": "16:9",
+    "image_urls": [
+      "/Users/josh.maldonado/Zulu Agent/projects/ai-trends/src/assets/generated/fourd-moment.png"
+    ]
+  },
+  "requestId": "01a213ba-8e9a-7be1-9adf-db6145fa7feb",
+  "seconds": 19
+}

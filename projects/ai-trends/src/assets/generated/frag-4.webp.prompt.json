@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:02:27.869Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Macro photograph of hand-woven wool textile, coarse weave, rust, cream and charcoal threads, raking light, no text",
+    "aspect_ratio": "1:1"
+  },
+  "requestId": "01a213a8-6790-7ee1-a6ac-1bce8107ae1d",
+  "seconds": 14
+}

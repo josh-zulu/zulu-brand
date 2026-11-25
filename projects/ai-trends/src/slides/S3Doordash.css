@@ -1,0 +1,16 @@
+.doordash { position: absolute; inset: 0; }
+
+.dd-copy { position: absolute; left: 140px; top: 150px; width: 700px; }
+.dd-title { margin-top: 34px; font-size: 90px; line-height: 0.92; max-width: 700px; text-wrap: balance; }
+.dd-steps { position: relative; list-style: none; margin: 60px 0 0; padding: 0 0 0 34px; }
+.dd-item { height: 84px; display: flex; align-items: center; gap: 22px; font-size: 32px; font-weight: 500; letter-spacing: -0.015em; color: var(--zak-paper); border-top: 1px solid var(--zak-line); }
+.dd-item:last-child { border-bottom: 1px solid var(--zak-line); }
+.dd-item .label { font-size: 15px; width: 30px; }
+.dd-marker { position: absolute; left: 0; top: 25px; width: 6px; height: 34px; border-radius: 999px; background: var(--zak-signal); box-shadow: 0 0 16px rgba(0, 228, 130, 0.5); transform-origin: 50% 50%; }
+
+.dd-stage { position: absolute; left: 860px; top: 0; width: 920px; height: 1080px; }
+.dd-phone { position: absolute; left: 50%; top: 50%; margin: -343px 0 0 -165px; transform-origin: 50% 50%; will-change: transform, opacity; }
+.dd-glow {
+  position: absolute; left: 50%; top: 50%; width: 900px; height: 900px; margin: -450px 0 0 -450px; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(255, 70, 40, 0.13), transparent 70%); filter: blur(10px);
+}

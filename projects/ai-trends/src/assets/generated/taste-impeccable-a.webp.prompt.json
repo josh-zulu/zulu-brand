@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:23:37.245Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-pro",
+  "input": {
+    "prompt": "Editorial advertising photograph, shot on medium-format film. A single matte pale sage-green aluminium can of sparkling water stands on a wet slab of dark grey granite at the edge of a still, cold northern lake at first light. Low mist drifts over the water; a soft line of black spruce on the far shore. Real condensation beads on the can. Cool natural overcast light with a faint warm glow at the horizon. The can sits on the right third of the frame; the left two-thirds is calm open mist and water, generous negative space. Restrained palette of slate, sage and bone. Fine film grain, true to life, quiet and premium. A small minimal label on the can reads ALDER in black serif capitals, nothing else. No other text, no logos.",
+    "aspect_ratio": "4:3"
+  },
+  "requestId": "01a213bb-9c18-7253-8f6b-a8ec420d133a",
+  "seconds": 25
+}

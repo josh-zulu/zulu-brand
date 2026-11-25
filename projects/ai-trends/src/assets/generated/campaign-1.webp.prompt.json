@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:02:51.672Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Advertising photograph for a winter coffee brand: a matte charcoal ceramic cup of black coffee on a snowy wooden windowsill, steam rising, soft blue morning light, minimal, no text, no logos",
+    "aspect_ratio": "4:5"
+  },
+  "requestId": "01a213a8-c443-7da2-b308-549fccbfda6c",
+  "seconds": 15
+}

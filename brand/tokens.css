@@ -1,0 +1,57 @@
+/*
+ * Zulu Alpha Kilo: brand tokens (source of truth for every Zulu project).
+ * Distilled from the ZAK master deck: charcoal ground, warm paper, stone greys,
+ * Oswald Light display caps, Schibsted Grotesk text, and the debossed pill-and-dot mark.
+ *
+ * Fonts are loaded by each project (e.g. @fontsource/oswald 300, @fontsource-variable/schibsted-grotesk,
+ * @fontsource-variable/jetbrains-mono). These tokens only name them.
+ */
+:root {
+  /* Ground */
+  --zak-ink: #161515;        /* primary dark ground */
+  --zak-ink-2: #1d1c1c;      /* raised surface */
+  --zak-ink-3: #2a2828;      /* panels, wells */
+  --zak-ink-4: #3a3837;      /* hairlines on dark when solid */
+
+  /* Paper */
+  --zak-paper: #f8f7f4;      /* primary light ground / text on dark */
+  --zak-paper-2: #cfcec9;    /* secondary text on dark */
+  --zak-stone: #9e9d99;      /* tertiary text, captions */
+  --zak-stone-2: #737068;    /* muted, footers */
+  --zak-graphite: #191919;   /* text on paper */
+
+  /* Signal: the machine's colour. Use sparingly: cursors, live states, agent activity. */
+  --zak-signal: #00e482;
+  --zak-signal-dim: rgba(0, 228, 130, 0.16);
+  --zak-signal-2: #4dd0e1;
+
+  /* Lines */
+  --zak-line: rgba(248, 247, 244, 0.12);
+  --zak-line-strong: rgba(248, 247, 244, 0.28);
+  --zak-line-paper: rgba(22, 21, 21, 0.14);
+
+  /* Type */
+  --zak-font-display: 'Oswald', 'Oswald Light', 'Arial Narrow', sans-serif;   /* weight 300, uppercase */
+  --zak-font-text: 'Schibsted Grotesk Variable', 'Schibsted Grotesk', 'Helvetica Neue', sans-serif;
+  --zak-font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', 'Roboto Mono', ui-monospace, monospace;
+
+  /* Display tracking: Oswald Light caps want a hair of air */
+  --zak-track-display: 0.01em;
+  --zak-track-label: 0.14em;
+
+  /* Shape: the pill is the brand's geometry (rounded slot, fully round ends) */
+  --zak-radius-pill: 999px;
+  --zak-radius-card: 28px;
+  --zak-radius-frame: 18px;
+
+  /* Debossed slot: the carved-in look from the ZAK mark */
+  --zak-deboss-dark: inset 0 6px 14px rgba(0, 0, 0, 0.75), inset 0 -1px 0 rgba(255, 255, 255, 0.10), 0 1px 0 rgba(255, 255, 255, 0.05);
+  --zak-deboss-paper: inset 0 6px 12px rgba(0, 0, 0, 0.22), inset 0 -1px 0 rgba(255, 255, 255, 0.9);
+
+  /* Motion */
+  --zak-ease-out: cubic-bezier(0.16, 1, 0.3, 1);     /* expo-ish out: arrivals */
+  --zak-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); /* moves */
+  --zak-dur-fast: 240ms;
+  --zak-dur: 600ms;
+  --zak-dur-slow: 1200ms;
+}

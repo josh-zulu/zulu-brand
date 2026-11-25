@@ -1,0 +1,63 @@
+/* S2Divider: tool chips plug into the hub. Title block reuses .div-* from components.css. */
+.s2d { background: var(--zak-ink); }
+.s2d-bg {
+  background:
+    radial-gradient(60% 55% at 50% 34%, rgba(248, 247, 244, 0.045), transparent 70%),
+    radial-gradient(circle at center, rgba(248, 247, 244, 0.07) 1.2px, transparent 1.6px) 0 0 / 36px 36px;
+  -webkit-mask-image: radial-gradient(70% 60% at 50% 34%, #000 30%, transparent 85%);
+          mask-image: radial-gradient(70% 60% at 50% 34%, #000 30%, transparent 85%);
+}
+.s2d-glow {
+  position: absolute; left: 50%; top: 330px; width: 1500px; height: 420px; transform: translate(-50%, -50%);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 228, 130, 0.10), transparent 70%);
+  opacity: 0; pointer-events: none;
+}
+
+.s2d-hub { position: absolute; left: 0; right: 0; top: 248px; display: flex; flex-direction: column; align-items: center; gap: 30px; }
+
+/* The ZAK slot: a debossed pill holding five sockets. */
+.s2d-slot {
+  position: relative; display: flex; gap: 16px; padding: 18px;
+  border-radius: var(--zak-radius-pill); background: rgba(0, 0, 0, 0.38); box-shadow: var(--zak-deboss-dark);
+  overflow: visible;
+}
+.s2d-sweep-clip { position: absolute; inset: 0; border-radius: var(--zak-radius-pill); overflow: hidden; pointer-events: none; z-index: 3; }
+.s2d-sweep {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 14%; border-radius: var(--zak-radius-pill); pointer-events: none; opacity: 0;
+  background: linear-gradient(90deg, transparent, rgba(0, 228, 130, 0.0) 10%, rgba(0, 228, 130, 0.38) 50%, rgba(0, 228, 130, 0) 90%, transparent);
+  mix-blend-mode: screen; z-index: 3;
+}
+.s2d-socket { position: relative; }
+.s2d-socket-ghost {
+  position: absolute; inset: 0; border-radius: var(--zak-radius-pill);
+  border: 1.5px dashed rgba(248, 247, 244, 0.16);
+}
+.s2d-flash {
+  position: absolute; inset: -6px; border-radius: var(--zak-radius-pill); opacity: 0; pointer-events: none;
+  box-shadow: 0 0 0 2px var(--zak-signal), 0 0 40px rgba(0, 228, 130, 0.45);
+}
+
+.s2d-chip {
+  position: relative; z-index: 2; display: flex; align-items: center; gap: 18px; height: 104px; padding: 0 30px 0 18px;
+  border-radius: var(--zak-radius-pill);
+  background: linear-gradient(180deg, #343231 0%, #2a2828 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09), 0 18px 40px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.4);
+  will-change: transform, opacity, filter;
+}
+.s2d-mark {
+  width: 68px; height: 68px; flex: none; border-radius: 50%; display: grid; place-items: center;
+  background: rgba(0, 0, 0, 0.32); box-shadow: var(--zak-deboss-dark); color: var(--zak-paper);
+}
+.s2d-mark svg { width: 34px; height: 34px; display: block; }
+.s2d-mark img { width: 38px; height: 38px; object-fit: contain; }
+.s2d-name { font-family: var(--zak-font-text); font-weight: 500; font-size: 30px; letter-spacing: -0.015em; color: var(--zak-paper); white-space: nowrap; }
+.s2d-led { position: relative; width: 11px; height: 11px; border-radius: 50%; background: var(--zak-ink-4); flex: none; margin-left: 4px; }
+.s2d-led-on {
+  position: absolute; inset: 0; border-radius: 50%; background: var(--zak-signal); opacity: 0;
+  box-shadow: 0 0 12px rgba(0, 228, 130, 0.8);
+  animation: s2d-breathe 3.2s ease-in-out infinite;
+}
+@keyframes s2d-breathe { 50% { box-shadow: 0 0 4px rgba(0, 228, 130, 0.35); } }
+
+.s2d-status { display: flex; align-items: center; gap: 12px; color: var(--zak-paper-2); font-size: 16px; }
+.s2d-status i { width: 8px; height: 8px; border-radius: 50%; background: var(--zak-signal); box-shadow: 0 0 10px rgba(0, 228, 130, 0.7); }

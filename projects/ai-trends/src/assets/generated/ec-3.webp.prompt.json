@@ -1,0 +1,12 @@
+{
+  "createdAt": "2026-11-25T17:21:41.551Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-pro",
+  "input": {
+    "prompt": "Soft tactile 3D render of a miniature handmade clay town on gentle rolling hills, a tiny sage-green bicycle on a winding pale road that curves toward small houses, matte plasticine textures with visible fingerprints, soft pastel palette of mint, peach and cream, warm soft studio lighting, slight tilt-shift depth of field, clean empty sky across the upper third for type, no text, no logos",
+    "aspect_ratio": "16:9",
+    "resolution": "2K"
+  },
+  "requestId": "01a213b9-d1e9-7a12-872b-60510df942a8",
+  "seconds": 27
+}

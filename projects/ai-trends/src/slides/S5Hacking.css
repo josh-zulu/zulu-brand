@@ -1,0 +1,55 @@
+.hk { position: absolute; inset: 0; }
+.hk-text { position: absolute; left: 140px; top: 170px; width: 620px; display: flex; flex-direction: column; gap: 34px; }
+.hk-head { font-size: 84px; transform-origin: 0 0; }
+.hk-lede { font-size: 32px; }
+
+.hk-stage { position: absolute; border-radius: 18px; overflow: hidden; background: #050505; box-shadow: 0 40px 120px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--zak-line); }
+.hk-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.hk-xray { background: #000; }
+.hk-xray img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform-origin: 50.04% 50.67%; transform: translate(-0.12%, 0.84%) scale(0.822);
+  /* the radiograph's own black isn't pure black: feather its edges into the stage */
+  -webkit-mask-image: radial-gradient(ellipse 46% 50% at 50% 50%, #000 62%, transparent 100%); mask-image: radial-gradient(ellipse 46% 50% at 50% 50%, #000 62%, transparent 100%);
+}
+.hk-dim { position: absolute; inset: 0; opacity: 0; pointer-events: none; background: linear-gradient(90deg, #0b0b0b 0%, #0b0b0b 32%, rgba(11, 11, 11, 0) 58%); }
+.hk-scan {
+  position: absolute; left: -2px; top: 0; bottom: 0; width: 3px; opacity: 0; pointer-events: none;
+  background: var(--zak-signal-2); box-shadow: 0 0 24px 6px rgba(77, 208, 225, 0.55), 0 0 90px 20px rgba(77, 208, 225, 0.18);
+}
+
+.hk-screen { position: absolute; overflow: hidden; opacity: 0; background: #000; border-radius: 2px; }
+.hk-screen-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hk-screen-white { position: absolute; inset: 0; background: #f4f6f8; opacity: 0; }
+
+.hk-parts { position: absolute; inset: 0; pointer-events: none; }
+.hk-part-svg { position: absolute; left: 0; top: 0; overflow: visible; }
+.hk-part-line { fill: none; stroke: rgba(77, 208, 225, 0.85); stroke-width: 1.5; }
+.hk-part-dot { position: absolute; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--zak-signal-2); box-shadow: 0 0 0 5px rgba(77, 208, 225, 0.22); }
+.hk-part-tag { position: absolute; display: flex; flex-direction: column; gap: 6px; }
+.hk-part.is-right .hk-part-tag { align-items: flex-end; text-align: right; }
+.hk-part-tag .label { font-size: 13px; color: var(--zak-signal-2); }
+.hk-part-tag b { font-family: var(--zak-font-mono); font-size: 19px; font-weight: 500; color: var(--zak-paper); white-space: nowrap; }
+
+.hk-log { position: absolute; left: 28px; bottom: 22px; right: 28px; font-size: 15px; color: var(--zak-paper-2); opacity: 0; white-space: nowrap; }
+.hk-chev { color: var(--zak-signal); }
+
+.hk-code {
+  position: absolute; left: 850px; top: 318px; width: 440px; padding: 26px 30px; border-radius: 18px; opacity: 0;
+  background: rgba(22, 21, 21, 0.92); box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55), 0 0 0 1px var(--zak-line); backdrop-filter: blur(8px);
+  font-family: var(--zak-font-mono); font-size: 20px; line-height: 1.7; white-space: pre;
+}
+.hk-code-l { min-height: 1.7em; color: var(--zak-paper-2); }
+.hk-code-l.is-file { color: var(--zak-stone); font-size: 14px; letter-spacing: var(--zak-track-label); text-transform: uppercase; }
+.hk-code-l.is-del { color: var(--zak-stone-2); text-decoration: line-through; text-decoration-color: rgba(248, 247, 244, 0.35); }
+.hk-code-l.is-add { color: var(--zak-paper); }
+.hk-code-l.is-cmd { color: var(--zak-signal); }
+.hk-code-l.is-ok { color: var(--zak-signal); }
+
+.hk-build {
+  position: absolute; left: 1510px; top: 800px; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 10px;
+  color: var(--zak-signal); font-size: 15px; opacity: 0; white-space: nowrap;
+}
+.hk-build i { width: 9px; height: 9px; border-radius: 50%; background: var(--zak-signal); box-shadow: 0 0 10px var(--zak-signal); }
+
+.hk-clips { position: absolute; left: 140px; right: 140px; top: 452px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; pointer-events: none; }
+.hk-clip { aspect-ratio: auto; height: 484px; opacity: 0; pointer-events: auto; }

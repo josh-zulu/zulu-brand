@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:23:02.899Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Render of an untextured 3D blockout in Blender's solid viewport shading: matte light-grey clay primitives forming a cinematic wide shot of a lone figure standing on a rooftop ledge at the edge of a city of simple box buildings, a cylindrical water tower and thin antenna masts, low camera angle, soft studio matcap lighting, no textures, no colour, no interface, no text",
+    "aspect_ratio": "16:9"
+  },
+  "requestId": "01a213bb-4617-7253-9d82-b62a918b58e3",
+  "seconds": 13
+}

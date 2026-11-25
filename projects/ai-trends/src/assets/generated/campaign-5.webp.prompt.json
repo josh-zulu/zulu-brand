@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:03:06.750Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Cinematic photograph of a quiet cafe window at dusk in a snowy city, warm interior glow, a person reading with a coffee, seen from outside, no text, no logos",
+    "aspect_ratio": "4:5"
+  },
+  "requestId": "01a213a8-fe60-7223-9230-1faf0f912b46",
+  "seconds": 15
+}

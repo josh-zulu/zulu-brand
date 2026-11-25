@@ -1,0 +1,32 @@
+.opener { position: absolute; inset: 0; background: #0b0b0b; }
+.op-vignette { background: radial-gradient(70% 70% at 50% 46%, #1a1919 0%, #0b0b0b 70%); }
+
+.op-prompt {
+  /* left-anchored like a real input, so typing grows rightward; padding centres the finished line */
+  position: absolute; left: 0; right: 0; top: 488px; display: flex; justify-content: flex-start; align-items: baseline; padding-left: 632px;
+  font-family: var(--zak-font-mono); font-size: 92px; font-weight: 400; letter-spacing: -0.02em; color: var(--zak-paper);
+  white-space: pre; transform-origin: 50% 50%;
+}
+.op-prompt .caret { width: 0.52em; height: 0.95em; vertical-align: -0.1em; }
+.op-chev { color: var(--zak-signal); margin-right: 0.45em; }
+.op-measure { visibility: hidden; }
+/* typed copy ends with a caret the measure copy doesn't have: shift the measure copy so letters overlap exactly */
+.op-measure::after { content: ''; display: inline-block; width: 0.52em; margin-left: 0.08em; }
+
+.op-title-wrap { position: absolute; left: 0; right: 0; top: 330px; display: flex; flex-direction: column; align-items: center; }
+.op-title { font-size: 340px; line-height: 0.9; letter-spacing: 0.015em; display: flex; }
+.op-letter { display: inline-block; will-change: transform, opacity, filter; transform-origin: 50% 60%; }
+.op-rule { width: 1180px; height: 1px; background: var(--zak-line-strong); margin: 44px 0 30px; transform-origin: 50% 50%; }
+.op-sub { font-size: 22px; letter-spacing: 0.24em; color: var(--zak-paper-2); }
+.op-dot { color: var(--zak-signal); margin: 0 0.6em; }
+
+.op-frags { pointer-events: none; }
+.op-frag {
+  position: absolute; left: 0; top: 0; will-change: transform, opacity;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+}
+.op-frag.shape-sq { border-radius: 4px; }
+.op-frag.shape-dot, .op-frag.shape-pill { border-radius: 999px; }
+
+.opener .agent-cursor { transform-origin: 0 0; }
+.op-mark { position: absolute; top: 56px; right: 72px; width: 72px; color: var(--zak-paper); }

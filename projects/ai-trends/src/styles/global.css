@@ -1,0 +1,234 @@
+@import '@brand/tokens.css';
+
+/* ───────────── Base ───────────── */
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { margin: 0; height: 100%; background: #000; color: var(--zak-paper); }
+body {
+  font-family: var(--zak-font-text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+}
+button { font: inherit; color: inherit; }
+
+/* ───────────── Stage ───────────── */
+.stage-outer { position: relative; width: 100%; height: 100%; overflow: hidden; }
+.stage { position: absolute; left: 50%; top: 50%; transform-origin: 50% 50%; overflow: hidden; background: var(--zak-ink); }
+.deck, .deck-stage { width: 100vw; height: 100vh; }
+.deck-stage { background: #000; }
+
+.layer { position: absolute; inset: 0; }
+.layer-enter { z-index: 2; }
+.layer-leave { z-index: 1; pointer-events: none; }
+.layer-enter.tr-fade { animation: tr-fade 700ms var(--zak-ease-out) both; }
+.layer-enter.tr-rise { animation: tr-rise 900ms var(--zak-ease-out) both; }
+.layer-enter.tr-blur { animation: tr-blur 900ms var(--zak-ease-out) both; }
+.layer-enter.tr-cut { animation: none; }
+.layer-leave { animation: tr-out 650ms ease both; }
+@keyframes tr-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes tr-rise { from { opacity: 0; transform: translateY(60px); } to { opacity: 1; transform: none; } }
+@keyframes tr-blur { from { opacity: 0; filter: blur(24px); transform: scale(1.04); } to { opacity: 1; filter: none; transform: none; } }
+@keyframes tr-out { from { opacity: 1; } to { opacity: 0; } }
+
+.progress {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 3px; z-index: 50;
+  background: var(--zak-signal); opacity: 0.55; transform-origin: 0 50%;
+  transition: transform 600ms var(--zak-ease-out);
+}
+.blackout { position: absolute; inset: 0; z-index: 60; background: #000; opacity: 0; pointer-events: none; transition: opacity 400ms ease; }
+.blackout.on { opacity: 1; }
+
+/* ───────────── Slide ───────────── */
+.slide { position: absolute; inset: 0; overflow: hidden; }
+.slide.theme-dark { background: var(--zak-ink); color: var(--zak-paper); }
+.slide.theme-paper { background: var(--zak-paper); color: var(--zak-graphite); }
+
+/* Film grain: keeps big flat grounds from feeling digital. */
+.grain {
+  position: absolute; inset: -50%; z-index: 40; pointer-events: none; opacity: 0.07; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 1.4 -0.2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  animation: grain 1.2s steps(6) infinite;
+}
+.theme-paper .grain { opacity: 0.16; mix-blend-mode: multiply; }
+@keyframes grain {
+  0% { transform: translate(0, 0); } 20% { transform: translate(-3%, 2%); } 40% { transform: translate(2%, -3%); }
+  60% { transform: translate(-2%, -1%); } 80% { transform: translate(3%, 3%); } 100% { transform: translate(0, 0); }
+}
+
+/* Brand chrome: ZAK mark top right, section + page bottom. */
+.chrome { position: absolute; inset: 0; z-index: 30; pointer-events: none; }
+.chrome-mark { position: absolute; top: 56px; right: 72px; width: 64px; color: currentColor; opacity: 0.9; }
+.chrome-section { position: absolute; left: 72px; bottom: 52px; display: flex; align-items: center; gap: 16px; }
+.chrome-num { color: var(--zak-signal); }
+.theme-paper .chrome-num { color: var(--zak-graphite); }
+.chrome-rule { width: 40px; height: 1px; background: currentColor; opacity: 0.4; }
+.chrome-page { position: absolute; right: 72px; bottom: 52px; }
+.chrome-of { opacity: 0.45; }
+
+/* ───────────── Type ───────────── */
+.display {
+  font-family: var(--zak-font-display); font-weight: 300; text-transform: uppercase;
+  letter-spacing: var(--zak-track-display); line-height: 0.92; margin: 0;
+}
+.display-xxl { font-size: 300px; line-height: 0.86; }
+.display-xl { font-size: 220px; }
+.display-l { font-size: 156px; }
+.display-m { font-size: 112px; }
+.display-s { font-size: 76px; line-height: 1; }
+
+.headline {
+  font-family: var(--zak-font-text); font-weight: 500; letter-spacing: -0.025em; line-height: 1.02; margin: 0;
+  font-size: 96px; text-wrap: balance;
+}
+.headline-l { font-size: 120px; }
+.headline-s { font-size: 72px; }
+.lede { font-family: var(--zak-font-text); font-weight: 400; font-size: 40px; line-height: 1.3; letter-spacing: -0.01em; color: var(--zak-paper-2); margin: 0; text-wrap: pretty; }
+.theme-paper .lede { color: #4a4844; }
+.body { font-size: 30px; line-height: 1.4; color: var(--zak-paper-2); margin: 0; }
+.label {
+  font-family: var(--zak-font-mono); font-size: 18px; font-weight: 500; letter-spacing: var(--zak-track-label);
+  text-transform: uppercase; color: var(--zak-stone);
+}
+.theme-paper .label { color: var(--zak-stone-2); }
+.mono { font-family: var(--zak-font-mono); }
+.signal { color: var(--zak-signal); }
+.muted { color: var(--zak-stone); }
+.source { font-family: var(--zak-font-text); font-size: 18px; color: var(--zak-stone-2); line-height: 1.4; }
+
+/* Mask wrapper for line/word reveals: overflow hidden with room for descenders. */
+.reveal-mask { display: block; overflow: hidden; padding-bottom: 0.08em; margin-bottom: -0.08em; }
+
+/* ───────────── Layout helpers ───────────── */
+.pad { position: absolute; inset: 0; padding: 140px 140px 140px; }
+.center { display: flex; align-items: center; justify-content: center; }
+.col { display: flex; flex-direction: column; }
+.row { display: flex; }
+.abs { position: absolute; }
+.fill { position: absolute; inset: 0; }
+
+/* Debossed pill: the ZAK mark's carved slot as a UI primitive. */
+.pill-slot { border-radius: var(--zak-radius-pill); background: rgba(0, 0, 0, 0.35); box-shadow: var(--zak-deboss-dark); }
+.theme-paper .pill-slot { background: rgba(0, 0, 0, 0.06); box-shadow: var(--zak-deboss-paper); }
+
+/* Machine text */
+.term { font-family: var(--zak-font-mono); font-size: 24px; line-height: 1.55; color: var(--zak-paper-2); }
+.caret { display: inline-block; width: 0.55em; height: 1.05em; vertical-align: -0.15em; background: var(--zak-signal); margin-left: 0.08em; }
+.caret.blink { animation: blink 1.05s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ───────────── Overlays (overview, help) ───────────── */
+.overlay { position: fixed; inset: 0; z-index: 100; background: rgba(10, 10, 10, 0.92); backdrop-filter: blur(10px); }
+.overview { overflow-y: auto; padding: 48px; }
+.overview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px 20px; max-width: 1800px; margin: 0 auto; }
+.overview-cell-wrap { display: flex; flex-direction: column; gap: 10px; }
+.overview-section { grid-column: 1 / -1; color: var(--zak-signal); font-size: 12px; min-height: 14px; }
+.overview-cell { all: unset; cursor: pointer; display: flex; flex-direction: column; gap: 10px; }
+.overview-stage { aspect-ratio: 16 / 9; height: auto; border-radius: 10px; outline: 1px solid var(--zak-line); transition: outline-color 200ms; }
+.overview-cell:hover .overview-stage { outline-color: var(--zak-line-strong); }
+.overview-cell.is-current .overview-stage { outline: 2px solid var(--zak-signal); }
+.overview-caption { font-size: 14px; color: var(--zak-stone); }
+.overview-caption b { color: var(--zak-paper); font-weight: 600; margin-right: 6px; }
+.overview-wrap .grain, .overview-stage .grain { display: none; }
+
+.help { display: grid; place-items: center; }
+.help-card { background: var(--zak-ink-2); border: 1px solid var(--zak-line); border-radius: 20px; padding: 32px 40px; min-width: 560px; display: grid; gap: 14px; }
+.help-row { display: grid; grid-template-columns: 240px 1fr; gap: 20px; align-items: center; font-size: 16px; color: var(--zak-paper-2); }
+kbd { font-family: var(--zak-font-mono); font-size: 13px; color: var(--zak-paper); background: var(--zak-ink-3); border-radius: 8px; padding: 6px 10px; justify-self: start; }
+
+/* ───────────── Presenter ───────────── */
+.presenter { height: 100vh; display: grid; grid-template-rows: auto 1fr auto; background: #0e0e0e; gap: 16px; padding: 20px 24px; }
+.presenter-bar { display: flex; align-items: center; gap: 28px; }
+.presenter-bar .label { flex: 1; color: var(--zak-signal); }
+.presenter-count { font-size: 18px; color: var(--zak-stone); }
+.presenter-count b { color: var(--zak-paper); font-size: 24px; }
+.presenter-timer { font-family: var(--zak-font-mono); font-size: 34px; color: var(--zak-paper); cursor: pointer; }
+.presenter-clock { font-family: var(--zak-font-mono); font-size: 20px; color: var(--zak-stone); }
+.presenter-main { display: grid; grid-template-columns: 1.55fr 1fr; gap: 24px; min-height: 0; }
+.presenter-current { display: flex; flex-direction: column; gap: 12px; min-height: 0; }
+.presenter-current .presenter-stage { flex: 1; border-radius: 12px; outline: 2px solid var(--zak-signal); }
+.presenter-stage { width: 100%; height: 100%; min-height: 0; }
+.presenter-beats { display: flex; align-items: center; gap: 8px; }
+.presenter-beats > span:not(.label) { width: 28px; height: 6px; border-radius: 3px; background: var(--zak-ink-4); }
+.presenter-beats > span.on { background: var(--zak-signal); }
+.presenter-beats .label { margin-left: 10px; font-size: 13px; }
+.presenter-side { display: grid; grid-template-rows: auto auto auto 1fr; gap: 10px; min-height: 0; }
+.presenter-side .label { font-size: 13px; }
+.presenter-next { aspect-ratio: 16 / 9; border-radius: 10px; overflow: hidden; outline: 1px solid var(--zak-line); }
+.presenter-end { height: 100%; display: grid; place-items: center; }
+.presenter-notes-head { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
+.presenter-font button { background: var(--zak-ink-3); border: 0; border-radius: 6px; padding: 4px 10px; margin-left: 6px; cursor: pointer; }
+.presenter-notes { overflow-y: auto; line-height: 1.45; color: var(--zak-paper); padding-right: 8px; }
+.presenter-notes p { margin: 0 0 0.7em; }
+.presenter-controls { display: flex; gap: 12px; justify-content: flex-end; }
+.presenter-controls button { background: var(--zak-ink-3); border: 0; border-radius: 999px; padding: 12px 22px; font-size: 16px; cursor: pointer; }
+.presenter-controls .primary { background: var(--zak-signal); color: var(--zak-ink); font-weight: 600; }
+
+@media (prefers-reduced-motion: reduce) {
+  .grain { animation: none; }
+  .layer-enter, .layer-leave { animation-duration: 1ms !important; }
+}
+
+/* One slide failed to render: keep the deck running. */
+.slide-error { position: absolute; inset: 0; display: grid; place-content: center; gap: 20px; padding: 200px; text-align: left; }
+.slide-error pre { font-family: var(--zak-font-mono); font-size: 22px; color: var(--zak-paper-2); white-space: pre-wrap; max-width: 1400px; }
+
+/* ───────────── Rehearsal panel (slides + presenters) ───────────── */
+.dbg-toggle {
+  position: fixed; left: 14px; bottom: 14px; z-index: 120; display: flex; align-items: center; gap: 3px;
+  font-family: var(--zak-font-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+  padding: 8px 12px 8px 10px; border-radius: 999px; border: 1px solid var(--zak-line); background: rgba(22,21,21,.85);
+  color: var(--zak-paper-2); cursor: pointer; opacity: .35; transition: opacity 200ms;
+}
+.dbg-toggle i { width: 4px; height: 4px; border-radius: 50%; background: var(--zak-signal); }
+.dbg-toggle i:last-of-type { margin-right: 6px; }
+.dbg-toggle:hover, .dbg-toggle.is-open { opacity: 1; }
+.dbg-toggle.is-open { left: 414px; }
+.dbg-panel {
+  position: fixed; left: 0; top: 0; bottom: 0; width: 400px; z-index: 110; display: grid; grid-template-rows: auto auto auto 1fr auto;
+  background: rgba(17,16,16,.97); border-right: 1px solid var(--zak-line); backdrop-filter: blur(10px); color: var(--zak-paper);
+  font-family: var(--zak-font-text); box-shadow: 20px 0 60px rgba(0,0,0,.4);
+}
+.dbg-head { display: flex; justify-content: space-between; align-items: center; padding: 18px 18px 10px; }
+.dbg-title { font-weight: 600; font-size: 15px; }
+.dbg-close { background: none; border: 0; font-size: 22px; color: var(--zak-stone); cursor: pointer; line-height: 1; }
+.dbg-filter { display: flex; gap: 6px; padding: 0 18px 10px; }
+.dbg-filter button { font-family: var(--zak-font-mono); font-size: 12px; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--zak-line); background: none; color: var(--zak-paper-2); cursor: pointer; display: flex; gap: 6px; }
+.dbg-filter button b { color: var(--zak-stone); font-weight: 500; }
+.dbg-filter button.on { background: var(--zak-paper); color: var(--zak-ink); border-color: var(--zak-paper); }
+.dbg-filter button.on b { color: var(--zak-stone-2); }
+.dbg-meta { padding: 0 18px 10px; font-size: 12px; color: var(--zak-stone); }
+.dbg-err { color: #e9b44c; }
+.dbg-list { overflow-y: auto; padding: 0 8px 12px; }
+.dbg-section { font-family: var(--zak-font-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--zak-signal); padding: 14px 10px 6px; }
+.dbg-row { display: flex; align-items: center; gap: 8px; border-radius: 10px; padding: 2px 4px 2px 0; }
+.dbg-row:hover { background: rgba(248,247,244,.05); }
+.dbg-row.is-current { background: rgba(0,228,130,.12); }
+.dbg-go { flex: 1; min-width: 0; display: flex; gap: 10px; align-items: baseline; text-align: left; background: none; border: 0; color: inherit; cursor: pointer; padding: 8px 6px 8px 10px; font-size: 13.5px; }
+.dbg-num { font-family: var(--zak-font-mono); font-size: 11px; color: var(--zak-stone-2); flex: none; }
+.dbg-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dbg-who { display: flex; gap: 4px; flex: none; }
+.dbg-chip { width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--zak-line); background: none; color: var(--zak-stone); font-family: var(--zak-font-mono); font-size: 11px; cursor: pointer; }
+.dbg-chip:hover { border-color: var(--zak-line-strong); color: var(--zak-paper); }
+.dbg-chip.on { background: var(--zak-signal); border-color: var(--zak-signal); color: var(--zak-ink); font-weight: 700; }
+.dbg-foot { padding: 10px 18px 14px; font-size: 11px; color: var(--zak-stone-2); border-top: 1px solid var(--zak-line); }
+
+/* Presenter view: who's up, and the handoff cue */
+.presenter-who { font-family: var(--zak-font-mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; background: rgba(0,228,130,.14); color: var(--zak-signal); }
+.presenter-handoff { font-family: var(--zak-font-mono); font-size: 13px; color: #e9b44c; }
+.dbg-copy { flex: none; font-family: var(--zak-font-mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; padding: 5px 8px; border-radius: 999px; border: 1px solid var(--zak-line); background: none; color: var(--zak-stone); cursor: pointer; opacity: 0; transition: opacity 150ms; min-width: 46px; }
+.dbg-row:hover .dbg-copy, .dbg-copy.is-done { opacity: 1; }
+.dbg-copy:hover { color: var(--zak-paper); border-color: var(--zak-line-strong); }
+.dbg-copy.is-done { color: var(--zak-signal); border-color: var(--zak-signal); }
+
+/* ───────────── Preview password screen (GitHub Pages) ───────────── */
+.gate { position: fixed; inset: 0; display: grid; place-items: center; background: var(--zak-ink); padding: 24px; }
+.gate-card { width: min(420px, 100%); display: flex; flex-direction: column; gap: 14px; }
+.gate-mark { width: 72px; color: var(--zak-paper); margin-bottom: 18px; }
+.gate-title { font-family: var(--zak-font-display); font-weight: 300; text-transform: uppercase; font-size: 64px; line-height: .9; }
+.gate-sub { font-size: 12px; margin-bottom: 28px; }
+.gate-label { font-size: 11px; }
+.gate-input { font: inherit; font-size: 18px; color: var(--zak-paper); background: rgba(0,0,0,.35); border: 0; border-radius: 999px; padding: 16px 22px; box-shadow: var(--zak-deboss-dark); outline: none; }
+.gate-input:focus { box-shadow: var(--zak-deboss-dark), 0 0 0 2px var(--zak-signal); }
+.gate-go { font: inherit; font-weight: 600; font-size: 16px; padding: 15px 22px; border: 0; border-radius: 999px; background: var(--zak-signal); color: var(--zak-ink); cursor: pointer; }
+.gate-go:focus-visible { outline: 2px solid var(--zak-paper); outline-offset: 3px; }
+.gate-msg { min-height: 20px; font-size: 14px; color: #e9b44c; }

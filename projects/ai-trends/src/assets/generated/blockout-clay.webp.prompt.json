@@ -1,0 +1,14 @@
+{
+  "createdAt": "2026-11-25T17:26:33.333Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2/edit",
+  "input": {
+    "prompt": "Convert this exact image into an untextured 3D blockout as seen in a Blender solid viewport: every object stays in exactly the same position, size and perspective, but is rendered as matte light-grey clay primitives with simple flat studio shading and thin dark edges. Buildings become plain grey boxes, the water tower a plain cylinder, the person a simple grey mannequin. No textures, no lit windows, no colour, plain light-grey sky, no text",
+    "aspect_ratio": "16:9",
+    "image_urls": [
+      "/Users/josh.maldonado/Zulu Agent/projects/ai-trends/src/assets/generated/final-still.png"
+    ]
+  },
+  "requestId": "01a213be-7a29-7a60-8db7-0669993a309a",
+  "seconds": 13
+}

@@ -1,0 +1,27 @@
+{
+  "name": "zulu-brand",
+  "private": true,
+  "description": "Zulu Alpha Kilo brand repo: shared brand system, generative tools and Claude skills, plus the projects built with them.",
+  "type": "module",
+  "workspaces": [
+    "projects/*"
+  ],
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev": "npm run dev -w ai-trends",
+    "build": "npm run build -w ai-trends",
+    "preview": "npm run preview -w ai-trends",
+    "doctor": "node tools/doctor.mjs",
+    "fal": "node tools/fal.mjs",
+    "eleven": "node tools/elevenlabs.mjs",
+    "codex-image": "node tools/codex-image.mjs",
+    "media": "node tools/media.mjs",
+    "assets": "node tools/assets.mjs",
+    "preview-password": "node tools/set-preview-password.mjs"
+  },
+  "devDependencies": {
+    "ffmpeg-static": "^5.2.0"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:22:46.134Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Glossy CGI product advertisement, hyper-real 3D render, generic stock advertising look. A single unbranded sparkling water can floating dead centre, perfectly centred symmetrical composition, can tilted slightly. Smooth vibrant purple-to-teal gradient studio background. Silver can, pink grapefruit slices floating, water droplets frozen in mid-air. Bright lens flare, glowing rim light, glossy plastic-like reflections, sparkling bubbles, ultra clean and shiny. No text, no logos, no labels or writing on the can.",
+    "aspect_ratio": "4:5"
+  },
+  "requestId": "01a213ba-feca-7ae0-a344-8ac53cb5ef70",
+  "seconds": 14
+}

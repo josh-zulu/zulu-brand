@@ -1,0 +1,12 @@
+.pitches { position: absolute; inset: 0; }
+.pi-title { position: absolute; left: 140px; top: 142px; font-size: 138px; line-height: 0.9; }
+.pi-lede { position: absolute; left: 140px; top: 436px; width: 620px; font-size: 38px; }
+
+.pi-phones { position: absolute; right: 150px; top: 112px; display: flex; align-items: center; gap: 36px; }
+.pi-phone { position: relative; }
+.pi-glow {
+  position: absolute; left: 50%; top: 50%; width: 170%; height: 90%; transform: translate(-50%, -50%); opacity: 0; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(77, 120, 220, 0.22), transparent 75%); filter: blur(10px);
+}
+
+.pi-rail { position: absolute; left: 110px; right: 110px; top: 724px; }

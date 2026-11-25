@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:03:18.373Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Wide landscape photograph of a snowy mountain cabin at blue hour with one warm lit window and smoke from the chimney, peaceful, no text",
+    "aspect_ratio": "4:5"
+  },
+  "requestId": "01a213a9-38c9-79f2-8fdc-d201729e3f3a",
+  "seconds": 11
+}

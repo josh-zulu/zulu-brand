@@ -1,0 +1,29 @@
+.ag { position: absolute; inset: 0; }
+.ag::before { /* a soft pool of light behind the list, so the ground isn't flat */
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(60% 70% at 30% 55%, rgba(248, 247, 244, 0.035), transparent 70%);
+}
+
+.ag-label { position: absolute; left: 140px; top: 132px; display: flex; align-items: center; gap: 14px; color: var(--zak-paper-2); }
+.ag-label-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--zak-signal); display: inline-block; }
+
+.ag-list { position: absolute; left: 140px; right: 140px; top: 196px; margin: 0; padding: 0; list-style: none; }
+.ag-row {
+  position: relative; height: 126px; display: flex; align-items: center; gap: 0;
+}
+.ag-rule {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--zak-line-strong); transform-origin: 0 50%;
+}
+.ag-row:last-child .ag-rule { background: var(--zak-line); }
+
+.ag-num {
+  width: 228px; flex: none; display: flex; font-size: 100px; line-height: 1; height: 1em; overflow: hidden;
+  color: var(--zak-signal); letter-spacing: 0.01em;
+}
+.ag-zero { display: inline-block; }
+.ag-digit { display: inline-block; height: 1em; overflow: hidden; }
+.ag-strip { display: flex; flex-direction: column; will-change: transform; }
+.ag-strip > span { height: 1em; line-height: 1; display: block; }
+
+.ag-title { font-size: 76px; line-height: 1; letter-spacing: 0.012em; color: var(--zak-paper); white-space: nowrap; padding-top: 4px; }
+.ag-title .ag-ch { will-change: transform; }

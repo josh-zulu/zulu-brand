@@ -1,0 +1,12 @@
+{
+  "createdAt": "2026-11-25T17:21:40.367Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-pro",
+  "input": {
+    "prompt": "Cinematic advertising photograph, end frame of a commercial for a city bike brand: a matte sage-green city bicycle leaning against a low weathered stone harbour wall beside perfectly calm water, blue hour just before sunrise, cool soft diffused light, thin mist over the water, the bike sits in the right third of the frame, wide empty pale sky and still water across the left half reserved for typography, 35mm film, gentle grain, natural colour, editorial, no people, no text, no logos",
+    "aspect_ratio": "16:9",
+    "resolution": "2K"
+  },
+  "requestId": "01a213b9-d09e-7511-8180-378af424424e",
+  "seconds": 26
+}

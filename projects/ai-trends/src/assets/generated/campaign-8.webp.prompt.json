@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-25T17:03:08.266Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2",
+  "input": {
+    "prompt": "Studio photograph of a single coffee cup on a seamless deep green backdrop with a hard shadow, colourful steam rendered as soft light, surreal minimal advertising, no text, no logos",
+    "aspect_ratio": "4:5"
+  },
+  "requestId": "01a213a9-111b-7743-8471-e52ccbc27922",
+  "seconds": 11
+}

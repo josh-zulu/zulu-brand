@@ -1,0 +1,14 @@
+{
+  "createdAt": "2026-11-25T17:23:19.957Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-2/edit",
+  "input": {
+    "prompt": "Turn this exact photograph into a monocular depth map: a smooth grayscale image where the closest surfaces are pure white and the farthest surfaces are black, identical composition and framing, no texture, no lighting, no colour, clean soft gradients, no text",
+    "aspect_ratio": "16:9",
+    "image_urls": [
+      "/Users/josh.maldonado/Zulu Agent/projects/ai-trends/src/assets/generated/world-photo.png"
+    ]
+  },
+  "requestId": "01a213bb-7cb7-7b33-9903-c475b4131ec1",
+  "seconds": 16
+}
