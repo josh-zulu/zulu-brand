@@ -4,42 +4,12 @@
 .clab-title { margin-top: 34px; font-size: 104px; line-height: 0.92; white-space: nowrap; }
 .clab-body { margin: auto 0 0; font-size: 32px; line-height: 1.32; letter-spacing: -0.01em; color: var(--zak-paper-2); max-width: 520px; }
 
-/* the lab: a light web app in a dark window (as in the source mockup) */
+/* window sized to the recording: 1020 wide → 1020 × 1086/1920 = 577 tall, plus the 44px bar */
 .clab-window {
-  position: absolute; left: 760px; top: 150px; width: 1020px; height: 780px; border-radius: 18px; overflow: hidden;
-  background: #f3f2ee; box-shadow: 0 50px 120px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(248, 247, 244, 0.14);
+  position: absolute; left: 760px; top: 230px; width: 1020px; height: 621px; border-radius: 18px; overflow: hidden;
+  background: #0b0b0b; box-shadow: 0 50px 120px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(248, 247, 244, 0.14);
 }
-.clab-window > .clab-bar { height: 44px; background: #0b0b0b; display: flex; align-items: center; padding: 0 20px; }
+.clab-bar { height: 44px; background: #0b0b0b; display: flex; align-items: center; padding: 0 20px; }
 .clab-dots { display: flex; gap: 9px; }
 .clab-dots i { width: 12px; height: 12px; border-radius: 50%; background: #3e3d3c; }
-.clab-app { position: absolute; top: 44px; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: 330px 1fr; color: var(--zak-graphite); }
-
-.clab-label { font-family: var(--zak-font-mono); font-size: 14px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #6f6c66; }
-.clab-label span { color: #a19e97; margin-left: 6px; }
-
-.clab-pick { padding: 36px 36px; border-right: 1px solid var(--zak-line-paper); display: flex; flex-direction: column; }
-.clab-swatch { margin-top: 22px; width: 258px; height: 258px; border-radius: 22px; background: #dcdcdc; box-shadow: inset 0 0 0 1px rgba(0,0,0,.08), 0 18px 40px rgba(0,0,0,.12); }
-.clab-hex { margin-top: 22px; font-family: var(--zak-font-mono); font-size: 30px; letter-spacing: 0.04em; color: var(--zak-graphite); }
-.clab-hue {
-  position: relative; margin-top: 30px; width: 258px; height: 26px; border-radius: 999px; cursor: pointer; touch-action: none;
-  background: linear-gradient(90deg, hsl(0 90% 50%), hsl(60 90% 50%), hsl(120 90% 45%), hsl(180 90% 45%), hsl(240 90% 55%), hsl(300 90% 50%), hsl(360 90% 50%));
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,.1);
-}
-.clab-knob {
-  position: absolute; top: 50%; left: 0; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%;
-  border: 4px solid #fff; box-shadow: 0 4px 12px rgba(0,0,0,.3), 0 0 0 1px rgba(0,0,0,.12); background: hsl(0 90% 50%);
-}
-
-.clab-results { padding: 36px 32px; }
-.clab-grid { position: relative; margin-top: 22px; height: 608px; }
-.clab-tile { position: absolute; left: 0; top: 0; width: 196px; height: 190px; will-change: transform; }
-.clab-art { position: relative; height: 148px; border-radius: 10px; background-size: cover; background-position: center; box-shadow: 0 6px 16px rgba(0,0,0,.12); }
-.clab-ring { position: absolute; inset: -6px; border-radius: 14px; border: 2.5px solid var(--zak-graphite); opacity: 0; }
-.clab-cap { display: flex; justify-content: space-between; align-items: baseline; margin-top: 10px; font-size: 16px; color: #4a4844; }
-.clab-score { font-family: var(--zak-font-mono); font-size: 13px; color: #8d8a83; }
-.clab-score b { font-size: 22px; font-weight: 500; color: var(--zak-graphite); margin-right: 2px; }
-.clab-score::after { content: '/100'; }
-.clab-tile > .clab-bar { margin-top: 8px; height: 3px; border-radius: 2px; background: rgba(22,21,21,.08); overflow: hidden; }
-.clab-tile > .clab-bar i { display: block; height: 100%; background: var(--zak-graphite); transform-origin: 0 50%; transform: scaleX(0); }
-
-.colour-lab .agent-cursor { transform-origin: 0 0; }
+.clab-rec { position: absolute; top: 44px; left: 0; right: 0; bottom: 0; }
