@@ -29,16 +29,21 @@ export interface PhoneScreenProps {
 }
 
 /**
- * Our own GIF mockups (public/media/ago/*.mp4) shown whole, iPhone bezel and status bar included.
- * The GIFs have a near-black ground outside the bezel, so the stack is clipped to the phone's outline.
+ * Our GIF mockups under the hi-res iPhone frame (phone-overlay.png, side buttons included). Overlay and mask are
+ * cropped so the GIF template lines up 1:1 underneath; the mask (phone silhouette) hides the GIF's near-black ground.
  */
+const PHONE_MASK = `url(${media('ago/phone-mask.png')})`;
+
 export function MockPhone({ width = 350, className = '', style, children, ...screen }: Partial<PhoneScreenProps> & {
   width?: number; className?: string; style?: CSSProperties; children?: ReactNode; mode: 'live' | 'preview';
 }) {
   return (
     <div className={`p34-mock ${className}`} style={{ width, ...style }}>
-      {children ?? (screen.src ? <PhoneScreen {...(screen as PhoneScreenProps)} /> : null)}
-      <div className="p34-sleep" />
+      <div className="p34-mock-screen" style={{ maskImage: PHONE_MASK, WebkitMaskImage: PHONE_MASK }}>
+        {children ?? (screen.src ? <PhoneScreen {...(screen as PhoneScreenProps)} /> : null)}
+        <div className="p34-sleep" />
+      </div>
+      <img className="p34-mock-frame" src={media('ago/phone-overlay.png')} alt="" draggable={false} />
     </div>
   );
 }
