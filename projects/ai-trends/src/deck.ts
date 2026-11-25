@@ -30,7 +30,11 @@ import S3Experience from './slides/S3Experience';
 import S3Doordash from './slides/S3Doordash';
 import S4Divider from './slides/S4Divider';
 import S4MakeAWish from './slides/S4MakeAWish';
-import S4Gallery from './slides/S4Gallery';
+import S4Maw1Inputs from './slides/maw/S4Maw1Inputs';
+import S4Maw2Clips from './slides/maw/S4Maw2Clips';
+import S4Maw3Figma from './slides/maw/S4Maw3Figma';
+import S4Maw4Animatic from './slides/maw/S4Maw4Animatic';
+import S4Maw5Site from './slides/maw/S4Maw5Site';
 import S5Divider from './slides/S5Divider';
 import S54dv from './slides/S54dv';
 import S5Realtime from './slides/S5Realtime';
@@ -70,7 +74,11 @@ export const slides: SlideDef[] = [
   S3Doordash,
   S4Divider,
   S4MakeAWish,
-  S4Gallery,
+  S4Maw1Inputs,
+  S4Maw2Clips,
+  S4Maw3Figma,
+  S4Maw4Animatic,
+  S4Maw5Site,
   S5Divider,
   S54dv,
   S5Realtime,

@@ -1,0 +1,6 @@
+.mx { position: absolute; inset: 0; overflow: hidden; }
+.mx-win { z-index: 2; }
+.mx-end { position: absolute; left: 140px; top: 0; bottom: 0; width: 960px; display: flex; flex-direction: column; justify-content: center; }
+.mx-head { margin: 0; font-size: 100px; line-height: 0.95; }
+.mx-sub { margin: 48px 0 0; font-family: var(--zak-font-text); font-weight: 500; font-size: 38px; letter-spacing: -0.015em; color: var(--zak-paper); }
+.mx-chip { margin-top: 40px; }

@@ -1,0 +1,21 @@
+.mi-card {
+  position: absolute; overflow: hidden; border-radius: 4px; background: #fff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45); will-change: transform, opacity;
+}
+.mi-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mi-group { position: absolute; z-index: 2; }
+.mi-band { position: absolute; left: 0; right: 0; top: 500px; display: flex; justify-content: center; z-index: 4; opacity: 0; }
+
+/* the documents keep Make-A-Wish's own blue: they're the client's material */
+.mi-transcript { padding: 28px 30px; color: #111; }
+.mi-doc-title { font-family: var(--zak-font-mono); font-size: 17px; text-transform: uppercase; color: #000; }
+.mi-doc-sub { font-family: var(--zak-font-text); font-size: 22px; color: #444; margin-top: 6px; }
+.mi-rule { height: 1px; background: #d5dae1; margin: 18px 0 16px; }
+.mi-speaker { margin-bottom: 16px; }
+.mi-who { font-family: var(--zak-font-mono); font-size: 13px; text-transform: uppercase; color: #0069ff; margin-bottom: 8px; }
+.mi-bar { height: 9px; border-radius: 5px; background: #dce1e8; margin-bottom: 7px; }
+
+.mi-narrative { padding: 28px 32px 30px; color: #000; }
+.mi-stat { margin: 0; font-family: var(--zak-font-text); font-size: 29px; line-height: 1.28; }
+.mi-quote { margin: 20px 0 0; font-family: var(--zak-font-text); font-size: 21px; line-height: 1.35; font-style: italic; color: #0069ff; }
+.mi-cite { margin-top: 10px; font-family: var(--zak-font-mono); font-size: 13px; text-transform: uppercase; color: #555; }

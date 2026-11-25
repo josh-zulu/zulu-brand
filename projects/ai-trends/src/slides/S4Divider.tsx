@@ -5,7 +5,7 @@ import './S4Divider.css';
 import { media } from '@/lib/asset';
 
 /**
- * Divider 4. Background: our own work, the Make-A-Wish film (source/image36.mp4), at 70% speed, desaturated, with a
+ * Divider 4. Background: our own work, the Make-A-Wish film loop (maw/film-loop.mp4), at 70% speed, desaturated, with a
  * very slow push-in. Live mode plays it; thumbnails show a still.
  */
 function Film({ mode }: Pick<SlideProps, 'mode'>) {
@@ -21,7 +21,7 @@ function Film({ mode }: Pick<SlideProps, 'mode'>) {
     <video
       ref={v}
       className="s4d-film"
-      src={live ? media('source/image36.mp4') : media('source/image36.mp4') + '#t=5.5'}
+      src={live ? media('maw/film-loop.mp4') : media('maw/film-loop.mp4') + '#t=2'}
       muted loop playsInline preload={live ? 'auto' : 'metadata'}
       aria-hidden
     />
