@@ -67,7 +67,7 @@ function S3Idropper({ step, mode }: SlideProps) {
         {SCREENS.map((s, i) => <div key={i} className="id-glow" style={{ background: `radial-gradient(closest-side, ${s.glow}, transparent 72%)` }} />)}
         <div className="id-float">
           <div className="id-hand">
-            <MockPhone width={400}>
+            <MockPhone width={400} mode={mode}>
               {SCREENS.map((s, i) => (
                 <PhoneScreen key={i} className="id-screen" src={s.src} mode={mode} still={s.still} on={step === i} />
               ))}

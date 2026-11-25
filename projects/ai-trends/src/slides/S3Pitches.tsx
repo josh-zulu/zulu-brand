@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { defineSlide, type SlideProps } from '@/engine/types';
 import { useBeats } from '@/engine/useBeats';
 import { revealLines, revealWords } from '@/lib/motion';
-import { Device } from './shared34/Device';
+import { MockPhone } from './shared34/Device';
 import { ProcessRail, railLight, type RailStep } from './shared34/ProcessRail';
 import './S3Pitches.css';
 
@@ -13,17 +13,17 @@ import './S3Pitches.css';
  * the app at "The prototype", the other mockups at "GIF mockups".
  */
 const STEPS: RailStep[] = [
-  { icon: 'source/image5.png', title: 'The brief', sub: 'Plus a PDF of the new artworks' },
-  { icon: 'source/image4.png', title: 'Gather photos', sub: 'From our Art Rate Monitor work and the AGO website' },
-  { icon: 'source/image14.png', title: 'The lab', sub: 'Test the colour matching' },
-  { icon: 'source/image17.png', title: 'The prototype', sub: 'A real app clients can try' },
-  { icon: 'source/image6.png', title: 'GIF mockups', sub: 'The experience before it exists' },
+  { icon: 'ago/icon-brief.png', title: 'The brief', sub: 'Plus a PDF of the new artworks' },
+  { icon: 'ago/icon-photos.png', title: 'Gather photos', sub: 'From our Art Rate Monitor work and the AGO website' },
+  { icon: 'ago/icon-lab.png', title: 'The lab', sub: 'Test the colour matching' },
+  { icon: 'ago/icon-prototype.png', title: 'The prototype', sub: 'A real app clients can try' },
+  { icon: 'ago/icon-mockups.png', title: 'GIF mockups', sub: 'The experience before it exists' },
 ];
 
 const PHONES = [
-  { src: 'source/image34.mp4', width: 228, still: 3.4, wakeAt: 4 },
-  { src: 'source/image12.mp4', width: 256, still: 3, wakeAt: 5 },
-  { src: 'source/image23.mp4', width: 228, still: 5.5, wakeAt: 5 },
+  { src: 'ago/idropper-intro.mp4', width: 228, still: 3.4, wakeAt: 4 },
+  { src: 'ago/idropper-match.mp4', width: 256, still: 3, wakeAt: 5 },
+  { src: 'ago/dd-search.mp4', width: 228, still: 5.5, wakeAt: 5 },
 ];
 
 function S3Pitches({ step, mode }: SlideProps) {
@@ -65,7 +65,7 @@ function S3Pitches({ step, mode }: SlideProps) {
         {PHONES.map((p, k) => (
           <div key={k} className="pi-phone">
             <div className="pi-glow" />
-            <Device width={p.width} src={p.src} mode={mode} still={p.still} on={step >= p.wakeAt} />
+            <MockPhone width={p.width} src={p.src} mode={mode} still={p.still} on={step >= p.wakeAt} />
           </div>
         ))}
       </div>

@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { defineSlide, type SlideProps } from '@/engine/types';
 import { useBeats } from '@/engine/useBeats';
 import { revealLines } from '@/lib/motion';
-import { Device } from './shared34/Device';
+import { MockPhone } from './shared34/Device';
 import './S3Experience.css';
 
 /**
@@ -13,11 +13,11 @@ import './S3Experience.css';
  *  beat 2  "Or just send a DM": a dashed branch reaches the fifth phone, the alternative way in
  */
 const SCREENS = [
-  { src: 'source/image34.mp4', label: 'Open the app', still: 3.6 },
-  { src: 'source/image22.mp4', label: 'Sample a colour', still: 4.5 },
-  { src: 'source/image12.mp4', label: 'Get your match', still: 3.5 },
-  { src: 'source/image11.mp4', label: 'Claim a VIP preview', still: 4 },
-  { src: 'source/image31.mp4', label: 'Or just send a DM', still: 9 },
+  { src: 'ago/idropper-intro.mp4', label: 'Open the app', still: 3.6 },
+  { src: 'ago/idropper-sample.mp4', label: 'Sample a colour', still: 4.5 },
+  { src: 'ago/idropper-match.mp4', label: 'Get your match', still: 3.5 },
+  { src: 'ago/idropper-claimed.mp4', label: 'Claim a VIP preview', still: 4 },
+  { src: 'ago/idropper-dm.mp4', label: 'Or just send a DM', still: 9 },
 ];
 const W = 244;          // phone width
 const X = [140, 452, 764, 1076, 1536]; // left edges; the DM phone stands apart
@@ -74,7 +74,7 @@ function S3Experience({ step, mode }: SlideProps) {
 
       {SCREENS.map((s, i) => (
         <div key={i} className="ex-phone" style={{ left: X[i] }}>
-          <Device width={W} src={s.src} mode={mode} still={s.still} on={i < 4 ? step >= 1 : step >= 2} />
+          <MockPhone width={W} src={s.src} mode={mode} still={s.still} on={i < 4 ? step >= 1 : step >= 2} />
         </div>
       ))}
 
