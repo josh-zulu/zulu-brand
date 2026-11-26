@@ -8,7 +8,6 @@ tools/            zero-dependency Node CLIs: fal.mjs, elevenlabs.mjs, codex-imag
 .claude/skills/   how to do recurring jobs here (brand, slides, generation, audio, media)
 projects/
   ai-trends/      the web-native deck (Vite + React + GSAP)
-  silence-the-hate/  pflag canada campaign: planning docs + educational microsite (own CLAUDE.md; launch 17 May 2027)
 ```
 
 ## Setup and everyday commands
