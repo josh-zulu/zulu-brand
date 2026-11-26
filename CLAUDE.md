@@ -45,7 +45,7 @@ Planned assets are **prompts in code**: `projects/<p>/assets.d/*.json` (one file
 
 ## AI Trends deck: how it works
 
-- `src/deck.ts` is the running order. One slide = one file in `src/slides/` that default-exports `defineSlide({ id, section, title, steps, notes, theme, chrome, transition, Component })`.
+- `src/deck.ts` lists every slide; `src/order.json` is the running order (and hidden slides). Reorder, hide and assign presenters in the slides panel (`\` key), then **Push to main** there: it saves `order.json` and `public/presenters.json`, checks the build and pushes both. One slide = one file in `src/slides/` that default-exports `defineSlide({ id, section, title, steps, notes, theme, chrome, transition, Component })`.
 - Every slide is authored on a fixed **1920×1080** canvas, scaled to fit (`engine/Stage.tsx`).
 - **Beats**: `steps` = number of clicks after the slide arrives. Inside the component, `useBeats(rootRef, step, (tl) => { … tl.addLabel('b1'); … })` builds one paused GSAP timeline cut by labels `b1`, `b2`…; forward plays to the next label, back rewinds. Build animations on `tl`; loops (blinking, drifting) as separate tweens.
 - Slides get `mode: 'live' | 'preview'`. Preview = presenter view and overview thumbnails: no audio, mic, or network side effects.
@@ -80,7 +80,7 @@ The repo is `wearezulubot/ai-trends` (private, in the Zulubot org). We push stra
 A branch and pull request is still worth it for a big or risky change you want the other person to look at first.
 
 Conflict hotspots (coordinate in chat before changing them in parallel):
-- `projects/ai-trends/src/deck.ts`: the running order. When resolving a conflict here, keep every slide from both sides in the intended order; never drop an import.
+- `projects/ai-trends/src/deck.ts` (every slide) and `src/order.json` (running order). When resolving a conflict, keep every slide from both sides in the intended order; never drop an import. Reorder in the slides panel rather than by hand.
 - `projects/ai-trends/public/presenters.json`: presenter assignments. Merge both sides' keys.
 - Shared code: `src/components/`, `src/engine/`, `src/styles/`, `brand/tokens.css`. A change here affects every slide.
 - The same slide file edited by both people. Slides are one file each, so this is rare. Agree who owns which slides.

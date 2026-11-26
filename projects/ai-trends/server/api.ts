@@ -4,6 +4,8 @@
  *   GET  /api/status        → which live features have keys configured
  *   POST /api/scribe-token  → single-use ElevenLabs token for realtime transcription in the browser
  *   POST /api/brief         → { transcript } → structured creative brief (Claude, structured output)
+ *   POST /api/presenters    → rehearsal panel: save presenter assignments to public/presenters.json
+ *   GET/POST /api/publish   → slides panel: push running order + presenters to main (dev only; see publish.ts)
  *
  * Every slide that uses these has an offline fallback, so the deck still runs with no keys or no wifi.
  */
@@ -14,6 +16,7 @@ import { betaZodOutputFormat } from '@anthropic-ai/sdk/helpers/beta/zod';
 import { z } from 'zod';
 import { writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { publish, publishStatus } from './publish';
 
 /** Rehearsal panel writes presenter assignments here (served as /presenters.json). */
 const PRESENTERS_FILE = fileURLToPath(new URL('../public/presenters.json', import.meta.url));
@@ -48,7 +51,7 @@ async function readJson(req: IncomingMessage): Promise<any> {
 export function deckApi(env: Record<string, string>): Plugin {
   const anthropic = env.ANTHROPIC_API_KEY ? new Anthropic({ apiKey: env.ANTHROPIC_API_KEY }) : null;
 
-  const handler: Connect.NextHandleFunction = async (req, res, next) => {
+  const handler = (dev: boolean): Connect.NextHandleFunction => async (req, res, next) => {
     if (!req.url?.startsWith('/api/')) return next();
     try {
       if (req.url === '/api/status') {
@@ -62,6 +65,11 @@ export function deckApi(env: Record<string, string>): Plugin {
         for (const [k, v] of Object.entries(map)) if (typeof v === 'string' && /^[a-z0-9-]+$/.test(k)) clean[k] = v;
         writeFileSync(PRESENTERS_FILE, JSON.stringify(clean, null, 2) + '\n');
         return json(res, 200, { ok: true, count: Object.keys(clean).length });
+      }
+
+      if (req.url === '/api/publish' && dev) {
+        if (req.method === 'GET') return json(res, 200, await publishStatus());
+        if (req.method === 'POST') { const r = await publish(await readJson(req)); return json(res, r.status, r.body); }
       }
 
       if (req.url === '/api/scribe-token' && req.method === 'POST') {
@@ -108,7 +116,7 @@ export function deckApi(env: Record<string, string>): Plugin {
 
   return {
     name: 'zulu-deck-api',
-    configureServer(server) { server.middlewares.use(handler); },
-    configurePreviewServer(server) { server.middlewares.use(handler); },
+    configureServer(server) { server.middlewares.use(handler(true)); },
+    configurePreviewServer(server) { server.middlewares.use(handler(false)); },
   };
 }

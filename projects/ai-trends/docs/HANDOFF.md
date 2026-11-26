@@ -10,10 +10,10 @@ The Zulu AI Working Group's December 2026 company talk, built as a web-native an
 |---|---|
 | Repo | https://github.com/wearezulubot/ai-trends (private, Zulubot org; moved from `josh-zulu/zulu-brand` on 26 Nov 2026). Org members get write access; Josh and Kyle are org admins. |
 | Live preview | None while the repo is private: the org's free plan has no Pages for private repos. Run `npm run dev`. The `pages.yml` deploy workflow will fail on merges until it's disabled or the org upgrades. |
-| Running order | `projects/ai-trends/src/deck.ts` (one file per slide in `src/slides/`) |
+| Running order | `projects/ai-trends/src/order.json`, edited in the slides panel (`\` key: drag, Hide, Push to main). Every slide is listed in `src/deck.ts` (one file per slide in `src/slides/`) |
 | Approved outline | `projects/ai-trends/docs/outline.md` (marked where Josh changed it) |
 | Source deck text | `projects/ai-trends/docs/source-deck.md` |
-| Presenter assignments | `projects/ai-trends/public/presenters.json` (edit with the rehearsal panel: `\` key) |
+| Presenter assignments | `projects/ai-trends/public/presenters.json` (slides panel: tap a name or press J, K, H; Push to main shares it) |
 | Build status page (for Josh) | `projects/ai-trends/docs/build-status.html`. Was published as a claude.ai artifact from Josh's personal account; republish it from the work account to keep a live link. |
 
 ## Accounts, keys and tools on this Mac

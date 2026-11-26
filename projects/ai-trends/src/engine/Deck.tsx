@@ -7,18 +7,21 @@ import { Overview } from './Overview';
 import { Presenter } from './Presenter';
 import { deckSyncKey } from './sync';
 import { DebugPanel } from './DebugPanel';
+import { useRunningSlides } from './order';
+import { KEYS } from './keys';
 
 const LEAVE_MS = 700;
 
 interface Layer { key: number; index: number; step: number; leaving: boolean }
 
 /** The audience view: one slide on stage, with a short overlap so slides can cross-dissolve. */
-export function Deck({ slides }: { slides: SlideDef[] }) {
+export function Deck({ slides: all }: { slides: SlideDef[] }) {
+  const slides = useRunningSlides(all);
   if (new URLSearchParams(location.search).has('presenter')) return <Presenter slides={slides} />;
-  return <AudienceDeck slides={slides} />;
+  return <AudienceDeck slides={slides} all={all} />;
 }
 
-function AudienceDeck({ slides }: { slides: SlideDef[] }) {
+function AudienceDeck({ slides, all }: { slides: SlideDef[]; all: SlideDef[] }) {
   const nav = useDeckNav(slides);
   const { pos, direction, blank } = nav;
   const [overview, setOverview] = useState(false);
@@ -32,7 +35,7 @@ function AudienceDeck({ slides }: { slides: SlideDef[] }) {
       const live = ls.find((l) => !l.leaving);
       if (live && live.index === pos.index) return ls.map((l) => (l === live ? { ...l, step: pos.step } : l));
       keyRef.current += 1;
-      const cut = (slides[pos.index].transition ?? 'fade') === 'cut';
+      const cut = (slides[pos.index]?.transition ?? 'fade') === 'cut';
       return [
         ...(live && !cut ? [{ ...live, leaving: true }] : []),
         { key: keyRef.current, index: pos.index, step: pos.step, leaving: false },
@@ -71,6 +74,7 @@ function AudienceDeck({ slides }: { slides: SlideDef[] }) {
       <Stage className="deck-stage">
         {layers.map((l) => {
           const s = slides[l.index];
+          if (!s) return null;
           const tr = s.transition ?? 'fade';
           return (
             <div
@@ -81,7 +85,7 @@ function AudienceDeck({ slides }: { slides: SlideDef[] }) {
             </div>
           );
         })}
-        <div className="progress" style={{ transform: `scaleX(${progress})`, opacity: slides[pos.index].chrome === false ? 0 : undefined }} />
+        <div className="progress" style={{ transform: `scaleX(${progress})`, opacity: slides[pos.index]?.chrome === false ? 0 : undefined }} />
         <div className={`blackout ${blank ? 'on' : ''}`} />
       </Stage>
 
@@ -94,29 +98,17 @@ function AudienceDeck({ slides }: { slides: SlideDef[] }) {
         />
       )}
       {help && <Help onClose={() => setHelp(false)} />}
-      <DebugPanel slides={slides} current={pos.index} onPick={(i) => nav.goto(i)} />
+      <DebugPanel all={all} current={slides[pos.index]?.id} onPick={(id) => nav.goto(slides.findIndex((s) => s.id === id))} />
     </div>
   );
 }
 
 function Help({ onClose }: { onClose: () => void }) {
-  const rows: [string, string][] = [
-    ['→  Space  PageDown', 'Next beat'],
-    ['←  PageUp', 'Previous beat'],
-    ['Shift + → / ←', 'Skip to next / previous slide'],
-    ['Number then Enter', 'Jump to slide'],
-    ['O  or  Esc', 'Overview of every slide'],
-    ['P', 'Open presenter view (notes, timer, next slide)'],
-    ['F', 'Fullscreen'],
-    ['B', 'Black screen'],
-    ['\\', 'Slides & presenters panel (rehearsal)'],
-    ['?', 'This help'],
-  ];
   return (
     <div className="overlay help" onClick={onClose}>
       <div className="help-card" onClick={(e) => e.stopPropagation()}>
         <div className="label">Keys</div>
-        {rows.map(([k, v]) => (
+        {KEYS.map(([k, v]) => (
           <div className="help-row" key={k}><kbd>{k}</kbd><span>{v}</span></div>
         ))}
       </div>

@@ -1,6 +1,8 @@
 /**
- * Running order. Each slide is one file in ./slides that default-exports defineSlide({...}).
+ * Every slide in the deck. Each slide is one file in ./slides that default-exports defineSlide({...}).
  * To add a slide: create the file, import it here, put it in the list. The URL hash uses the slide id.
+ * The order they run in (and which are hidden) is src/order.json, edited from the slides panel (\ key): drag to
+ * reorder, Hide, then "Push to main". A slide missing from order.json runs right after the slide it follows here.
  */
 import type { SlideDef } from "./engine/types";
 import Opener from "./slides/Opener";

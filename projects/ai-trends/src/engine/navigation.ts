@@ -50,9 +50,17 @@ export function useDeckNav(slides: SlideDef[]): Nav {
     });
     syncRef.current = sync;
     sync.hello();
+    // The running order changed (slides panel draft, or a saved order.json): stay on the same slide by id. If it was
+    // just hidden, stay at the same position instead.
+    const [, id] = location.hash.split('/');
+    const at = slides.findIndex((x) => x.id === decodeURIComponent(id || ''));
+    const cur = posRef.current;
+    const p = at >= 0 ? { index: at, step: at === cur.index ? cur.step : clamp(cur.step, 0, slides[at].steps ?? 0) }
+      : { index: clamp(cur.index, 0, slides.length - 1), step: 0 };
+    if (p.index !== cur.index || p.step !== cur.step) { posRef.current = p; setPos(p); }
+    history.replaceState(null, '', `#/${slides[p.index].id}/${p.step}`);
     const onHash = () => apply(parseHash(slides));
     addEventListener('hashchange', onHash);
-    if (!location.hash) history.replaceState(null, '', `#/${slides[posRef.current.index].id}/${posRef.current.step}`);
     return () => { sync.close(); removeEventListener('hashchange', onHash); };
   }, [apply, slides]);
 
