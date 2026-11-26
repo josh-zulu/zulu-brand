@@ -112,7 +112,7 @@ function Realtime({ step, mode }: SlideProps) {
 
   return (
     <div ref={root} className="rt">
-      <div className="rt-kicker label"><b>Trend 05</b><span className="rt-kicker-sep">·</span>Watch<span className="rt-rank" aria-hidden>{[0, 1, 2, 3, 4].map((k) => <i key={k} className={k === 4 ? 'on' : ''} />)}</span></div>
+      <div className="rt-kicker label"><b>On our radar</b></div>
       <div className="rt-text">
         <h2 className="rt-head headline">Made as you watch.</h2>
         <p className="rt-lede lede">Video and 3D worlds generated in real time from a sentence or a photo.</p>
@@ -162,7 +162,7 @@ export default defineSlide({
   title: 'Made as you watch',
   steps: 1,
   notes:
-    'Trend five, the one to watch: impressive now, not ready for client work yet.\n' +
+    'The one to watch: impressive now, not ready for client work yet.\n' +
     'On arrival: a photo and one sentence go in, and the world grows out of the photo while you watch. The frame counter is the point: it is being made frame by frame, not played back.\n' +
     'Click: the real thing. A world generated live with Genie (clip to add: genie-world-live.mp4).',
   Component: Realtime,

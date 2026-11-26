@@ -50,10 +50,7 @@
 
 .rt-clone { position: absolute; overflow: hidden; border-radius: 14px; z-index: 5; opacity: 0; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5); will-change: transform; }
 
-/* trend kicker (same on all five trend slides) */
+/* kicker: "On our radar" (same on all five trend slides) */
 .rt-kicker { position: absolute; left: 140px; top: 132px; z-index: 6; display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--zak-paper-2); white-space: nowrap; }
 .rt-kicker b { font-weight: 500; color: var(--zak-signal); }
 .rt-kicker-sep { color: var(--zak-stone-2); }
-.rt-rank { display: flex; gap: 6px; margin-left: 12px; }
-.rt-rank i { width: 8px; height: 8px; border-radius: 999px; background: var(--zak-ink-4); }
-.rt-rank i.on { width: 24px; background: var(--zak-signal); }

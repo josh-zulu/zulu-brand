@@ -1,12 +1,9 @@
 .hk { position: absolute; inset: 0; }
 
-/* trend kicker (same on all five trend slides) */
+/* kicker: "On our radar" (same on all five trend slides) */
 .hk-kicker { position: absolute; left: 140px; top: 132px; z-index: 6; display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--zak-paper-2); white-space: nowrap; }
 .hk-kicker b { font-weight: 500; color: var(--zak-signal); }
 .hk-kicker-sep { color: var(--zak-stone-2); }
-.hk-rank { display: flex; gap: 6px; margin-left: 12px; }
-.hk-rank i { width: 8px; height: 8px; border-radius: 999px; background: var(--zak-ink-4); }
-.hk-rank i.on { width: 24px; background: var(--zak-signal); }
 .hk-text { position: absolute; left: 140px; top: 196px; width: 620px; display: flex; flex-direction: column; gap: 34px; }
 .hk-head { font-size: 84px; transform-origin: 0 0; }
 .hk-lede { font-size: 32px; }

@@ -1,13 +1,10 @@
 /* Trend 01 · Brand agents. Prefix: .cx- */
 .cx { position: absolute; inset: 0; --cx-forest: #2c3a2e; --cx-sage: #a9b79a; --cx-cream: #efe9dc; }
 
-/* trend kicker (same on all five trend slides) */
+/* kicker: "On our radar" (same on all five trend slides) */
 .cx-kicker { position: absolute; left: 140px; top: 132px; z-index: 6; display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--zak-paper-2); white-space: nowrap; }
 .cx-kicker b { font-weight: 500; color: var(--zak-signal); }
 .cx-kicker-sep { color: var(--zak-stone-2); }
-.cx-rank { display: flex; gap: 6px; margin-left: 12px; }
-.cx-rank i { width: 8px; height: 8px; border-radius: 999px; background: var(--zak-ink-4); }
-.cx-rank i.on { width: 24px; background: var(--zak-signal); }
 
 /* copy */
 .cx-text { position: absolute; left: 140px; top: 214px; width: 620px; display: flex; flex-direction: column; gap: 30px; }

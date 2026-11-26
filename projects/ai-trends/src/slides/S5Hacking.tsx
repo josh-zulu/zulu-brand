@@ -50,8 +50,7 @@ const USES = ['Activations', 'Installations', 'Retail', 'Prototypes'];
 function Kicker() {
   return (
     <div className="hk-kicker label">
-      <b>Trend 02</b><span className="hk-kicker-sep">·</span>Next year
-      <span className="hk-rank" aria-hidden>{[0, 1, 2, 3, 4].map((k) => <i key={k} className={k === 1 ? 'on' : ''} />)}</span>
+      <b>On our radar</b>
     </div>
   );
 }
@@ -193,7 +192,7 @@ export default defineSlide({
   title: 'Agents that build hardware',
   steps: 3,
   notes:
-    'Trend two, within the next year: agents that hack and build hardware.\n' +
+    'Agents that hack and build hardware, within the next year.\n' +
     'On arrival: an ordinary picture frame, running what the maker shipped.\n' +
     'Click 1: point an agent at it. It reads the firmware and works out how the thing was built, down to which pins are free.\n' +
     'Click 2: then it writes new firmware and wires in a motion sensor. Flash it, and the frame now shows our work when someone walks up. That is a working interactive prototype, and the agent did the fiddly part.\n' +

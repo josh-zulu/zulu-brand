@@ -114,7 +114,7 @@ function FourDV({ step, mode }: SlideProps) {
       </div>
       <div className="fdv-scrim fill" />
 
-      <div className="fdv-kicker label"><b>Trend 04</b><span className="fdv-kicker-sep">·</span>In 2 years<span className="fdv-rank" aria-hidden>{[0, 1, 2, 3, 4].map((k) => <i key={k} className={k === 3 ? 'on' : ''} />)}</span></div>
+      <div className="fdv-kicker label"><b>On our radar</b></div>
       <div className="fdv-live label"><i className="fdv-live-dot" />Live demo <span className="fdv-sep">·</span> 4DV.ai</div>
 
       <div className="fdv-copy">
@@ -155,7 +155,7 @@ export default defineSlide({
   steps: 1,
   transition: 'fade',
   notes:
-    'Trend four, about two years out.\n' +
+    'About two years out.\n' +
     'Live demo: 4DV.ai. Have it open in a browser tab with a scene loaded before the talk.\n' +
     'On arrival the moment plays, then pauses, and the camera keeps moving around it. That is the idea: the video is stopped, the viewpoint is not.\n' +
     'Click once to "step inside" (the copy clears and the camera pushes in), then switch to 4DV.ai and drag the camera around a real capture.\n' +

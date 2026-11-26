@@ -55,8 +55,7 @@ function TileArt({ v, seed }: { v: number; seed: number }) {
 function Kicker() {
   return (
     <div className="cx-kicker label">
-      <b>Trend 01</b><span className="cx-kicker-sep">·</span>Now
-      <span className="cx-rank" aria-hidden>{[0, 1, 2, 3, 4].map((k) => <i key={k} className={k === 0 ? 'on' : ''} />)}</span>
+      <b>On our radar</b>
     </div>
   );
 }
@@ -175,7 +174,7 @@ export default defineSlide({
   title: 'Brand agents',
   steps: 2,
   notes:
-    'Trend one, and it is here now: brand agents. Agents that use a brand’s guidelines to run creative ops: making every format, versioning, checking the work against the guidelines.\n' +
+    'Brand agents, and they are here now. Agents that use a brand’s guidelines to run creative ops: making every format, versioning, checking the work against the guidelines.\n' +
     'Click: brand guidelines were built for what stays the same. The logo, the type, the colours. That is exactly the kind of rule an agent can follow, every time, across every format.\n' +
     'Click: and that is good news for us. Agents manage what stays the same, and we manage where things should be different. Remember the sea of sameness from earlier: the risk is that everything looks alike. The system has to leave room to break out of it, and that part is our job. (The Alder ad is the one from the taste slide.)',
   Component: BrandAgents,

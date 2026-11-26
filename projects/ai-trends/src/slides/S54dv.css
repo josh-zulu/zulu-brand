@@ -51,10 +51,7 @@
 .fdv-credit { position: absolute; right: 72px; top: 132px; font-size: 13px; color: var(--zak-stone); z-index: 5; }
 .splat-failed { position: absolute; inset: 0; display: grid; place-items: center; }
 
-/* trend kicker (same on all five trend slides) */
+/* kicker: "On our radar" (same on all five trend slides) */
 .fdv-kicker { position: absolute; left: 140px; top: 132px; z-index: 7; display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--zak-paper-2); white-space: nowrap; }
 .fdv-kicker b { font-weight: 500; color: var(--zak-signal); }
 .fdv-kicker-sep { color: var(--zak-stone-2); }
-.fdv-rank { display: flex; gap: 6px; margin-left: 12px; }
-.fdv-rank i { width: 8px; height: 8px; border-radius: 999px; background: var(--zak-ink-4); }
-.fdv-rank i.on { width: 24px; background: var(--zak-signal); }
