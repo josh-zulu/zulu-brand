@@ -37,7 +37,7 @@ Intro (opener, Digital team, agenda) → **1 The year AI started working** (setu
    - section 2: connectors tee-up, Blender's new headline
    - section 5: ranked, brand agents, hardware
    - earlier: the Alder ad line on the taste slide, the sameness slogans, the team slide lines
-2. **Workspace in the connectors index.** Done: "05 · Office · Google Workspace" is the fifth socket on `s2-connectors` (five clicks now), and the Workspace slide header matches. Its line, "building docs, sheets and decks", is new copy and needs Josh's sign-off.
+2. **Workspace in the connectors index.** Done: "05 · Office · Google Workspace" is the fifth socket on `s2-connectors` (five clicks now), and the Workspace slide header matches. Josh approved its copy ("Office", "building docs, sheets and decks") on 26 Nov 2026.
 3. **Missing clips** (they show "clip to add"): the Blender, Figma, Asana, NetSuite and Resolve recordings, `workspace-docs-sheets-slides.mp4`, `blockout.mp4`, `final-film.mp4`, `photo-to-world-marble.mp4`, `genie-world-live.mp4`, and the two hardware clips. They go in `projects/ai-trends/public/media/clips/` (gitignored: share via OneDrive, or commit web-encoded versions).
 4. **Real GPT Image 2 examples.** The generative-media slide's GPT Image 2 and Seedance cards currently show Nano Banana images (captioned). Fix with `codex login` and `npm run codex-image`.
 5. **Live dictation on the shared link.** It only works on the presenting laptop (needs the dev server). For a shared live demo: Vercel functions plus a passcode. Optional: make the offline fallback always show the polished Northline brief.
