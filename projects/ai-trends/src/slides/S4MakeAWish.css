@@ -7,29 +7,8 @@
   background: #0b0b0b; box-shadow: 0 40px 110px rgba(0, 0, 0, 0.55), 0 0 0 1px var(--zak-line);
 }
 .mw-frame .mw-film { position: absolute; inset: 0; }
-.mw-shots { position: absolute; inset: 0; }
-.mw-shot { position: absolute; left: 0; top: 0; border-radius: 2px; will-change: transform, opacity; }
-
-.mw-canvas {
-  position: absolute; inset: 0; opacity: 0; background-color: rgba(11, 11, 11, 1);
-  background-image: radial-gradient(rgba(248, 247, 244, 0.12) 1px, transparent 1.2px); background-size: 16px 16px;
-}
-.mw-wire { position: absolute; inset: 0; display: block; }
-.mw-wire * { fill: none; stroke: var(--zak-paper); stroke-width: 1.5; opacity: 0.85; }
-
-.mw-scrub { position: absolute; left: 26px; right: 26px; bottom: 18px; height: 14px; opacity: 0; }
-.mw-ticks {
-  position: absolute; left: 0; right: 0; top: 6px; height: 2px; background: rgba(248, 247, 244, 0.25);
-  -webkit-mask: repeating-linear-gradient(90deg, #000 0 calc(16.66% - 3px), transparent calc(16.66% - 3px) 16.66%);
-          mask: repeating-linear-gradient(90deg, #000 0 calc(16.66% - 3px), transparent calc(16.66% - 3px) 16.66%);
-}
-.mw-head { position: absolute; top: 0; left: 0; width: 2px; height: 14px; margin-left: -1px; background: var(--zak-signal); box-shadow: 0 0 10px rgba(0, 228, 130, 0.7); }
-
-/* the finished site: source image29, cropped to its browser window (x 301–1619, y 118–905 of 1920×1080) */
-.mw-site {
-  position: absolute; inset: 0; opacity: 0;
-  background-image: url('/media/source/image29.jpg');
-  background-size: 1107px 622.7px; background-position: -173.5px -68px;
-}
 
 .mw-rail { position: absolute; left: 110px; right: 110px; top: 712px; }
+/* the map of what's coming: every step readable at once */
+.mw-rail .p34-step-title, .mw-rail .p34-step-sub { opacity: 1; }
+.mw-rail .p34-node img { filter: grayscale(1) brightness(1.6) opacity(0.75); }

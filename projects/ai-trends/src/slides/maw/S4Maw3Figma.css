@@ -1,0 +1,5 @@
+.mf-chip { position: absolute; z-index: 3; }
+.mf-win .mws-win-url { position: relative; }
+.mf-url-b { position: absolute; left: 14px; opacity: 0; }
+.mf-options { position: absolute; inset: 0; overflow: hidden; background: #fff; }
+.mf-options img { position: absolute; left: 0; top: 0; display: block; will-change: transform; }

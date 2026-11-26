@@ -2,8 +2,9 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { defineSlide, type SlideProps } from '@/engine/types';
 import { useBeats } from '@/engine/useBeats';
+import { AGO_STEPS, StepStrip, stripIn } from './shared34/StepStrip';
 import { revealLines } from '@/lib/motion';
-import { Device } from './shared34/Device';
+import { MockPhone } from './shared34/Device';
 import './S3Doordash.css';
 
 /**
@@ -12,10 +13,10 @@ import './S3Doordash.css';
  *  beat 0  Search "burgers"   · beat 1 Find the gallery · beat 2 Check out · beat 3 Ticket in your wallet
  */
 const SCREENS = [
-  { src: 'source/image23.mp4', label: 'Search “burgers”', still: 5.5 },
-  { src: 'source/image32.mp4', label: 'Find the gallery', still: 6 },
-  { src: 'source/image21.mp4', label: 'Check out', still: 3.2 },
-  { src: 'source/image18.mp4', label: 'Ticket in your wallet', still: 6.5 },
+  { src: 'ago/dd-search.mp4', label: 'Search “burgers”', still: 5.5 },
+  { src: 'ago/dd-gallery.mp4', label: 'Find the gallery', still: 6 },
+  { src: 'ago/dd-checkout.mp4', label: 'Check out', still: 3.2 },
+  { src: 'ago/dd-ticket.mp4', label: 'Ticket in your wallet', still: 6.5 },
 ];
 const PITCH = 300;   // distance between neighbours in the carousel
 const SIDE = 0.7;    // neighbour scale
@@ -32,6 +33,7 @@ function S3Doordash({ step, mode }: SlideProps) {
 
   useBeats(root, step, (tl) => {
     const q = gsap.utils.selector(root);
+    stripIn(tl, root.current!);
     const phones = q('.dd-phone');
     const items = q('.dd-item');
     phones.forEach((p, i) => gsap.set(p, pose(i)));
@@ -74,10 +76,11 @@ function S3Doordash({ step, mode }: SlideProps) {
         <div className="dd-glow" />
         {SCREENS.map((s, i) => (
           <div key={i} className="dd-phone">
-            <Device width={330} src={s.src} mode={mode} still={s.still} on={step === i} />
+            <MockPhone width={330} src={s.src} mode={mode} still={s.still} on={step === i} />
           </div>
         ))}
       </div>
+      <StepStrip steps={AGO_STEPS} active={3} />
     </div>
   );
 }

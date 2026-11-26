@@ -7,7 +7,7 @@ import './S3Divider.css';
  * Divider 3. Background: a slow, tilted wall of the section's own work (the AGO pitch mockups), columns drifting in
  * opposite directions, darkened so the title owns the frame. Videos play in live mode only; thumbnails show stills.
  */
-const SRC = ['image34', 'image23', 'image22', 'image32', 'image12', 'image21', 'image11', 'image18', 'image31'];
+const SRC = ['idropper-intro', 'dd-search', 'idropper-sample', 'dd-gallery', 'idropper-match', 'dd-checkout', 'idropper-claimed', 'dd-ticket', 'idropper-dm'];
 const COLS = 7, PER = 3;
 
 function Wall({ mode }: Pick<SlideProps, 'mode'>) {
@@ -18,7 +18,7 @@ function Wall({ mode }: Pick<SlideProps, 'mode'>) {
           <div key={c} className={`s3d-col ${c % 2 ? 'is-down' : ''}`} style={{ animationDelay: `${-c * 7}s` }}>
             {Array.from({ length: PER }, (_, r) => {
               const id = SRC[(c * 4 + r * 2) % SRC.length];
-              return <PhoneScreen key={r} className="s3d-tile" src={`source/${id}.mp4`} mode={mode} still={2 + ((c + r) % 4)} rate={0.85} />;
+              return <PhoneScreen key={r} className="s3d-tile" src={`ago/${id}.mp4`} mode={mode} still={2 + ((c + r) % 4)} rate={0.85} />;
             })}
           </div>
         ))}

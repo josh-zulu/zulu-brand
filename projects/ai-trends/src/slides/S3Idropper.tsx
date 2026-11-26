@@ -2,8 +2,11 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { defineSlide, type SlideProps } from '@/engine/types';
 import { useBeats } from '@/engine/useBeats';
+import { AGO_STEPS, StepStrip, stripIn } from './shared34/StepStrip';
 import { revealLines } from '@/lib/motion';
-import { Device, PhoneScreen } from './shared34/Device';
+import { MockPhone, PhoneScreen } from './shared34/Device';
+import { LinkChip } from './shared34/LinkChip';
+import { LINKS } from '@/links';
 import './S3Idropper.css';
 
 /**
@@ -15,9 +18,9 @@ import './S3Idropper.css';
  *  beat 2  "and it finds…"        the match
  */
 const SCREENS = [
-  { src: 'source/image34.mp4', still: 3.6, glow: 'rgba(96, 128, 196, 0.30)' },
-  { src: 'source/image22.mp4', still: 4.5, glow: 'rgba(40, 70, 220, 0.36)' },
-  { src: 'source/image12.mp4', still: 3.5, glow: 'rgba(60, 90, 200, 0.30)' },
+  { src: 'ago/idropper-intro.mp4', still: 3.6, glow: 'rgba(96, 128, 196, 0.30)' },
+  { src: 'ago/idropper-sample.mp4', still: 4.5, glow: 'rgba(40, 70, 220, 0.36)' },
+  { src: 'ago/idropper-match.mp4', still: 3.5, glow: 'rgba(60, 90, 200, 0.30)' },
 ];
 
 function S3Idropper({ step, mode }: SlideProps) {
@@ -25,6 +28,7 @@ function S3Idropper({ step, mode }: SlideProps) {
 
   useBeats(root, step, (tl) => {
     const q = gsap.utils.selector(root);
+    stripIn(tl, root.current!);
     const screens = q('.id-screen');
     const phrases = q('.id-phrase');
     const glows = q('.id-glow');
@@ -35,6 +39,7 @@ function S3Idropper({ step, mode }: SlideProps) {
     // beat 0: copy in; the phone is handed over
     tl.from(q('.id-kicker'), { opacity: 0, x: -16, duration: 0.7 }, 0);
     revealLines(tl, q('.id-title')[0], {}, 0.05);
+    tl.from(q('.id-link'), { opacity: 0, y: 12, duration: 0.6, ease: 'expo.out' }, 1.0);
     tl.from(phrases, { opacity: 0, y: 14, duration: 0.8, stagger: 0.12, ease: 'power3.out' }, 0.6);
     tl.from(q('.id-hand'), { y: 620, x: 120, rotation: 16, duration: 1.6, ease: 'zak.settle' }, 0.15);
     tl.from(glows[0], { opacity: 0, scale: 0.6, duration: 1.8, ease: 'power2.out' }, 0.7);
@@ -61,20 +66,22 @@ function S3Idropper({ step, mode }: SlideProps) {
           <span className="id-phrase">tap a colour,</span>{' '}
           <span className="id-phrase">and it finds the matching work in the AGO collection.</span>
         </p>
+        <LinkChip className="id-link" href={LINKS.agoPrototype} label="Try the prototype" />
       </div>
 
       <div className="id-stage">
         {SCREENS.map((s, i) => <div key={i} className="id-glow" style={{ background: `radial-gradient(closest-side, ${s.glow}, transparent 72%)` }} />)}
         <div className="id-float">
           <div className="id-hand">
-            <Device width={350} mode={mode}>
+            <MockPhone width={360} mode={mode}>
               {SCREENS.map((s, i) => (
                 <PhoneScreen key={i} className="id-screen" src={s.src} mode={mode} still={s.still} on={step === i} />
               ))}
-            </Device>
+            </MockPhone>
           </div>
         </div>
       </div>
+      <StepStrip steps={AGO_STEPS} active={4} />
     </div>
   );
 }

@@ -20,6 +20,7 @@ import S2Figma from "./slides/S2Figma";
 import S2Blender from "./slides/S2Blender";
 import S2Resolve from "./slides/S2Resolve";
 import S2AsanaNetsuite from "./slides/S2AsanaNetsuite";
+import S2Workspace from "./slides/S2Workspace";
 import S2Sameness from "./slides/S2Sameness";
 import S2Taste from "./slides/S2Taste";
 import S3Divider from "./slides/S3Divider";
@@ -27,12 +28,18 @@ import S3Blockout from "./slides/S3Blockout";
 import S2Endcards from "./slides/S2Endcards";
 import S4Divider from "./slides/S4Divider";
 import S3Pitches from "./slides/S3Pitches";
+import S3AgoBrief from "./slides/ago/S3AgoBrief";
+import S3AgoPhotos from "./slides/ago/S3AgoPhotos";
 import S3ColourLab from "./slides/S3ColourLab";
 import S3Idropper from "./slides/S3Idropper";
 import S3Experience from "./slides/S3Experience";
 import S3Doordash from "./slides/S3Doordash";
 import S4MakeAWish from "./slides/S4MakeAWish";
-import S4Gallery from "./slides/S4Gallery";
+import S4Maw1Inputs from "./slides/maw/S4Maw1Inputs";
+import S4Maw2Clips from "./slides/maw/S4Maw2Clips";
+import S4Maw3Figma from "./slides/maw/S4Maw3Figma";
+import S4Maw4Animatic from "./slides/maw/S4Maw4Animatic";
+import S4Maw5Site from "./slides/maw/S4Maw5Site";
 import S5Divider from "./slides/S5Divider";
 import S5Ranked from "./slides/S5Ranked";
 import S5Context from "./slides/S5Context";
@@ -66,6 +73,7 @@ export const slides: SlideDef[] = [
   S2Blender,
   S2Resolve,
   S2AsanaNetsuite,
+  S2Workspace,
   S2Sameness,
   S2Taste,
   // 3 · New ways to make things
@@ -75,12 +83,18 @@ export const slides: SlideDef[] = [
   // 4 · Work we made: AGO, Make-A-Wish
   S4Divider,
   S3Pitches,
+  S3AgoBrief,
+  S3AgoPhotos,
   S3ColourLab,
-  S3Idropper,
   S3Experience,
   S3Doordash,
+  S3Idropper,
   S4MakeAWish,
-  S4Gallery,
+  S4Maw1Inputs,
+  S4Maw2Clips,
+  S4Maw3Figma,
+  S4Maw4Animatic,
+  S4Maw5Site,
   // 5 · What is next, ranked
   S5Divider,
   S5Ranked,

@@ -1,0 +1,40 @@
+/* S2Workspace: an app window whose tabs follow the recording (Docs → Sheets → Slides). */
+.ws { position: absolute; inset: 0; }
+.ws-text { position: absolute; left: 140px; top: 0; bottom: 0; width: 580px; display: flex; flex-direction: column; justify-content: center; gap: 30px; }
+.ws-kicker { font-size: 16px; color: var(--zak-signal); }
+.ws-head { font-size: 80px; }
+.ws-lede { font-size: 30px; }
+
+/* window: 56px tab bar + 1000×562 clip body */
+.ws-win {
+  position: absolute; left: 780px; top: 231px; width: 1000px; border-radius: var(--zak-radius-frame); overflow: hidden;
+  background: #0b0b0b; box-shadow: 0 40px 120px rgba(0, 0, 0, 0.55), 0 0 0 1px var(--zak-line);
+}
+.ws-bar {
+  height: 56px; display: flex; align-items: stretch; justify-content: space-between; padding: 0 20px 0 8px;
+  background: #232222; border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.ws-tabs { position: relative; display: flex; }
+.ws-tab {
+  display: flex; align-items: center; gap: 12px; padding: 0 20px; font-family: var(--zak-font-text); font-size: 18px;
+  color: var(--zak-stone); transition: color 0.4s;
+}
+.ws-tab.on { color: var(--zak-paper); }
+.ws-marker {
+  position: absolute; left: 0; bottom: 0; height: 3px; border-radius: 3px 3px 0 0;
+  background: var(--zak-signal); box-shadow: 0 0 14px rgba(0, 228, 130, 0.6);
+}
+
+/* app glyphs: a page of lines, a grid, a slide */
+.ws-glyph { position: relative; width: 16px; height: 20px; border: 2px solid currentColor; border-radius: 3px; flex: none; opacity: 0.85; }
+.ws-tab-docs .ws-glyph { background: linear-gradient(currentColor, currentColor) 2px 4px / 8px 2px no-repeat, linear-gradient(currentColor, currentColor) 2px 9px / 8px 2px no-repeat; }
+.ws-tab-sheets .ws-glyph { background:
+  linear-gradient(currentColor, currentColor) 50% 0 / 2px 100% no-repeat,
+  linear-gradient(currentColor, currentColor) 0 50% / 100% 2px no-repeat; }
+.ws-tab-slides .ws-glyph { width: 22px; height: 16px; background: linear-gradient(currentColor, currentColor) 50% 50% / 8px 4px no-repeat; }
+
+.ws-status { position: relative; width: 380px; font-size: 13px; opacity: 0; }
+.ws-live { position: absolute; right: 0; top: 50%; width: 8px; height: 8px; margin-top: -4px; border-radius: 50%; background: var(--zak-signal); box-shadow: 0 0 10px rgba(0, 228, 130, 0.7); opacity: 0; }
+.ws-status-line { position: absolute; right: 22px; top: 50%; transform: translateY(-50%); white-space: nowrap; color: var(--zak-signal); }
+
+.ws-clip.clip-frame { width: 1000px; height: 562px; border-radius: 0; box-shadow: none; }
