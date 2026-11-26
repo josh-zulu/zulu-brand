@@ -18,8 +18,8 @@
 
 | Week | Kyle (app) | Josh / agent (planning, lyrics, microsite) | pflag | Others |
 |---|---|---|---|---|
-| **30 Nov** | Share current spec; demo what works | One-pager and schedule to team; request LyricFind and Musixmatch trials; draft rubric v0 | Kick-off: guidelines timeline, reviewers, legal counsel | IT review meeting |
-| **7 Dec** | Spike: detect + skip on Spotify app (Mac, Windows), Apple Music, one web player | Lyrics spike: 200 songs through lexicon + classifier | Share existing language guidance; name reviewers | Legal questions to pflag counsel; trademark search |
+| **30 Nov** | Spec shared 25 Nov (macOS prototype works); test Apple Music skip | One-pager and schedule to team; request LyricFind and Musixmatch trials; draft rubric v0 | Kick-off: guidelines timeline, reviewers, legal counsel | IT review meeting |
+| **7 Dec** | Windows spike (system media controls); notarisation; one web player | Lyrics spike: 200 songs through lexicon + classifier | Share existing language guidance; name reviewers | Legal questions to pflag counsel; trademark search |
 | **14 Dec** | Write up spike results: latency, reliability per service | Spike report; cost estimate; microsite content outline | Review 10 worked flag examples | Cost split agreed with leadership |
 | **Fri 18 Dec** | **G1 decision** | | | |
 

@@ -1,0 +1,21 @@
+# Runs on every pull request: the deck must typecheck and build before it can merge into main.
+name: Check
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: Typecheck and build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build -w ai-trends
+        env:
+          DECK_BASE: /${{ github.event.repository.name }}/

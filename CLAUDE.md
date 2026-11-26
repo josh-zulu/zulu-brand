@@ -67,3 +67,20 @@ Motion language:
 - Copy is approved: use the outline's words exactly. Sections 3–5 copy belongs to Kyle and Hiep; keep it as in the source deck.
 
 See `brand/BRAND.md` for the brand system and `.claude/skills/` for step-by-step how-tos.
+
+## Working together (Josh and Kyle)
+
+The repo is `josh-zulu/zulu-brand`. `main` is protected: every change goes in through a pull request, and the **Check** workflow (typecheck + build) must pass. Merging to `main` republishes the preview at https://josh-zulu.github.io/zulu-brand/.
+
+1. Start each session with `git switch main && git pull`.
+2. Work on a branch named for the change: `git switch -c kyle/ago-copy` or `josh/section-5-tweaks`.
+3. Commit small and often. Push the branch and open a pull request (`gh pr create --fill`); fill in the template.
+4. The other person looks, or merges straight away for small changes. Then everyone pulls.
+
+Conflict hotspots (coordinate in chat before changing them in parallel):
+- `projects/ai-trends/src/deck.ts`: the running order. When resolving a conflict here, keep every slide from both sides in the intended order; never drop an import.
+- `projects/ai-trends/public/presenters.json`: presenter assignments. Merge both sides' keys.
+- Shared code: `src/components/`, `src/engine/`, `src/styles/`, `brand/tokens.css`. A change here affects every slide.
+- The same slide file edited by both people. Slides are one file each, so this is rare. Agree who owns which slides.
+
+When resolving a merge conflict: read both versions, keep both people's intent (copy edits from one side, layout or motion edits from the other), run `npx tsc --noEmit` in `projects/ai-trends`, and click through the affected slides before committing. Never resolve by taking one whole side unless the other side's change is clearly superseded. If intent is unclear, ask.

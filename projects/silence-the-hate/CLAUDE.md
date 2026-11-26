@@ -14,7 +14,7 @@ A desktop plugin that **skips homophobic and transphobic songs** while people li
 ## People
 
 - **Josh Maldonado**: lead on planning, IT liaison, microsite.
-- **Kyle**: building the desktop app (Rust). His spec goes in `docs/desktop-app-spec.md` when he shares it. Don't redesign his app here; raise questions for him in `docs/open-questions.md`.
+- **Kyle Collins**: building the app and the review back end. His stack spec is `docs/desktop-app-spec.md` (Tauri 2 + Rust macOS menu bar app; Cloudflare Workers + D1 review dashboard and public `blocklist.json`; exact title + artist matching in Apple's spelling). Don't redesign his app here; raise questions for him in `docs/open-questions.md`.
 - **pflag canada**: guidelines, human review of flags, education content, resources, corporate partners.
 - **ZAK IT**: reviewing security, hosting, signing and data concerns (`docs/it-review.md`).
 
@@ -31,7 +31,7 @@ docs/
   costs.md              line items: agency investment vs ask vs pass-through
   open-questions.md     questions by owner (pflag, Kyle, IT, legal)
   decisions.md          dated decision log
-  desktop-app-spec.md   Kyle's spec (to add)
+  desktop-app-spec.md   Kyle's app stack spec (25 Nov)
 microsite/              the educational microsite (not started; see microsite/README.md)
 ```
 
