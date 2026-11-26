@@ -73,6 +73,7 @@ function S2Resolve({ step, direction, mode }: SlideProps) {
     gsap.set(q('.rsv-status-run, .rsv-status-done, .rsv-vlabel-cut'), { opacity: 0 });
 
     // ── beat 0: the dump ────────────────────────────────────────
+    tl.from(q('.rsv-kicker'), { opacity: 0, y: 10, duration: 0.6 }, 0);
     revealLines(tl, q('.rsv-head')[0], {}, 0.05);
     tl.from(viewer, { opacity: 0, y: VIEW_SMALL.y + 40, duration: 1.2 }, 0.3);
     tl.from(q('.rsv-tl'), { opacity: 0, y: 40, duration: 1.2 }, 0.4);
@@ -138,6 +139,7 @@ function S2Resolve({ step, direction, mode }: SlideProps) {
 
   return (
     <div ref={root} className="rsv">
+      <div className="rsv-kicker label"><i /><span><b>03</b> · Edit assembly · Resolve</span></div>
       <h2 className="rsv-head headline">Hand it the footage.<br />Get back a rough cut.</h2>
 
       {/* viewer */}

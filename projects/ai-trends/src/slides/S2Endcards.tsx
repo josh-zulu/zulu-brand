@@ -149,7 +149,7 @@ function S2Endcards({ step, direction, mode }: SlideProps) {
 
 export default defineSlide({
   id: 's2-endcards',
-  section: 2,
+  section: 3,
   title: 'End cards',
   steps: 2,
   notes:

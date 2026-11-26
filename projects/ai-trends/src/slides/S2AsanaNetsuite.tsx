@@ -57,6 +57,7 @@ function S2AsanaNetsuite({ step, direction, mode }: SlideProps) {
     gsap.set(q('.asn-s2'), { opacity: 0.32 });
 
     // ── beat 0 ──────────────────────────────────────────────────
+    tl.from(q('.asn-kicker'), { opacity: 0, y: 10, duration: 0.6 }, 0);
     revealLines(tl, q('.asn-head')[0], {}, 0.05);
     revealWords(tl, q('.asn-lede')[0], {}, 0.4);
     tl.from(q('.asn-frame'), { y: 60, opacity: 0, duration: 1.3 }, 0.25);
@@ -123,6 +124,7 @@ function S2AsanaNetsuite({ step, direction, mode }: SlideProps) {
   return (
     <div ref={root} className="asn">
       <div className="asn-text">
+        <div className="asn-kicker label"><i /><span><b>04</b> · Production · Asana + NetSuite</span></div>
         <h2 className="asn-head headline">Describe the project. It sets up the rest.</h2>
         <p className="asn-lede lede">
           <span className="asn-s1">Every task, date and owner in Asana.</span>{' '}

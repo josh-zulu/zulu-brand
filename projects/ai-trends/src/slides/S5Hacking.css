@@ -1,5 +1,13 @@
 .hk { position: absolute; inset: 0; }
-.hk-text { position: absolute; left: 140px; top: 170px; width: 620px; display: flex; flex-direction: column; gap: 34px; }
+
+/* trend kicker (same on all five trend slides) */
+.hk-kicker { position: absolute; left: 140px; top: 132px; z-index: 6; display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--zak-paper-2); white-space: nowrap; }
+.hk-kicker b { font-weight: 500; color: var(--zak-signal); }
+.hk-kicker-sep { color: var(--zak-stone-2); }
+.hk-rank { display: flex; gap: 6px; margin-left: 12px; }
+.hk-rank i { width: 8px; height: 8px; border-radius: 999px; background: var(--zak-ink-4); }
+.hk-rank i.on { width: 24px; background: var(--zak-signal); }
+.hk-text { position: absolute; left: 140px; top: 196px; width: 620px; display: flex; flex-direction: column; gap: 34px; }
 .hk-head { font-size: 84px; transform-origin: 0 0; }
 .hk-lede { font-size: 32px; }
 
@@ -45,11 +53,25 @@
 .hk-code-l.is-cmd { color: var(--zak-signal); }
 .hk-code-l.is-ok { color: var(--zak-signal); }
 
-.hk-build {
-  position: absolute; left: 1510px; top: 800px; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 10px;
-  color: var(--zak-signal); font-size: 15px; opacity: 0; white-space: nowrap;
-}
-.hk-build i { width: 9px; height: 9px; border-radius: 50%; background: var(--zak-signal); box-shadow: 0 0 10px var(--zak-signal); }
-
 .hk-clips { position: absolute; left: 140px; right: 140px; top: 452px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; pointer-events: none; }
 .hk-clip { aspect-ratio: auto; height: 484px; opacity: 0; pointer-events: auto; }
+
+/* the sensor the agent wires in */
+.hk-wire-svg { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }
+.hk-wire { fill: none; stroke: var(--zak-signal-2); stroke-width: 2.5; stroke-linejoin: round; filter: drop-shadow(0 0 6px rgba(77, 208, 225, 0.6)); }
+.hk-ripple { fill: none; stroke: var(--zak-signal); stroke-width: 2; opacity: 0; }
+.hk-sensor {
+  position: absolute; width: 132px; height: 48px; display: flex; align-items: center; gap: 12px; padding: 0 14px 0 10px; opacity: 0;
+  border-radius: 10px; background: #12201a; box-shadow: 0 0 0 1.5px rgba(77, 208, 225, 0.7), 0 14px 30px rgba(0, 0, 0, 0.6);
+}
+.hk-dome { width: 28px; height: 28px; flex: none; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #ffffff, #d9dcd6 55%, #9a9e98); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); }
+.hk-sensor .label { font-size: 12px; line-height: 1.3; color: var(--zak-signal-2); }
+.hk-sensor .label b { display: block; color: var(--zak-paper); font-weight: 500; }
+.hk-live { position: absolute; height: 20px; display: inline-flex; align-items: center; gap: 10px; font-size: 14px; color: var(--zak-signal); white-space: nowrap; opacity: 0; }
+.hk-live i { width: 9px; height: 9px; border-radius: 50%; background: var(--zak-signal); box-shadow: 0 0 10px var(--zak-signal); }
+
+/* where we'd use it */
+.hk-uses { position: absolute; left: 820px; top: 196px; display: flex; flex-direction: column; gap: 22px; opacity: 0; }
+.hk-uses > .label { font-size: 15px; }
+.hk-uses-row { display: flex; gap: 14px; }
+.hk-use { font-size: 26px; color: var(--zak-paper); padding: 16px 28px; white-space: nowrap; }

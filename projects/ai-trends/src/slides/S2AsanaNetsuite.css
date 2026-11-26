@@ -1,6 +1,6 @@
 /* S2AsanaNetsuite: one frame, two tools. Sentence → tasks, question → chart, then the recordings. */
 .asn { position: absolute; inset: 0; }
-.asn-text { position: absolute; left: 140px; top: 270px; width: 580px; display: flex; flex-direction: column; gap: 34px; }
+.asn-text { position: absolute; left: 140px; top: 236px; width: 580px; display: flex; flex-direction: column; gap: 34px; }
 .asn-head { font-size: 80px; }
 .asn-lede { font-size: 30px; }
 .asn-lede .asn-s1, .asn-lede .asn-s2 { color: var(--zak-paper-2); }
@@ -85,3 +85,8 @@
 .asn-clip .clip-ph-inner .label { font-size: 12px; }
 .asn-clip .clip-ph-name { font-size: 14px; }
 .asn-clip .clip-ph-hint { display: none; }
+
+/* thematic header: same look on all four tool slides, matching the S2Connectors map */
+.asn-kicker { display: flex; align-items: center; gap: 12px; color: var(--zak-paper-2); }
+.asn-kicker i { width: 8px; height: 8px; border-radius: 50%; background: var(--zak-signal); box-shadow: 0 0 10px rgba(0, 228, 130, 0.7); }
+.asn-kicker b { font-weight: inherit; color: var(--zak-signal); }

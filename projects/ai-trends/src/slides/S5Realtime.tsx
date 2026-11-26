@@ -77,6 +77,7 @@ function Realtime({ step, mode }: SlideProps) {
     gsap.set(q('.rt-clone'), { x: THUMB.x - (FRAME.x + SEED.x), y: THUMB.y - (FRAME.y + SEED.y), scale: THUMB.s / SEED.w, transformOrigin: '0 0', opacity: 0 });
 
     // ── beat 0: text, empty frame, the prompt ─────────────────
+    tl.from(q('.rt-kicker'), { opacity: 0, y: 10, duration: 0.8 }, 0);
     revealLines(tl, q('.rt-head')[0], {}, 0);
     revealWords(tl, q('.rt-lede')[0], {}, 0.4);
     tl.from(q('.rt-frame'), { opacity: 0, y: 40, duration: 1.2 }, 0.2);
@@ -111,6 +112,7 @@ function Realtime({ step, mode }: SlideProps) {
 
   return (
     <div ref={root} className="rt">
+      <div className="rt-kicker label"><b>Trend 05</b><span className="rt-kicker-sep">·</span>Watch<span className="rt-rank" aria-hidden>{[0, 1, 2, 3, 4].map((k) => <i key={k} className={k === 4 ? 'on' : ''} />)}</span></div>
       <div className="rt-text">
         <h2 className="rt-head headline">Made as you watch.</h2>
         <p className="rt-lede lede">Video and 3D worlds generated in real time from a sentence or a photo.</p>
@@ -160,6 +162,7 @@ export default defineSlide({
   title: 'Made as you watch',
   steps: 1,
   notes:
+    'Trend five, the one to watch: impressive now, not ready for client work yet.\n' +
     'On arrival: a photo and one sentence go in, and the world grows out of the photo while you watch. The frame counter is the point: it is being made frame by frame, not played back.\n' +
     'Click: the real thing. A world generated live with Genie (clip to add: genie-world-live.mp4).',
   Component: Realtime,

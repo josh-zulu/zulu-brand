@@ -1,0 +1,78 @@
+.genmedia { position: absolute; inset: 0; }
+
+/* headline, lede, and the turn that replaces the lede on the last beat */
+.gm-head { position: absolute; left: 140px; top: 118px; font-size: 88px; white-space: nowrap; }
+.gm-lede { position: absolute; left: 140px; top: 232px; font-size: 34px; color: var(--zak-stone); }
+.gm-turn { position: absolute; left: 140px; top: 214px; font-size: 88px; white-space: nowrap; color: var(--zak-paper); }
+.gm-receipt {
+  position: absolute; left: 1330px; top: 224px; width: 450px; font-family: var(--zak-font-mono); font-size: 18px; line-height: 1.5;
+  color: var(--zak-paper-2); opacity: 0;
+}
+.gm-receipt b { color: var(--zak-signal); font-weight: 500; }
+.gm-receipt .caret { height: 1em; width: 0.5em; vertical-align: -0.12em; }
+
+/* the release rail */
+.gm-rail { position: absolute; left: 140px; top: 391px; width: 1640px; height: 2px; }
+.gm-rail-track, .gm-rail-fill { position: absolute; inset: 0; transform-origin: 0 50%; }
+.gm-rail-track { background: var(--zak-line); }
+.gm-rail-fill { background: var(--zak-paper-2); opacity: 0.55; transform: scaleX(0); }
+
+.gm-card { position: absolute; top: 340px; width: 520px; }
+.gm-meta { position: relative; display: flex; justify-content: space-between; align-items: baseline; height: 30px; padding-left: 30px; font-size: 16px; }
+.gm-date { color: var(--zak-paper-2); }
+.gm-maker { color: var(--zak-stone-2); }
+.gm-node {
+  position: absolute; left: 0; top: 44px; width: 16px; height: 16px; border-radius: 50%; background: var(--zak-paper);
+  box-shadow: 0 0 0 6px var(--zak-ink); transform: scale(0);
+}
+
+.gm-well {
+  position: absolute; left: 0; top: 80px; width: 520px; height: 270px; border-radius: 14px; overflow: hidden;
+  background: var(--zak-ink-3); box-shadow: 0 0 0 1px var(--zak-line), 0 30px 80px rgba(0,0,0,.45);
+}
+.gm-img { position: absolute; background-size: cover; background-position: center; background-color: var(--zak-ink-4); will-change: filter, transform; }
+.gm-noise {
+  position: absolute; inset: -40px; pointer-events: none; opacity: 0; mix-blend-mode: screen;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .9 0 0 0 0 .9 0 0 0 0 .88 0 0 0 1.1 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: gm-grain 0.5s steps(4) infinite;
+}
+@keyframes gm-grain { 0% { transform: translate(0, 0); } 25% { transform: translate(-14px, 9px); } 50% { transform: translate(11px, -12px); } 75% { transform: translate(-7px, -5px); } }
+.gm-tag {
+  position: absolute; left: 12px; bottom: 12px; padding: 6px 10px; border-radius: 999px; background: rgba(16,15,15,.72);
+  font-family: var(--zak-font-mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--zak-paper-2);
+}
+
+/* seedance: one frame that cuts between three shots, over a timeline with sound */
+.gm-shot { opacity: 0; }
+.gm-shot.is-first { opacity: 1; }
+.gm-strip { position: absolute; left: 0; right: 0; bottom: 0; height: 52px; background: #121111; border-top: 1px solid rgba(255,255,255,.06); }
+.gm-segs { position: absolute; left: 14px; right: 72px; top: 10px; height: 12px; display: flex; gap: 4px; }
+.gm-segs i { flex: 1; border-radius: 3px; background: var(--zak-ink-4); }
+.gm-wave { position: absolute; left: 14px; right: 72px; top: 28px; height: 16px; }
+.gm-wave rect { fill: var(--zak-stone-2); }
+.gm-playhead { position: absolute; left: 14px; top: 6px; width: 2px; height: 40px; background: var(--zak-paper); }
+.gm-time { position: absolute; right: 14px; top: 17px; font-family: var(--zak-font-mono); font-size: 13px; color: var(--zak-stone); }
+
+/* gpt image 2: eight images from one prompt, after a beat of thinking */
+.gm-think {
+  position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: grid; place-items: center; z-index: 2; opacity: 0;
+  font-family: var(--zak-font-mono); font-size: 17px; color: var(--zak-paper-2); pointer-events: none;
+}
+.gm-think span { padding: 9px 16px; border-radius: 999px; background: rgba(16,15,15,.8); }
+
+.gm-name { position: absolute; left: 0; top: 374px; font-size: 42px; line-height: 1.1; white-space: nowrap; }
+.gm-facts { position: absolute; left: 0; top: 432px; width: 520px; margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.gm-facts li { position: relative; padding-left: 26px; font-size: 24px; line-height: 1.32; color: var(--zak-paper-2); }
+.gm-facts li::before { content: ''; position: absolute; left: 0; top: 0.66em; width: 12px; height: 1.5px; background: var(--zak-stone-2); }
+.gm-src { position: absolute; left: 0; top: 560px; width: 520px; font-size: 15px; }
+.gm-caption { position: absolute; left: 140px; top: 948px; font-size: 15px; }
+
+/* the agent beat */
+.gm-call {
+  position: absolute; left: 12px; top: 12px; z-index: 3; display: flex; align-items: center; gap: 10px; padding: 8px 14px 8px 12px; border-radius: 999px;
+  background: rgba(16,15,15,.86); box-shadow: 0 0 0 1px rgba(0,228,130,.35); font-family: var(--zak-font-mono); font-size: 15px; color: var(--zak-paper);
+  opacity: 0;
+}
+.gm-call i { width: 9px; height: 9px; border-radius: 50%; background: var(--zak-signal); }
+.gm-call em { font-style: normal; color: var(--zak-stone); }
+.genmedia .agent-cursor { transform-origin: 0 0; z-index: 30; }

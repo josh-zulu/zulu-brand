@@ -95,7 +95,7 @@ function S3Experience({ step, mode }: SlideProps) {
 
 export default defineSlide({
   id: 's3-experience',
-  section: 3,
+  section: 4,
   title: 'AGO · Show the experience',
   steps: 2,
   notes:

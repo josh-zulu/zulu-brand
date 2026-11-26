@@ -120,7 +120,7 @@ function S2Figma({ step, direction, mode }: SlideProps) {
   return (
     <div ref={root} className="fg">
       <div className="fg-text">
-        <div className="fg-kicker label">Agentic design · Figma</div>
+        <div className="fg-kicker label"><i /><span><b>01</b> · Design · Figma</span></div>
         <h2 className="fg-head headline">You direct. It designs with you.</h2>
         <p className="fg-lede lede">AI works right on the Figma canvas, in our files, with our components. We set the direction and make the calls.</p>
       </div>

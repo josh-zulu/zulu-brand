@@ -110,3 +110,8 @@
 .fg-tool-ai { font-size: 13px; color: var(--zak-signal); padding: 0 10px 0 4px; }
 
 .fg-canvas .agent-cursor { left: -700px; }
+
+/* thematic header: same look on all four tool slides, matching the S2Connectors map */
+.fg-kicker { display: flex; align-items: center; gap: 12px; color: var(--zak-paper-2); }
+.fg-kicker i { width: 8px; height: 8px; border-radius: 50%; background: var(--zak-signal); box-shadow: 0 0 10px rgba(0, 228, 130, 0.7); }
+.fg-kicker b { font-weight: inherit; color: var(--zak-signal); }

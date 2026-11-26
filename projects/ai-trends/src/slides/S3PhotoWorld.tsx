@@ -53,6 +53,7 @@ function S3PhotoWorld({ step, mode }: SlideProps) {
     gsap.set(q('.pw-print'), { scale: 0.56, rotation: -4 });
 
     // beat 0: the print
+    tl.from(q('.pw-kicker'), { opacity: 0, y: 10, duration: 0.8 }, 0);
     revealLines(tl, q('.pw-headline')[0], {}, 0.05);
     revealWords(tl, q('.pw-lede')[0], {}, 0.45);
     tl.from(q('.pw-print'), { y: 120, opacity: 0, rotation: -9, duration: 1.4, ease: 'expo.out' }, 0.2);
@@ -71,6 +72,7 @@ function S3PhotoWorld({ step, mode }: SlideProps) {
 
   return (
     <div ref={root} className="photo-world">
+      <div className="pw-kicker label"><b>Trend 03</b><span className="pw-kicker-sep">·</span>Next year<span className="pw-rank" aria-hidden>{[0, 1, 2, 3, 4].map((k) => <i key={k} className={k === 2 ? 'on' : ''} />)}</span></div>
       <div className="pw-copy">
         <h2 className="pw-headline headline">Take one photo. Walk around inside it.</h2>
         <p className="pw-lede lede">AI builds a 3D world from it that we can explore and film.</p>
@@ -97,10 +99,11 @@ function S3PhotoWorld({ step, mode }: SlideProps) {
 
 export default defineSlide({
   id: 's3-photo-world',
-  section: 3,
+  section: 5,
   title: 'Photo to 3D world',
   steps: 2,
   notes:
+    'Trend three, within the next year.\n' +
     'Take one photo. Walk around inside it. AI builds a 3D world from it that we can explore and film.\n' +
     'Click 1: the photo opens up and the camera walks inside it. This is a real 3D world made with World Labs Marble (their sample scene, credited on the slide), rendered live. You can steer it with the mouse.\n' +
     'Click 2: the real thing, World Labs Marble. Clip to add: clips/photo-to-world-marble.mp4.',

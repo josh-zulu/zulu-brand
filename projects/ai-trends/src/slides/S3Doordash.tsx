@@ -84,7 +84,7 @@ function S3Doordash({ step, mode }: SlideProps) {
 
 export default defineSlide({
   id: 's3-doordash',
-  section: 3,
+  section: 4,
   title: 'AGO · AGO-to-go on DoorDash',
   steps: 3,
   notes:

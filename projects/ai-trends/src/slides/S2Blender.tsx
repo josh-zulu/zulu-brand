@@ -8,7 +8,7 @@ import { useSfx } from '@/lib/sfx';
 import './S2Blender.css';
 
 /**
- * It works inside our tools.
+ * It doesn't describe the scene. It builds it.
  * One idea: the connector. A chat panel and a 3D viewport sit side by side; on the click a line runs out of the chat,
  * plugs into the viewport and on into the scene. Where it lands, the scene builds itself (wireframe, then solid),
  * while the agent's tool calls tick down the chat. Then the real recording takes over the viewport.
@@ -37,6 +37,7 @@ function S2Blender({ step, direction, mode }: SlideProps) {
     const q = gsap.utils.selector(root);
 
     // ── beat 0: the setting ────────────────────────────────────
+    tl.from(q('.bl-kicker'), { opacity: 0, y: 10, duration: 0.6 }, 0);
     revealLines(tl, q('.bl-head')[0], {}, 0.05);
     revealWords(tl, q('.bl-lede')[0], {}, 0.4);
     tl.from(q('.bl-vp'), { y: 60, opacity: 0, duration: 1.3 }, 0.25);
@@ -105,8 +106,9 @@ function S2Blender({ step, direction, mode }: SlideProps) {
   return (
     <div ref={root} className="bl">
       <div className="bl-text">
-        <h2 className="bl-head headline">It works inside our tools.</h2>
-        <p className="bl-lede lede">Connectors plug AI straight into Blender, Figma, Asana and more. It doesn't describe the scene. It builds it.</p>
+        <div className="bl-kicker label"><i /><span><b>02</b> · 3D · Blender</span></div>
+        <h2 className="bl-head headline">It doesn't describe the scene. It builds it.</h2>
+        <p className="bl-lede lede">Plugged into Blender, it lays out the set, the lights and the camera in our file, ready for an artist to take further.</p>
       </div>
 
       {/* chat panel */}

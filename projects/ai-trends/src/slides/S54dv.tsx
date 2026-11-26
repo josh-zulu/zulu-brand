@@ -83,6 +83,7 @@ function FourDV({ step, mode }: SlideProps) {
     // ── beat 0: the moment plays … and stops ─────────────────
     tl.fromTo(q('.fdv-view'), { opacity: 0 }, { opacity: 1, duration: 1.4, ease: 'power2.out' }, 0);
     tl.to(c, { zoom: 1, duration: 2.6, ease: 'power2.out', onUpdate: render }, 0);
+    tl.from(q('.fdv-kicker'), { opacity: 0, y: 10, duration: 0.8 }, 0.2);
     revealLines(tl, q('.fdv-head')[0], {}, 0.2);
     revealWords(tl, q('.fdv-lede')[0], {}, 0.6);
     tl.from(q('.fdv-live'), { opacity: 0, x: -16, duration: 0.8 }, 0.5);
@@ -98,6 +99,7 @@ function FourDV({ step, mode }: SlideProps) {
 
     // ── beat 1: step inside ──────────────────────────────────
     tl.to(q('.fdv-copy'), { opacity: 0, y: 40, duration: 0.7, ease: 'power2.in' }, 'b1');
+    tl.to(q('.fdv-kicker'), { opacity: 0, duration: 0.5 }, 'b1');
     tl.to(q('.fdv-scrim'), { opacity: 0.35, duration: 1.2, ease: 'power2.inOut' }, 'b1');
     tl.to(c, { zoom: 1.45, amp: 1.5, shift: 0, duration: 2.2, ease: 'power3.inOut', onUpdate: render }, 'b1');
     tl.to(q('.fdv-live'), { scale: 1.18, x: 16, y: 8, duration: 1, ease: 'power3.inOut' }, 'b1+=0.4');
@@ -112,6 +114,7 @@ function FourDV({ step, mode }: SlideProps) {
       </div>
       <div className="fdv-scrim fill" />
 
+      <div className="fdv-kicker label"><b>Trend 04</b><span className="fdv-kicker-sep">·</span>In 2 years<span className="fdv-rank" aria-hidden>{[0, 1, 2, 3, 4].map((k) => <i key={k} className={k === 3 ? 'on' : ''} />)}</span></div>
       <div className="fdv-live label"><i className="fdv-live-dot" />Live demo <span className="fdv-sep">·</span> 4DV.ai</div>
 
       <div className="fdv-copy">
@@ -152,6 +155,7 @@ export default defineSlide({
   steps: 1,
   transition: 'fade',
   notes:
+    'Trend four, about two years out.\n' +
     'Live demo: 4DV.ai. Have it open in a browser tab with a scene loaded before the talk.\n' +
     'On arrival the moment plays, then pauses, and the camera keeps moving around it. That is the idea: the video is stopped, the viewpoint is not.\n' +
     'Click once to "step inside" (the copy clears and the camera pushes in), then switch to 4DV.ai and drag the camera around a real capture.\n' +
