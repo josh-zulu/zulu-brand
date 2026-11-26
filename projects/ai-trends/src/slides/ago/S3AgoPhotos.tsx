@@ -65,7 +65,7 @@ function S3AgoPhotos({ step }: SlideProps) {
 
 export default defineSlide({
   id: 's3-ago-photos',
-  section: 3,
+  section: 4,
   title: 'AGO · 02 Gather photos',
   steps: 1,
   transition: 'fade',
