@@ -64,7 +64,7 @@ function S7Contact({ step }: SlideProps) {
 
 export default defineSlide({
   id: 's7-contact',
-  section: 6,
+  section: 5,
   title: 'Bring us the hard digital problems',
   chrome: false,
   notes: 'Last slide. The ask: when you have a digital or innovation problem, bring it to us. Josh, Kyle and Hiep.',

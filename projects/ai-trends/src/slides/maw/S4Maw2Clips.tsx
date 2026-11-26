@@ -94,7 +94,7 @@ function S4Maw2Clips({ step }: SlideProps) {
 
 export default defineSlide({
   id: 's4-maw-clips',
-  section: 4,
+  section: 3,
   title: 'Make-A-Wish · 02 Clip library',
   steps: 1,
   transition: 'fade',

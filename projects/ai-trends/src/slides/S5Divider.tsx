@@ -8,7 +8,7 @@ import { rng } from '@/lib/motion';
 import './S5Divider.css';
 
 /**
- * Forward-looking background for section 5: we travel through a corridor of moments.
+ * Forward-looking background for section 4: we travel through a corridor of moments.
  * Frames from the coming section (and a few "next" stills) drift out of the dark at the vanishing point,
  * grow as they approach and slip past the camera. Slow, continuous, no beats: it just keeps moving forward.
  */
@@ -82,11 +82,11 @@ function Corridor({ mode }: { mode: SlideProps['mode'] }) {
 
 export default defineSlide({
   id: 's5-divider',
-  section: 5,
+  section: 4,
   title: "Divider: What's next",
   chrome: false,
   notes:
-    "Section 5: what's next.\n" +
+    "Section 4: what's next.\n" +
     'The background is a corridor of moments drifting toward us, a few of them from the slides ahead. Let it run while you set up the section.',
-  Component: (p) => <SectionDivider {...p} number={5} title={'What’s next'} background={<Corridor mode={p.mode} />} />,
+  Component: (p) => <SectionDivider {...p} number={4} title={'What’s next'} background={<Corridor mode={p.mode} />} />,
 });

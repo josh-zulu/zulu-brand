@@ -7,10 +7,10 @@ import './Agenda.css';
 
 /**
  * Agenda. One idea: the talk counts itself in.
- * Each section number rolls up like an odometer (01 lands first, 06 last, each running a little longer),
+ * Each section number rolls up like an odometer (01 lands first, 05 last, each running a little longer),
  * and its title rises letter by letter just as the number settles. The hairline under each row draws on.
  */
-const ROWS = [1, 2, 3, 4, 5, 6].map((n) => ({ n, title: SECTIONS[n].replace(/'/g, '’') }));
+const ROWS = [1, 2, 3, 4, 5].map((n) => ({ n, title: SECTIONS[n].replace(/'/g, '’') }));
 
 function Agenda({ step }: SlideProps) {
   const root = useRef<HTMLDivElement>(null);
@@ -65,6 +65,6 @@ export default defineSlide({
   section: 0,
   title: 'Agenda',
   transition: 'fade',
-  notes: 'Six sections. The numbers count themselves in; no click needed.',
+  notes: 'Five sections. The numbers count themselves in; no click needed.',
   Component: Agenda,
 });

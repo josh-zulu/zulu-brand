@@ -82,7 +82,7 @@ function S4Maw3Figma({ step, mode }: SlideProps) {
 
 export default defineSlide({
   id: 's4-maw-figma',
-  section: 4,
+  section: 3,
   title: 'Make-A-Wish · 03 Figma',
   steps: 2,
   transition: 'fade',

@@ -56,14 +56,14 @@ Planned assets are **prompts in code**: `projects/<p>/assets.d/*.json` (one file
 
 ## The story and the rules (read before designing anything)
 
-Three beats, said at the top, echoed in section 2, closed in section 6: **It talked** (chat partner, we learned to prompt) → **It made** (generator, we learned to make with it) → **It does** (coworker, we're learning to hand off the work). Underneath: *creativity that means something still starts with a person. The idea, the taste and the reason to make something stay human.*
+Three beats, said at the top, echoed in section 2, closed in section 5 (the close): **It talked** (chat partner, we learned to prompt) → **It made** (generator, we learned to make with it) → **It does** (coworker, we're learning to hand off the work). Underneath: *creativity that means something still starts with a person. The idea, the taste and the reason to make something stay human.*
 
 Motion language:
 - **One motion idea per slide.** Every animation explains the point of the slide; nothing decorative for its own sake.
 - **Machine moments** are charcoal with signal green (`--zak-signal`) for cursors, live states and agent activity, mono type (JetBrains Mono) for anything the machine says.
 - **Human moments** go quiet: paper ground (`theme: 'paper'`), no particles, no UI, and the hand-drawn `HandLine`. It appears on 1B and returns at the close. Don't use it elsewhere.
 - Display type is Oswald Light caps; statements are Schibsted Grotesk 500, sentence case; labels are mono caps.
-- Copy is approved: use the outline's words exactly. Sections 3–5 copy belongs to Kyle and Hiep; keep it as in the source deck.
+- Copy is approved: use the outline's words exactly. Copy for Work we made and What's next (sections 3–4) belongs to Kyle and Hiep; keep it as in the source deck.
 
 See `brand/BRAND.md` for the brand system and `.claude/skills/` for step-by-step how-tos. Where the AI Trends project stands and what's open: `projects/ai-trends/docs/HANDOFF.md`.
 

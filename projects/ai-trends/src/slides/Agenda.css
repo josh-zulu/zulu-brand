@@ -9,7 +9,7 @@
 
 .ag-list { position: absolute; left: 140px; right: 140px; top: 196px; margin: 0; padding: 0; list-style: none; }
 .ag-row {
-  position: relative; height: 126px; display: flex; align-items: center; gap: 0;
+  position: relative; height: 150px; display: flex; align-items: center; gap: 0;
 }
 .ag-rule {
   position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--zak-line-strong); transform-origin: 0 50%;

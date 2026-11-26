@@ -30,9 +30,9 @@ function Film({ mode }: Pick<SlideProps, 'mode'>) {
 
 export default defineSlide({
   id: 's4-divider',
-  section: 4,
+  section: 3,
   title: 'Divider: Work we made',
   chrome: false,
-  notes: 'Section 4: work we made.',
-  Component: (p) => <SectionDivider {...p} number={4} title="Work we made" background={<Film mode={p.mode} />} />,
+  notes: 'Section 3: work we made.',
+  Component: (p) => <SectionDivider {...p} number={3} title="Work we made" background={<Film mode={p.mode} />} />,
 });

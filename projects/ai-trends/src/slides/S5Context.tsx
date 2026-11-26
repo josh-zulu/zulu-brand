@@ -171,7 +171,7 @@ function BrandAgents({ step }: SlideProps) {
 
 export default defineSlide({
   id: 's5-context',
-  section: 5,
+  section: 4,
   title: 'Brand agents',
   steps: 2,
   notes:

@@ -46,7 +46,7 @@ function S3ColourLab({ mode }: SlideProps) {
 
 export default defineSlide({
   id: 's3-colour-lab',
-  section: 4,
+  section: 3,
   title: 'AGO · Colour lab',
   steps: 0,
   notes:

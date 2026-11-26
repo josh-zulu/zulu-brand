@@ -28,14 +28,16 @@ The Zulu AI Working Group's December 2026 company talk, built as a web-native an
 - Each slide is its own file; conflict hotspots are `deck.ts`, `presenters.json` and shared components.
 - When work is split across helper agents, keep one live status page updated for Josh. No need to ask before splitting.
 
-## Deck structure (41+ slides)
-Intro (opener, Digital team, agenda) → **1 The year AI started working** (setup, generative media, agentic context, how we work with it: goal + dictation) → **2 It works where we work** (connectors tee-up; 01 Design · Figma, 02 3D · Blender, 03 Edit assembly · Resolve, 04 Production · Asana + NetSuite, 05 Office · Google Workspace; sameness; taste) → **3 New ways to make things** (blockout to film, end cards) → **4 Work we made** (AGO steps, Make-A-Wish steps) → **5 What's next, ranked** (brand agents, hardware, worlds from a photo, 4DV, real-time) → close (built with AI, the close, questions, Bring us the hard digital problems).
+## Deck structure (46 slides, five sections)
+Intro (opener, Digital team, agenda) → **1 The year AI started working** (setup, generative media, agentic context, how we work with it: goal + dictation) → **2 It works where we work** (connectors tee-up; 01 Design · Figma, 02 3D · Blender, 03 Edit assembly · Resolve, 04 Production · Asana + NetSuite, 05 Office · Google Workspace; sameness; taste) → **3 Work we made** (AGO steps, Make-A-Wish steps) → **4 What's next, ranked** (brand agents, blockout to film, hardware, worlds from a photo, 4DV, real-time) → **5** close (built with AI, the close, questions, Bring us the hard digital problems).
 
 ## Open items
+_26 Nov 2026: Josh cut "New ways to make things". Its divider and the End cards slide are deleted, Blockout to film moved to What's next, and the sections renumbered 01–05._
+
 1. **Copy approval.** All new copy written during the restructure needs Josh's sign-off:
    - section 1: generative media, agentic, "We brief it"
    - section 2: connectors tee-up, Blender's new headline
-   - section 5: ranked, brand agents, hardware
+   - section 4 (What's next): ranked, brand agents, hardware
    - earlier: the Alder ad line on the taste slide, the sameness slogans, the team slide lines
 2. **Workspace in the connectors index.** Done: "05 · Office · Google Workspace" is the fifth socket on `s2-connectors` (five clicks now), and the Workspace slide header matches. Josh approved its copy ("Office", "building docs, sheets and decks") on 26 Nov 2026.
 3. **Missing clips** (they show "clip to add"): the Blender, Figma, Asana, NetSuite and Resolve recordings, `workspace-docs-sheets-slides.mp4`, `blockout.mp4`, `final-film.mp4`, `photo-to-world-marble.mp4`, `genie-world-live.mp4`, and the two hardware clips. They go in `projects/ai-trends/public/media/clips/` (gitignored: share via OneDrive, or commit web-encoded versions).

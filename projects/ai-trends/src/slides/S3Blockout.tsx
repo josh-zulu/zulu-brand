@@ -65,7 +65,7 @@ function S3Blockout({ step, mode }: SlideProps) {
 
 export default defineSlide({
   id: 's3-blockout',
-  section: 3,
+  section: 4,
   title: 'Blockout to film',
   steps: 1,
   notes:

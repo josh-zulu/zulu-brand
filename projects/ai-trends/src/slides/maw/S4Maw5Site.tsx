@@ -43,7 +43,7 @@ function S4Maw5Site({ mode }: SlideProps) {
 
 export default defineSlide({
   id: 's4-maw-site',
-  section: 4,
+  section: 3,
   title: 'Make-A-Wish · 05 The site',
   steps: 0,
   chrome: false,

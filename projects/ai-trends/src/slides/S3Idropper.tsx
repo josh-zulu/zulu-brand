@@ -88,7 +88,7 @@ function S3Idropper({ step, mode }: SlideProps) {
 
 export default defineSlide({
   id: 's3-idropper',
-  section: 4,
+  section: 3,
   title: 'AGO · iDropper prototype',
   steps: 2,
   notes:

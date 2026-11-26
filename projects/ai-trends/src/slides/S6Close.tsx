@@ -120,7 +120,7 @@ function S6Close({ step }: SlideProps) {
 
 export default defineSlide({
   id: 's6-close',
-  section: 6,
+  section: 5,
   title: '6C · The close',
   steps: 1,
   chrome: false,

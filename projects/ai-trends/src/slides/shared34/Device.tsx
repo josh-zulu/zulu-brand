@@ -3,7 +3,7 @@ import './shared34.css';
 import { media } from '@/lib/asset';
 
 /**
- * Phone pieces for the AGO pitch slides (section 3) and the divider mosaic.
+ * Phone pieces for the AGO pitch slides (Work we made).
  *
  * Our GIF mockups (public/media/ago/*.mp4) have an iPhone bezel, Dynamic Island and status bar baked into the
  * pixels. MockPhone shows them whole; on its own, PhoneScreen crops to the app screen (the divider mosaic tiles).

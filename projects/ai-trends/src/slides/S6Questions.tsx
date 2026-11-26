@@ -61,7 +61,7 @@ function Questions({ step }: SlideProps) {
 
 export default defineSlide({
   id: 's6-questions',
-  section: 6,
+  section: 5,
   title: 'Questions',
   chrome: false,
   transition: 'fade',

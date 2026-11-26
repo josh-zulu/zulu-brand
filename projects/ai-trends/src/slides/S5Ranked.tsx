@@ -102,7 +102,7 @@ function Ranked({ step }: SlideProps) {
 
 export default defineSlide({
   id: 's5-ranked',
-  section: 5,
+  section: 4,
   title: 'What’s next, ranked',
   steps: 1,
   notes:

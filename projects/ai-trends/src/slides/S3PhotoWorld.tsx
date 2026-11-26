@@ -99,7 +99,7 @@ function S3PhotoWorld({ step, mode }: SlideProps) {
 
 export default defineSlide({
   id: 's3-photo-world',
-  section: 5,
+  section: 4,
   title: 'Photo to 3D world',
   steps: 2,
   notes:

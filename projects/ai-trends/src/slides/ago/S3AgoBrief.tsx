@@ -72,7 +72,7 @@ function S3AgoBrief({ step }: SlideProps) {
 
 export default defineSlide({
   id: 's3-ago-brief',
-  section: 4,
+  section: 3,
   title: 'AGO · 01 The brief',
   steps: 1,
   transition: 'fade',

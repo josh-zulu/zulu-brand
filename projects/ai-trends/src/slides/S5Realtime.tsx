@@ -158,7 +158,7 @@ function Realtime({ step, mode }: SlideProps) {
 
 export default defineSlide({
   id: 's5-realtime',
-  section: 5,
+  section: 4,
   title: 'Made as you watch',
   steps: 1,
   notes:

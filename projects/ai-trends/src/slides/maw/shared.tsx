@@ -5,7 +5,7 @@ import { StepStrip, stripIn } from '../shared34/StepStrip';
 import './maw.css';
 
 /**
- * Make-A-Wish step slides (section 4). The motion is ported from the Remotion scenes in maw-video/src/scenes:
+ * Make-A-Wish step slides (section 3, Work we made). The motion is ported from the Remotion scenes in maw-video/src/scenes:
  * each scene is authored in its original 1920×1080 coordinates inside .mws-scene, which scales it into the
  * slide's safe area (Remotion content spans x 100–1820, y 170–905 → slide x 140–1780, y 224–924).
  * Remotion frames are 30fps, so a frame value f becomes f / 30 seconds on the beat timeline.

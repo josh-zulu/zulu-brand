@@ -261,7 +261,7 @@ function Reveal({ step, direction, mode }: SlideProps) {
 
 export default defineSlide({
   id: 's6-reveal',
-  section: 6,
+  section: 5,
   title: '6A · This deck was built with AI',
   steps: 3,
   notes:

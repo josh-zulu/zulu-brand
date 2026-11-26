@@ -15,6 +15,7 @@ Motion: Start on black. A blinking chat cursor types "AI Trends." The letters br
 
 ## Agenda
 Keep the current six sections (1 The Year AI Started Working · 2 What AI Can Do Now · 3 New Ways to Make Things · 4 Work We Made · 5 What's Next · 6 Questions).
+**Changed by Josh (26 Nov 2026):** five sections. New Ways to Make Things is cut (its divider and End cards deleted; Blockout to film moved to What's Next), so: 1 The Year AI Started Working · 2 What AI Can Do Now · 3 Work We Made · 4 What's Next · 5 Questions.
 Motion: section numbers count in, titles stagger in after them.
 
 ## Section 1

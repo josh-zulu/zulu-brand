@@ -189,7 +189,7 @@ function Hacking({ step, mode }: SlideProps) {
 
 export default defineSlide({
   id: 's5-hacking',
-  section: 5,
+  section: 4,
   title: 'Agents that build hardware',
   steps: 3,
   notes:

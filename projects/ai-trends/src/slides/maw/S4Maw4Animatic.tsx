@@ -45,7 +45,7 @@ function S4Maw4Animatic({ mode }: SlideProps) {
 
 export default defineSlide({
   id: 's4-maw-animatic',
-  section: 4,
+  section: 3,
   title: 'Make-A-Wish · 04 Animatic',
   steps: 0,
   transition: 'fade',

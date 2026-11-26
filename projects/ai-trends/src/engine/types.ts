@@ -43,10 +43,9 @@ export const SECTIONS: Record<number, string> = {
   0: 'AI Trends',
   1: 'The Year AI Started Working',
   2: 'What AI Can Do Now',
-  3: 'New Ways to Make Things',
-  4: 'Work We Made',
-  5: "What's Next",
-  6: 'Questions',
+  3: 'Work We Made',
+  4: "What's Next",
+  5: 'Questions',
 };
 
 /** Design canvas. Every slide is authored in these pixels and scaled to fit. */

@@ -25,9 +25,7 @@ import S2AsanaNetsuite from "./slides/S2AsanaNetsuite";
 import S2Workspace from "./slides/S2Workspace";
 import S2Sameness from "./slides/S2Sameness";
 import S2Taste from "./slides/S2Taste";
-import S3Divider from "./slides/S3Divider";
 import S3Blockout from "./slides/S3Blockout";
-import S2Endcards from "./slides/S2Endcards";
 import S4Divider from "./slides/S4Divider";
 import S3Pitches from "./slides/S3Pitches";
 import S3AgoBrief from "./slides/ago/S3AgoBrief";
@@ -78,11 +76,7 @@ export const slides: SlideDef[] = [
   S2Workspace,
   S2Sameness,
   S2Taste,
-  // 3 · New ways to make things
-  S3Divider,
-  S3Blockout,
-  S2Endcards,
-  // 4 · Work we made: AGO, Make-A-Wish
+  // 3 · Work we made: AGO, Make-A-Wish
   S4Divider,
   S3Pitches,
   S3AgoBrief,
@@ -97,15 +91,16 @@ export const slides: SlideDef[] = [
   S4Maw3Figma,
   S4Maw4Animatic,
   S4Maw5Site,
-  // 5 · What is next, ranked
+  // 4 · What is next, ranked
   S5Divider,
   S5Ranked,
   S5Context,
+  S3Blockout,
   S5Hacking,
   S3PhotoWorld,
   S54dv,
   S5Realtime,
-  // Close
+  // 5 · Close
   S6Reveal,
   S6Close,
   S6Questions,

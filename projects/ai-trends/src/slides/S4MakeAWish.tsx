@@ -45,7 +45,7 @@ function S4MakeAWish({ step, mode }: SlideProps) {
 
 export default defineSlide({
   id: 's4-make-a-wish',
-  section: 4,
+  section: 3,
   title: 'Make-A-Wish: Wishes Are Medicine',
   steps: 0,
   notes:

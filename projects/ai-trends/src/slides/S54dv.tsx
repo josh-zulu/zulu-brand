@@ -150,7 +150,7 @@ function FourDV({ step, mode }: SlideProps) {
 
 export default defineSlide({
   id: 's5-4dv',
-  section: 5,
+  section: 4,
   title: 'Video you can step inside',
   steps: 1,
   transition: 'fade',

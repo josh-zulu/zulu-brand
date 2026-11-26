@@ -111,7 +111,7 @@ function S4Maw1Inputs({ step }: SlideProps) {
 
 export default defineSlide({
   id: 's4-maw-inputs',
-  section: 4,
+  section: 3,
   title: 'Make-A-Wish · 01 The inputs',
   steps: 1,
   transition: 'fade',

@@ -59,7 +59,7 @@ function S3Pitches({ mode }: SlideProps) {
 
 export default defineSlide({
   id: 's3-pitches',
-  section: 4,
+  section: 3,
   title: 'Pitches they can play with',
   steps: 0,
   notes:
