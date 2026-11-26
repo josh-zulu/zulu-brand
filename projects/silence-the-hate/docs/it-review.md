@@ -8,15 +8,15 @@ ZAK and pflag canada are shipping a small **desktop app** (macOS and Windows, bu
 
 ## Design choices that reduce risk (already proposed)
 
-- **No user accounts, no listening data collected.** Matching happens on the user's computer. Only an anonymous, opt-in skip count is sent.
+- **No user accounts, no listening data collected.** Matching happens on the user's computer; today the app's only network call is downloading the public block list. A future skip counter would be anonymous and opt-in.
 - **Signed flag list.** The app checks a signature before using a new list, so nobody can tamper with what gets skipped even if hosting is compromised.
 - **Static microsite on a CDN.** Little to attack, cheap to scale.
-- **Hosting in Canada.**
+- **Cloudflare Workers + D1** (Kyle's prototype). D1 has no Canada-only region that we know of; only reviewer emails are stored.
 
 ## Questions for IT
 
 **Ownership and accounts**
-1. Where should the code live (ZAK GitHub org)? Who gets access, including outside contributors from pflag?
+1. The back end (two Workers + D1) runs on the **Zulubot Cloudflare account**, the review dashboard behind Cloudflare Access with email one-time codes. Right home for a public client launch? Who else needs access? Where should the code live (ZAK GitHub org), including access for pflag contributors?
 2. Who should be the **publisher of record** on the Apple Developer ID and Windows code-signing certificate: ZAK or pflag? (Being the named publisher of a hate-related tool may draw harassment. It also decides who can ship updates.)
 3. Where are the signing keys and API keys kept, and who can use them? (Proposed: CI-only signing, keys in a secrets manager, never on laptops.)
 

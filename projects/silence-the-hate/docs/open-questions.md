@@ -3,10 +3,12 @@
 Add an owner and a date when you add a question. Move answered ones to `decisions.md`.
 
 ## Kyle (desktop app)
-- How does the app detect the playing track and skip today? Which services and OSes work?
-- How fast is the skip from track start? Reliability when the user scrubs, repeats or shuffles?
-- Tauri or native? How will updates and signing work?
-- Can the app keep the flag list and matching fully local?
+- Answered 25 Nov in `desktop-app-spec.md`: Tauri 2 + Rust, macOS distributed notifications, ~22 ms skip, matching local, Cloudflare Workers + D1 back end.
+- Windows: effort and approach (system media transport controls)?
+- Reliability when the user scrubs, repeats or shuffles?
+- Auto-update and notarisation plan; who holds the signing identity?
+- Feed: add a signature and version, and the education fields (flagged lines, explanation id)?
+- Two-reviewer rule for severe cases in the dashboard (today any one reviewer can block)?
 
 ## pflag canada
 - When can we see a draft of the flagging guidelines?

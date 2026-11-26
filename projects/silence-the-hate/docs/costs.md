@@ -39,7 +39,7 @@ Three buckets:
 | Apple Developer Program | US$99 a year | Publisher of record |
 | Windows code signing | Varies by option; quote needed | Publisher of record |
 | AI classification (Claude API) | Small at this scale; estimate after the spike | ZAK |
-| Hosting, CDN, WAF, domain | Low monthly at campaign scale; spikes around launch | ZAK or partner |
+| Cloudflare Workers, D1, domain (current stack) | Free tier today; Workers paid plan from US$5 a month | ZAK or partner |
 | French translation | Quote needed | pflag / partner |
 | Accessibility audit | Quote needed | |
 | Security review / pen test | Quote needed | |

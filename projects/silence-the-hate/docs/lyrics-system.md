@@ -60,9 +60,12 @@ Tune it against a **gold set**: 200 to 300 songs labelled by pflag reviewers, de
 
 ### 5. Matching songs on the computer
 
-The desktop app sees only what the music app reports: title, artist, sometimes album and duration. No ISRC. So:
-- The catalog stores each flagged song's ISRC (from the lyrics provider or MusicBrainz, which is free and open) plus normalised title / artist variants: remasters, "feat." credits, clean / explicit, live versions, translations.
-- The app normalises what it sees (strip "Remastered 2011", "feat.", punctuation, case) and matches against the list. Duration breaks ties.
+Kyle's approach (see `desktop-app-spec.md`, "Song matching"): players only report title and artist, never an ISRC, so none is stored.
+- The app matches **exact title + artist**, ignoring case and outer spaces. Strict on purpose: skipping the wrong song is worse than missing one.
+- Songs are saved with **Apple's exact title and artist** (from the iTunes Search API); Spotify shows the same distributor metadata.
+- Clean, live and remix versions are added by a reviewer as their own entries.
+- **The lyrics pipeline must output Apple's spelling** so its proposals drop straight into the review dashboard.
+- Still open: fold curly apostrophes and "(feat. ...)"; use the stored song length to separate two same-titled songs by one artist.
 - Clean (radio edit) versions: decide with pflag whether the clean version is flagged too. A muted slur is still the song.
 
 ### 6. After launch
