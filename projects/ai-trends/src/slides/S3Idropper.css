@@ -10,3 +10,4 @@
 .id-float { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); animation: id-float 6s ease-in-out infinite; }
 .id-hand { transform-origin: 50% 90%; }
 @keyframes id-float { 0%, 100% { transform: translate(-50%, -50%); } 50% { transform: translate(-50%, calc(-50% - 8px)); } }
+.id-link { margin-top: 32px; align-self: flex-start; }

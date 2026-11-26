@@ -37,6 +37,17 @@
 .p34-si.is-on .label { color: var(--zak-signal); }
 .p34-si.is-on b { color: var(--zak-paper); }
 
+/* ───────── Link to the live work ───────── */
+.p34-link {
+  display: inline-flex; align-items: center; gap: 12px; padding: 12px 18px; border-radius: 999px; z-index: 5;
+  font-family: var(--zak-font-mono); font-size: 17px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
+  color: var(--zak-paper); background: rgba(11, 11, 11, 0.72); box-shadow: 0 0 0 1px var(--zak-line-strong);
+  backdrop-filter: blur(8px); transition: box-shadow 0.2s, color 0.2s;
+}
+.p34-link i { width: 8px; height: 8px; border-radius: 50%; background: var(--zak-signal); }
+.p34-link span { color: var(--zak-signal); }
+.p34-link:hover { box-shadow: 0 0 0 1px var(--zak-signal), 0 0 18px rgba(0, 228, 130, 0.35); }
+
 /* ───────── AGO pitch kicker (slides 21–24) ───────── */
 .p34-kicker { display: flex; align-items: center; gap: 14px; }
 .p34-kicker b { font-weight: 500; color: var(--zak-paper); }

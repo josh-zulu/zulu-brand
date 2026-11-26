@@ -3,6 +3,8 @@ import gsap from 'gsap';
 import { defineSlide, type SlideProps } from '@/engine/types';
 import { useBeats } from '@/engine/useBeats';
 import { StepStrip } from '../shared34/StepStrip';
+import { LinkChip } from '../shared34/LinkChip';
+import { LINKS } from '@/links';
 import { BrowserWindow, MAW_STEPS, Recording, f } from './shared';
 import { ANIMATIC_WIN } from './S4Maw4Animatic';
 import './S4Maw5Site.css';
@@ -23,6 +25,7 @@ function S4Maw5Site({ mode }: SlideProps) {
   useBeats(root, 0, (tl) => {
     const q = gsap.utils.selector(root);
     tl.fromTo(q('.mx-win'), START, { ...FULL, duration: f(20), ease: 'power3.inOut' }, f(24));
+    tl.from(q('.mx-link'), { opacity: 0, y: 12, duration: 0.6, ease: 'expo.out' }, f(44));
     tl.to(q('.mx-kicker, .p34-strip'), { opacity: 0, duration: f(10), ease: 'power2.in' }, f(16));
   });
 
@@ -33,6 +36,7 @@ function S4Maw5Site({ mode }: SlideProps) {
         <Recording src="site-cut.mp4" mode={mode} still={6} />
       </BrowserWindow>
       <StepStrip steps={MAW_STEPS} active={4} />
+      <LinkChip className="mx-link" href={LINKS.mawSite} label="Visit the site" />
     </div>
   );
 }

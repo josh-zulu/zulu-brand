@@ -5,6 +5,8 @@ import { useBeats } from '@/engine/useBeats';
 import { AGO_STEPS, StepStrip, stripIn } from './shared34/StepStrip';
 import { revealLines } from '@/lib/motion';
 import { MockPhone, PhoneScreen } from './shared34/Device';
+import { LinkChip } from './shared34/LinkChip';
+import { LINKS } from '@/links';
 import './S3Idropper.css';
 
 /**
@@ -37,6 +39,7 @@ function S3Idropper({ step, mode }: SlideProps) {
     // beat 0: copy in; the phone is handed over
     tl.from(q('.id-kicker'), { opacity: 0, x: -16, duration: 0.7 }, 0);
     revealLines(tl, q('.id-title')[0], {}, 0.05);
+    tl.from(q('.id-link'), { opacity: 0, y: 12, duration: 0.6, ease: 'expo.out' }, 1.0);
     tl.from(phrases, { opacity: 0, y: 14, duration: 0.8, stagger: 0.12, ease: 'power3.out' }, 0.6);
     tl.from(q('.id-hand'), { y: 620, x: 120, rotation: 16, duration: 1.6, ease: 'zak.settle' }, 0.15);
     tl.from(glows[0], { opacity: 0, scale: 0.6, duration: 1.8, ease: 'power2.out' }, 0.7);
@@ -63,6 +66,7 @@ function S3Idropper({ step, mode }: SlideProps) {
           <span className="id-phrase">tap a colour,</span>{' '}
           <span className="id-phrase">and it finds the matching work in the AGO collection.</span>
         </p>
+        <LinkChip className="id-link" href={LINKS.agoPrototype} label="Try the prototype" />
       </div>
 
       <div className="id-stage">

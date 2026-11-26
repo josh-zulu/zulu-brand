@@ -5,6 +5,8 @@ import { useBeats } from '@/engine/useBeats';
 import { AGO_STEPS, StepStrip, stripIn } from './shared34/StepStrip';
 import { revealLines, revealWords } from '@/lib/motion';
 import { ClipOrStill } from './shared34/ClipOrStill';
+import { LinkChip } from './shared34/LinkChip';
+import { LINKS } from '@/links';
 import './S3ColourLab.css';
 
 /**
@@ -22,6 +24,7 @@ function S3ColourLab({ mode }: SlideProps) {
     revealLines(tl, q('.clab-title')[0], {}, 0.05);
     revealWords(tl, q('.clab-body')[0], {}, 0.6);
     tl.from(q('.clab-window'), { y: 80, opacity: 0, duration: 1.3, ease: 'expo.out' }, 0.25);
+    tl.from(q('.clab-link'), { opacity: 0, y: 12, duration: 0.6, ease: 'expo.out' }, 1.0);
   });
 
   return (
@@ -35,6 +38,7 @@ function S3ColourLab({ mode }: SlideProps) {
         <div className="clab-bar"><span className="clab-dots"><i /><i /><i /></span></div>
         <ClipOrStill className="clab-rec" src="ago/colour-lab.mp4" mode={mode} hint={false} />
       </div>
+      <LinkChip className="clab-link" href={LINKS.agoLab} label="Open the lab" />
       <StepStrip steps={AGO_STEPS} active={2} />
     </div>
   );

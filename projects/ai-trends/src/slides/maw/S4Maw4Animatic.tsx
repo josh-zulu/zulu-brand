@@ -3,6 +3,8 @@ import gsap from 'gsap';
 import { defineSlide, type SlideProps } from '@/engine/types';
 import { useBeats } from '@/engine/useBeats';
 import { BrowserWindow, Chip, MawStep, Recording, f, stepIntro, usePush } from './shared';
+import { LinkChip } from '../shared34/LinkChip';
+import { LINKS } from '@/links';
 import './S4Maw4Animatic.css';
 
 /**
@@ -23,6 +25,7 @@ function S4Maw4Animatic({ mode }: SlideProps) {
     tl.fromTo(q('.ma-win'), { opacity: 0, y: 24, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: f(18), ease: 'zak.out' }, 0);
     tl.from(q('.ma-chip'), { opacity: 0, y: 10, duration: f(14), ease: 'zak.out' }, f(14));
     tl.from(q('.ma-caption'), { opacity: 0, y: 16, duration: f(16), ease: 'zak.out' }, f(10));
+    tl.from(q('.ma-link'), { opacity: 0, y: 10, duration: f(14), ease: 'zak.out' }, f(18));
   });
 
   const W = ANIMATIC_WIN;
@@ -34,6 +37,7 @@ function S4Maw4Animatic({ mode }: SlideProps) {
         </BrowserWindow>
         <div className="ma-chip" style={{ right: W.x - 24, top: W.y - 26 }}><Chip size={22}>19 scenes · every one moving</Chip></div>
         <div className="ma-caption" style={{ top: W.y + W.chrome + CONTENT_H + 34 }}>A working animatic, before a line of the site was built</div>
+        <LinkChip className="ma-link" href={LINKS.mawAnimatic} label="Open the animatic" style={{ position: 'absolute', left: W.x - 24, top: W.y - 26 }} />
       </MawStep>
     </div>
   );
