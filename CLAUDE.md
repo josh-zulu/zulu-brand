@@ -70,7 +70,7 @@ See `brand/BRAND.md` for the brand system and `.claude/skills/` for step-by-step
 
 ## Working together (Josh and Kyle)
 
-The repo is `josh-zulu/zulu-brand`. `main` is protected: every change goes in through a pull request, and the **Check** workflow (typecheck + build) must pass. Merging to `main` republishes the preview at https://josh-zulu.github.io/zulu-brand/.
+The repo is `wearezulubot/ai-trends` (private, in the Zulubot org). Every change goes in through a pull request, and the **Check** workflow (typecheck + build) must pass before merging. The org's free plan doesn't enforce this on private repos, so it's on us. There's no hosted preview while the repo is private: run the deck locally with `npm run dev`.
 
 1. Start each session with `git switch main && git pull`.
 2. Work on a branch named for the change: `git switch -c kyle/ago-copy` or `josh/section-5-tweaks`.
