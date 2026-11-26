@@ -40,7 +40,7 @@ import S4Maw3Figma from "./slides/maw/S4Maw3Figma";
 import S4Maw4Animatic from "./slides/maw/S4Maw4Animatic";
 import S4Maw5Site from "./slides/maw/S4Maw5Site";
 import S5Divider from "./slides/S5Divider";
-import S5Ranked from "./slides/S5Ranked";
+import S4Watching from "./slides/S4Watching";
 import S5Context from "./slides/S5Context";
 import S5Hacking from "./slides/S5Hacking";
 import S3PhotoWorld from "./slides/S3PhotoWorld";
@@ -89,9 +89,9 @@ export const slides: SlideDef[] = [
   S4Maw3Figma,
   S4Maw4Animatic,
   S4Maw5Site,
-  // 4 · What is next, ranked
+  // 4 · What's next: what we're paying attention to at Zulu, then one slide each
   S5Divider,
-  S5Ranked,
+  S4Watching,
   S5Context,
   S3Blockout,
   S5Hacking,

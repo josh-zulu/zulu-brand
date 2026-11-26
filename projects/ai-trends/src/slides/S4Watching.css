@@ -1,0 +1,18 @@
+/* What we're paying attention to at Zulu: the watch list for section 4. Prefix: .wa- */
+.wa { position: absolute; inset: 0; }
+
+.wa-text { position: absolute; left: 140px; top: 0; bottom: 0; width: 680px; display: flex; flex-direction: column; justify-content: center; gap: 30px; }
+.wa-kicker { display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--zak-paper-2); }
+.wa-kicker i { width: 8px; height: 8px; border-radius: 50%; background: var(--zak-signal); box-shadow: 0 0 10px rgba(0, 228, 130, 0.7); }
+.wa-head { font-size: 88px; }
+
+.wa-list { position: absolute; left: 860px; right: 140px; top: 50%; transform: translateY(-50%); margin: 0; padding: 0; list-style: none; }
+.wa-row { position: relative; height: 122px; display: flex; flex-direction: column; justify-content: center; gap: 8px; padding-left: 44px; }
+.wa-rule { position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--zak-line-strong); transform-origin: 0 50%; }
+.wa-row:first-child::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 1px; background: var(--zak-line); }
+.wa-dot {
+  position: absolute; left: 6px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%;
+  background: var(--zak-signal); box-shadow: 0 0 14px rgba(0, 228, 130, 0.6);
+}
+.wa-name { font-size: 38px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.1; color: var(--zak-paper); }
+.wa-why { font-size: 22px; line-height: 1.3; color: var(--zak-stone); white-space: nowrap; }
