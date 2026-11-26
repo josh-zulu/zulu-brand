@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { defineSlide, type SlideProps } from '@/engine/types';
 import { useBeats } from '@/engine/useBeats';
+import { AGO_STEPS, StepStrip, stripIn } from './shared34/StepStrip';
 import { revealLines } from '@/lib/motion';
 import { MockPhone, PhoneScreen } from './shared34/Device';
 import './S3Idropper.css';
@@ -25,6 +26,7 @@ function S3Idropper({ step, mode }: SlideProps) {
 
   useBeats(root, step, (tl) => {
     const q = gsap.utils.selector(root);
+    stripIn(tl, root.current!);
     const screens = q('.id-screen');
     const phrases = q('.id-phrase');
     const glows = q('.id-glow');
@@ -67,7 +69,7 @@ function S3Idropper({ step, mode }: SlideProps) {
         {SCREENS.map((s, i) => <div key={i} className="id-glow" style={{ background: `radial-gradient(closest-side, ${s.glow}, transparent 72%)` }} />)}
         <div className="id-float">
           <div className="id-hand">
-            <MockPhone width={400} mode={mode}>
+            <MockPhone width={360} mode={mode}>
               {SCREENS.map((s, i) => (
                 <PhoneScreen key={i} className="id-screen" src={s.src} mode={mode} still={s.still} on={step === i} />
               ))}
@@ -75,6 +77,7 @@ function S3Idropper({ step, mode }: SlideProps) {
           </div>
         </div>
       </div>
+      <StepStrip steps={AGO_STEPS} active={4} />
     </div>
   );
 }

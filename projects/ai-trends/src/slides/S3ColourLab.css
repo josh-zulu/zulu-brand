@@ -1,6 +1,6 @@
 .colour-lab { position: absolute; inset: 0; }
 
-.clab-copy { position: absolute; left: 140px; top: 150px; bottom: 150px; width: 560px; display: flex; flex-direction: column; }
+.clab-copy { position: absolute; left: 140px; top: 150px; bottom: 190px; width: 560px; display: flex; flex-direction: column; }
 .clab-title { margin-top: 34px; font-size: 104px; line-height: 0.92; white-space: nowrap; }
 .clab-body { margin: auto 0 0; font-size: 32px; line-height: 1.32; letter-spacing: -0.01em; color: var(--zak-paper-2); max-width: 520px; }
 

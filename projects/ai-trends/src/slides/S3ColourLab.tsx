@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { defineSlide, type SlideProps } from '@/engine/types';
 import { useBeats } from '@/engine/useBeats';
+import { AGO_STEPS, StepStrip, stripIn } from './shared34/StepStrip';
 import { revealLines, revealWords } from '@/lib/motion';
 import { ClipOrStill } from './shared34/ClipOrStill';
 import './S3ColourLab.css';
@@ -16,6 +17,7 @@ function S3ColourLab({ mode }: SlideProps) {
 
   useBeats(root, 0, (tl) => {
     const q = gsap.utils.selector(root);
+    stripIn(tl, root.current!);
     tl.from(q('.clab-kicker'), { opacity: 0, x: -16, duration: 0.7 }, 0);
     revealLines(tl, q('.clab-title')[0], {}, 0.05);
     revealWords(tl, q('.clab-body')[0], {}, 0.6);
@@ -33,6 +35,7 @@ function S3ColourLab({ mode }: SlideProps) {
         <div className="clab-bar"><span className="clab-dots"><i /><i /><i /></span></div>
         <ClipOrStill className="clab-rec" src="ago/colour-lab.mp4" mode={mode} hint={false} />
       </div>
+      <StepStrip steps={AGO_STEPS} active={2} />
     </div>
   );
 }

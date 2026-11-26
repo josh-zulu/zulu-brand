@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { defineSlide, type SlideProps } from '@/engine/types';
 import { useBeats } from '@/engine/useBeats';
+import { AGO_STEPS, StepStrip, stripIn } from './shared34/StepStrip';
 import { revealLines } from '@/lib/motion';
 import { MockPhone } from './shared34/Device';
 import './S3Doordash.css';
@@ -32,6 +33,7 @@ function S3Doordash({ step, mode }: SlideProps) {
 
   useBeats(root, step, (tl) => {
     const q = gsap.utils.selector(root);
+    stripIn(tl, root.current!);
     const phones = q('.dd-phone');
     const items = q('.dd-item');
     phones.forEach((p, i) => gsap.set(p, pose(i)));
@@ -78,6 +80,7 @@ function S3Doordash({ step, mode }: SlideProps) {
           </div>
         ))}
       </div>
+      <StepStrip steps={AGO_STEPS} active={3} />
     </div>
   );
 }

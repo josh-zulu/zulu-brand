@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { defineSlide, type SlideProps } from '@/engine/types';
 import { useBeats } from '@/engine/useBeats';
+import { AGO_STEPS, StepStrip, stripIn } from './shared34/StepStrip';
 import { revealLines } from '@/lib/motion';
 import { MockPhone } from './shared34/Device';
 import './S3Experience.css';
@@ -28,6 +29,7 @@ function S3Experience({ step, mode }: SlideProps) {
 
   useBeats(root, step, (tl) => {
     const q = gsap.utils.selector(root);
+    stripIn(tl, root.current!);
     const phones = q('.ex-phone');
     const sleeps = q('.ex-phone .p34-sleep');
     const caps = q('.ex-cap');
@@ -89,6 +91,7 @@ function S3Experience({ step, mode }: SlideProps) {
           </div>
         ))}
       </div>
+      <StepStrip steps={AGO_STEPS} active={3} />
     </div>
   );
 }

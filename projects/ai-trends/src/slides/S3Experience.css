@@ -2,9 +2,9 @@
 .ex-kicker { position: absolute; left: 140px; top: 132px; }
 .ex-title { position: absolute; left: 140px; top: 172px; font-size: 100px; white-space: nowrap; }
 
-.ex-phone { position: absolute; top: 318px; }
+.ex-phone { position: absolute; top: 290px; }
 
-.ex-journey { position: absolute; left: 0; right: 0; top: 842px; height: 120px; }
+.ex-journey { position: absolute; left: 0; right: 0; top: 812px; height: 120px; }
 .ex-track { position: absolute; height: 2px; margin-top: -1px; background: var(--zak-line-strong); }
 .ex-fill { position: absolute; inset: 0; background: var(--zak-signal); transform-origin: 0 50%; transform: scaleX(0); box-shadow: 0 0 14px rgba(0, 228, 130, 0.45); }
 .ex-branch { position: absolute; height: 2px; margin-top: -1px; background: repeating-linear-gradient(90deg, var(--zak-signal-2) 0 4px, transparent 4px 12px); clip-path: inset(0 100% 0 0); }
