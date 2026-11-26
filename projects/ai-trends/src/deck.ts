@@ -13,6 +13,7 @@ import S1Goal from './slides/S1Goal';
 import S1Dictation from './slides/S1Dictation';
 import S2Divider from './slides/S2Divider';
 import S2Blender from './slides/S2Blender';
+import S2Workspace from './slides/S2Workspace';
 import S2Figma from './slides/S2Figma';
 import S2AsanaNetsuite from './slides/S2AsanaNetsuite';
 import S2Resolve from './slides/S2Resolve';
@@ -59,6 +60,7 @@ export const slides: SlideDef[] = [
   S1Dictation,
   S2Divider,
   S2Blender,
+  S2Workspace,
   S2Figma,
   S2AsanaNetsuite,
   S2Resolve,
