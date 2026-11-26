@@ -29,7 +29,7 @@ The Zulu AI Working Group's December 2026 company talk, built as a web-native an
 - When work is split across helper agents, keep one live status page updated for Josh. No need to ask before splitting.
 
 ## Deck structure (46 slides, five sections)
-Intro (opener, Digital team, agenda) → **1 The year AI started working** (setup, generative media, agentic context, how we work with it: goal + dictation) → **2 It works where we work** (01 Design · Figma, 02 3D · Blender, 03 Edit assembly · Resolve, 04 Production · Asana + NetSuite, 05 Office · Google Workspace; sameness; taste) → **3 Work we made** (AGO steps, Make-A-Wish steps) → **4 What's next** (what we're paying attention to at Zulu; brand agents, blockout to film, hardware, worlds from a photo, 4DV, real-time) → **5** close (built with AI, the close, questions, Bring us the hard digital problems).
+Intro (opener, Digital team, agenda) → **1 The year AI started working** (setup, generative media, agentic context, how we work with it: goal + dictation) → **2 It works where we work** (01 Design · Figma, 02 3D · Blender, 03 Edit assembly · Resolve, 04 Production · Asana + NetSuite, 05 Office · Google Workspace; sameness; taste) → **3 Work we made** (AGO steps, Make-A-Wish steps) → **4 What's next** (what we're paying attention to at Zulu; brand agents, blockout to film, hardware, worlds from a photo, real-time) → **5** close (built with AI, the close, questions, Bring us the hard digital problems).
 
 ## Open items
 _26 Nov 2026: Josh cut "New ways to make things". Its divider and the End cards slide are deleted, Blockout to film moved to What's next, and the sections renumbered 01–05. The connectors slide ("Connectors plug AI into our tools") is cut too: it repeated what section 1 already says._
@@ -44,6 +44,6 @@ _26 Nov 2026: Josh cut "New ways to make things". Its divider and the End cards 
 4. **Real GPT Image 2 examples.** The generative-media slide's GPT Image 2 and Seedance cards currently show Nano Banana images (captioned). Fix with `codex login` and `npm run codex-image`.
 5. **Live dictation on the shared link.** It only works on the presenting laptop (needs the dev server). For a shared live demo: Vercel functions plus a passcode. Optional: make the offline fallback always show the polished Northline brief.
 6. **Hiep's photo** is 313 px (from LinkedIn). Ask him for a larger black-and-white headshot: `src/assets/team/hiep.jpg`.
-7. **World Labs sample scenes** (forge, painted bedroom) are credited on the slides. Their reuse terms aren't stated, so check before any public use beyond the internal talk.
+7. **World Labs sample scene** (painted bedroom, on the photo-world slide) is credited on the slide. The forge scene was only on the 4DV slide, which is cut; it's still in `public/media/splats/` for the splat lab. Its reuse terms aren't stated, so check before any public use beyond the internal talk.
 8. **Repo co-ownership.** Done: moved to `wearezulubot/ai-trends` (private). To get the hosted preview and branch protection back, the org needs GitHub Team, or the repo goes public again.
 9. **Rehearse on the presenting laptop:** allow the microphone for slide 8, check sound levels (`M` mutes), and watch every slide at full speed once.

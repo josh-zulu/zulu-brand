@@ -44,7 +44,6 @@ import S4Watching from "./slides/S4Watching";
 import S5Context from "./slides/S5Context";
 import S5Hacking from "./slides/S5Hacking";
 import S3PhotoWorld from "./slides/S3PhotoWorld";
-import S54dv from "./slides/S54dv";
 import S5Realtime from "./slides/S5Realtime";
 import S6Reveal from "./slides/S6Reveal";
 import S6Close from "./slides/S6Close";
@@ -96,7 +95,6 @@ export const slides: SlideDef[] = [
   S3Blockout,
   S5Hacking,
   S3PhotoWorld,
-  S54dv,
   S5Realtime,
   // 5 · Close
   S6Reveal,

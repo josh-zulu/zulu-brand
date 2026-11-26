@@ -6,10 +6,10 @@ import { revealLines } from '@/lib/motion';
 import './S4Watching.css';
 
 /**
- * What we're paying attention to at Zulu: the index for the six slides that follow, in the order they run.
+ * What we're paying attention to at Zulu: the index for the five slides that follow, in the order they run.
  * One idea: the watch list fills in. Each row's hairline draws across, its dot lights (signal: we're watching it)
  * and the line rises in. No ranking and no timeline, just what's on our radar.
- *  beat 0  kicker and headline; the six rows land one after another
+ *  beat 0  kicker and headline; the five rows land one after another
  * Descriptions are the existing lines from each slide (Kyle and Hiep's copy).
  */
 const ITEMS = [
@@ -17,7 +17,6 @@ const ITEMS = [
   { name: 'Blockout to film', why: 'We block out the shot in Blender. AI renders the final look.' },
   { name: 'Agents that build hardware', why: 'Agents write the firmware, so we can prototype physical work fast.' },
   { name: 'Worlds from a photo', why: 'One photo becomes a 3D world we can explore and film.' },
-  { name: 'Video you can step inside', why: 'Move the camera around a moment after it’s been filmed.' },
   { name: 'Made as you watch', why: 'Video and worlds generated in real time, from a sentence.' },
 ] as const;
 
@@ -62,7 +61,7 @@ export default defineSlide({
   title: 'What we’re paying attention to at Zulu',
   steps: 0,
   notes:
-    'Here’s what we’re paying attention to at Zulu. Six things, and the next six slides take them in this order.\n' +
-    'Brand agents. Blockout to film. Agents that build hardware. Worlds from a photo. Video you can step inside. And made as you watch.',
+    'Here’s what we’re paying attention to at Zulu. Five things, and the next five slides take them in this order.\n' +
+    'Brand agents. Blockout to film. Agents that build hardware. Worlds from a photo. And made as you watch.',
   Component: Watching,
 });
