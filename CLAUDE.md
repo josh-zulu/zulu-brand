@@ -66,7 +66,7 @@ Motion language:
 - Display type is Oswald Light caps; statements are Schibsted Grotesk 500, sentence case; labels are mono caps.
 - Copy is approved: use the outline's words exactly. Sections 3–5 copy belongs to Kyle and Hiep; keep it as in the source deck.
 
-See `brand/BRAND.md` for the brand system and `.claude/skills/` for step-by-step how-tos.
+See `brand/BRAND.md` for the brand system and `.claude/skills/` for step-by-step how-tos. Where the AI Trends project stands and what's open: `projects/ai-trends/docs/HANDOFF.md`.
 
 ## Working together (Josh and Kyle)
 
