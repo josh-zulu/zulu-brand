@@ -69,7 +69,7 @@ See `brand/BRAND.md` for the brand system and `.claude/skills/` for step-by-step
 
 ## Working together (Josh and Kyle)
 
-The repo is `wearezulubot/ai-trends` (private, in the Zulubot org). We push straight to `main`: no branches or pull requests needed. There's no hosted preview while the repo is private: run the deck locally with `npm run dev`.
+The repo is `wearezulubot/ai-trends` (public, in the Zulubot org). We push straight to `main`: no branches or pull requests needed. Every push republishes the preview at https://wearezulubot.github.io/ai-trends/ (open link, no password).
 
 1. Start each session with `git switch main && git pull`.
 2. Before pushing, run `npm run build` (typecheck + build). Don't push a broken build.

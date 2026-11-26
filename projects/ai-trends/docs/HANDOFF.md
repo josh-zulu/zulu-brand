@@ -8,8 +8,8 @@ The Zulu AI Working Group's December 2026 company talk, built as a web-native an
 ## Where things live
 | Thing | Where |
 |---|---|
-| Repo | https://github.com/wearezulubot/ai-trends (private, Zulubot org; moved from `josh-zulu/zulu-brand` on 26 Nov 2026). Org members get write access; Josh and Kyle are org admins. |
-| Live preview | None while the repo is private: the org's free plan has no Pages for private repos. Run `npm run dev`. The `pages.yml` deploy is manual-only until the org upgrades or the repo goes public. |
+| Repo | https://github.com/wearezulubot/ai-trends (public, Zulubot org; moved from `josh-zulu/zulu-brand` on 26 Nov 2026, private for an afternoon, public again so Pages works on the free plan). Org members get write access; Josh and Kyle are org admins. |
+| Live preview | https://wearezulubot.github.io/ai-trends/ (open link, no password; republishes on every push to `main`). The old `josh-zulu.github.io/zulu-brand` link is gone. |
 | Running order | `projects/ai-trends/src/order.json`, edited in the slides panel (`\` key: drag, Hide, Push to main). Every slide is listed in `src/deck.ts` (one file per slide in `src/slides/`) |
 | Approved outline | `projects/ai-trends/docs/outline.md` (marked where Josh changed it) |
 | Source deck text | `projects/ai-trends/docs/source-deck.md` |
@@ -45,5 +45,5 @@ _26 Nov 2026: Josh cut "New ways to make things". Its divider and the End cards 
 5. **Live dictation on the shared link.** It only works on the presenting laptop (needs the dev server). For a shared live demo: Vercel functions plus a passcode. Optional: make the offline fallback always show the polished Northline brief.
 6. **Hiep's photo** is 313 px (from LinkedIn). Ask him for a larger black-and-white headshot: `src/assets/team/hiep.jpg`.
 7. **World Labs sample scene** (painted bedroom, on the photo-world slide) is credited on the slide. The forge scene was only on the 4DV slide, which is cut; it's still in `public/media/splats/` for the splat lab. Its reuse terms aren't stated, so check before any public use beyond the internal talk.
-8. **Repo co-ownership.** Done: moved to `wearezulubot/ai-trends` (private). To get the hosted preview and branch protection back, the org needs GitHub Team, or the repo goes public again.
+8. **Repo co-ownership.** Done: moved to `wearezulubot/ai-trends` (public, so the free plan's Pages works).
 9. **Rehearse on the presenting laptop:** allow the microphone for slide 8, check sound levels (`M` mutes), and watch every slide at full speed once.
