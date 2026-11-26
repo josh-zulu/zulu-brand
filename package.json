@@ -4,7 +4,8 @@
   "description": "Zulu Alpha Kilo brand repo: shared brand system, generative tools and Claude skills, plus the projects built with them.",
   "type": "module",
   "workspaces": [
-    "projects/*"
+    "projects/*",
+    "projects/silence-the-hate/microsite"
   ],
   "engines": {
     "node": ">=22.18"
@@ -19,7 +20,9 @@
     "codex-image": "node tools/codex-image.mjs",
     "media": "node tools/media.mjs",
     "assets": "node tools/assets.mjs",
-    "preview-password": "node tools/set-preview-password.mjs"
+    "preview-password": "node tools/set-preview-password.mjs",
+    "sth:dev": "npm run dev -w silence-the-hate-microsite",
+    "sth:build": "npm run build -w silence-the-hate-microsite"
   },
   "devDependencies": {
     "ffmpeg-static": "^5.2.0"
