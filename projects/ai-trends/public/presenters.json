@@ -7,10 +7,10 @@
   "s1-human": "Josh",
   "s1-goal": "Josh",
   "s1-dictation": "Josh",
-  "s2-divider": "Josh",
+  "s2-divider": "Kyle",
   "s2-blender": "Hiep",
-  "s2-figma": "Josh",
-  "s2-asana-netsuite": "Josh",
+  "s2-figma": "Hiep",
+  "s2-asana-netsuite": "Kyle",
   "s2-resolve": "Hiep",
   "s2-endcards": "Hiep",
   "s2-sameness": "Josh",
@@ -35,5 +35,6 @@
   "s4-maw-site": "Kyle",
   "s3-ago-brief": "Kyle",
   "s3-ago-photos": "Kyle",
-  "s2-workspace": "Kyle"
+  "s2-workspace": "Kyle",
+  "s1-genmedia": "Hiep"
 }
