@@ -60,7 +60,7 @@ function S2Workspace({ step, mode }: SlideProps) {
   return (
     <div ref={root} className="ws">
       <div className="ws-text">
-        <div className="ws-kicker label">Google Workspace</div>
+        <div className="ws-kicker label"><i /><span><b>05</b> · Office · Google Workspace</span></div>
         <h2 className="ws-head headline">Docs, sheets and decks, built in place.</h2>
         <p className="ws-lede lede">Ask from the side panel. It rewrites the doc, turns two CSVs into a budget report, and builds the deck from Drive and Salesforce.</p>
       </div>

@@ -7,12 +7,13 @@ import { useSfx } from '@/lib/sfx';
 import './S2Connectors.css';
 
 /**
- * Connectors tee-up: the plumbing, and the map of the next four slides.
- * One idea: an AI hub with four empty sockets. Each click plugs in one theme + tool; the connection runs out from
- * the hub into it, the socket lights and a line of what it does there types in. It ends on the four themes in
+ * Connectors tee-up: the plumbing, and the map of the next five slides.
+ * One idea: an AI hub with five empty sockets. Each click plugs in one theme + tool; the connection runs out from
+ * the hub into it, the socket lights and a line of what it does there types in. It ends on the five themes in
  * order, which is the index for the tool slides that follow (their headers read "01 · Design · Figma" etc.).
- *  beat 0    kicker, headline, lede; the hub and four dashed sockets
- *  beat 1-4  01 Design · Figma → 02 3D · Blender → 03 Edit assembly · Resolve → 04 Production · Asana + NetSuite
+ *  beat 0    kicker, headline, lede; the hub and five dashed sockets
+ *  beat 1-5  01 Design · Figma → 02 3D · Blender → 03 Edit assembly · Resolve → 04 Production · Asana + NetSuite
+ *            → 05 Office · Google Workspace
  * Tool names are plain type, no official logos.
  */
 type Theme = { num: string; theme: string; tool: string; act: string };
@@ -21,11 +22,12 @@ const THEMES: Theme[] = [
   { num: '02', theme: '3D', tool: 'Blender', act: 'building the scene, lights and camera' },
   { num: '03', theme: 'Edit assembly', tool: 'Resolve', act: 'cutting the selects into a rough cut' },
   { num: '04', theme: 'Production', tool: 'Asana + NetSuite', act: 'setting up tasks, checking budgets' },
+  { num: '05', theme: 'Office', tool: 'Google Workspace', act: 'building docs, sheets and decks' },
 ];
 
 // Stage geometry (px)
 const HUB = { x: 960, y: 560 };
-const CHIP = { x: 1190, w: 590, h: 112, gap: 148 };
+const CHIP = { x: 1190, w: 590, h: 112, gap: 136 };
 const rowY = (i: number) => HUB.y + (i - (THEMES.length - 1) / 2) * CHIP.gap;
 const PORT_X = CHIP.x - 20;
 const wire = (i: number) => {
@@ -61,7 +63,7 @@ function S2Connectors({ step, direction, mode }: SlideProps) {
     tl.from(ghosts, { opacity: 0, x: 24, duration: 0.8, stagger: 0.08, ease: 'expo.out' }, 0.7);
     tl.addLabel('b1');
 
-    // ── beats 1-4: one theme plugs in per click ────────────────
+    // ── beats 1-5: one theme plugs in per click ────────────────
     THEMES.forEach((t, i) => {
       const L = `b${i + 1}`;
       tl.to(chips[i], { x: 0, opacity: 1, filter: 'blur(0px)', duration: 0.75, ease: 'power3.out' }, L);
@@ -138,11 +140,11 @@ export default defineSlide({
   id: 's2-connectors',
   section: 2,
   title: 'Connectors plug AI into our tools',
-  steps: 4,
+  steps: 5,
   notes:
     'Before we go tool by tool, how this actually works. Connectors, built on MCP, the Model Context Protocol, plug AI straight into software we already use. It doesn\'t tell us what to click. It opens our file and does the work inside the tool.\n' +
-    'Click through the map. These are the next four slides.\n' +
-    'Click: 01, Design, in Figma. Click: 02, 3D, in Blender. Click: 03, Edit assembly, in Resolve. Click: 04, Production, in Asana and NetSuite.\n' +
+    'Click through the map. These are the next five slides.\n' +
+    'Click: 01, Design, in Figma. Click: 02, 3D, in Blender. Click: 03, Edit assembly, in Resolve. Click: 04, Production, in Asana and NetSuite. Click: 05, Office, in Google Workspace.\n' +
     'Same idea every time: our tools, our files, our standards. We direct, it does the hands-on work.',
   Component: S2Connectors,
 });
