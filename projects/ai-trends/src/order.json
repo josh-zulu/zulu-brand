@@ -13,8 +13,8 @@
     "s1-human",
     "s2-divider",
     "s2-figma",
-    "s2-blender",
     "s2-resolve",
+    "s2-blender",
     "s2-asana-netsuite",
     "s2-workspace",
     "s2-sameness",
@@ -42,8 +42,8 @@
     "s5-realtime",
     "s6-reveal",
     "s6-close",
-    "s6-questions",
-    "s7-contact"
+    "s7-contact",
+    "s6-questions"
   ],
   "hidden": []
 }
