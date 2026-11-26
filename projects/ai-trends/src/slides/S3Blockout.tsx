@@ -12,8 +12,8 @@ import './S3Blockout.css';
  * sweeps across it and leaves the finished film behind, then settles in the middle so both read side by side.
  *  beat 0  the blockout
  *  beat 1  the render sweeps across (to the full final), then settles to a 50/50 Blockout | Final film
- * Clips: clips/blockout.mp4 and clips/final-film.mp4 (same shot, same length). Until they arrive, matched generated
- * stills stand in (blockout-clay / final-still). Live mode: drag across the frame to compare.
+ * Clips: clips/blockout.mp4 and clips/final-film.mp4, Higgsfield's Blender plugin demo (higgsfield.ai/plugins/blender,
+ * 800×450, 30s, same shot). Matched generated stills show if the files are missing. Live mode: drag across to compare.
  */
 function S3Blockout({ step, mode }: SlideProps) {
   const root = useRef<HTMLDivElement>(null);
@@ -71,6 +71,6 @@ export default defineSlide({
   notes:
     'Rough 3D becomes a finished film. We block out the shot in Blender. AI renders the final look.\n' +
     'Click once: the render sweeps across the blockout and settles side by side. In the live window you can drag across the frame to compare.\n' +
-    'Clips to add: clips/blockout.mp4 and clips/final-film.mp4 (same shot, same length). Until then, matched stills stand in.',
+    'Footage: Higgsfield\'s Blender plugin. A clay blockout of a hallway, rendered into a finished shot.',
   Component: S3Blockout,
 });

@@ -12,29 +12,39 @@
   left: -5.224%; top: -7.544%; width: 110.075%; height: 109.474%;
 }
 
-/* ───────── Device: brand-neutral slab, sizes in em (1em = width / 100) ───────── */
-.p34-device {
-  position: relative; width: var(--dw); font-size: calc(var(--dw) / 100);
-  padding: 5.4em 3.3em 3.6em; border-radius: 17.6em / 8.6em;
-  background: linear-gradient(155deg, #2b2a29 0%, #121111 26%, #0b0b0b 70%, #1b1a1a 100%);
-  box-shadow:
-    inset 0 0 0 0.35em #050505,
-    inset 0 0.25em 0.4em rgba(255, 255, 255, 0.08),
-    0 0 0 1px rgba(248, 247, 244, 0.13),
-    0 4em 9em rgba(0, 0, 0, 0.6),
-    0 1.2em 2.4em rgba(0, 0, 0, 0.45);
-}
-.p34-bezel-top { position: absolute; top: 1.85em; left: 0; right: 0; display: flex; justify-content: center; align-items: center; gap: 2.2em; }
-.p34-cam { width: 1.7em; height: 1.7em; border-radius: 50%; background: radial-gradient(circle at 38% 35%, #2c3440 0 22%, #07090c 55%); box-shadow: inset 0 0.15em 0.3em rgba(0,0,0,.9), 0 0 0 0.12em rgba(255,255,255,.06); }
-.p34-spk { width: 11em; height: 1.2em; border-radius: 999px; background: #050505; box-shadow: var(--zak-deboss-dark); }
-.p34-glass { position: relative; border-radius: 15.5% / 7.29%; overflow: hidden; box-shadow: 0 0 0 0.3em #000; }
-.p34-glass > .p34-screen { width: 100%; }
-.p34-glass > .p34-screen + .p34-screen { position: absolute; inset: 0; }
+/* ───────── MockPhone: GIF mockup under the hi-res iPhone frame ───────── */
+.p34-mock { position: relative; aspect-ratio: 652 / 1374; filter: drop-shadow(0 40px 70px rgba(0, 0, 0, 0.55)); }
+.p34-mock-screen { position: absolute; inset: 0; mask-size: 100% 100%; mask-repeat: no-repeat; -webkit-mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; }
+.p34-mock-screen > .p34-screen { position: absolute; inset: 0; aspect-ratio: auto; border-radius: 0; background: #000; }
+.p34-mock-screen > .p34-screen video { left: 0; top: 0; width: 100%; height: 100%; }
+.p34-mock-frame { position: absolute; inset: 0; width: 100%; height: 100%; display: block; pointer-events: none; }
+
+/* asleep layer over the screen (opacity 0 by default): animate it to put the phone to sleep or wake it */
 .p34-sleep {
   position: absolute; inset: 0; opacity: 0; pointer-events: none;
   background: radial-gradient(120% 70% at 30% 10%, #1a1a1a 0%, #070707 55%, #030303 100%);
 }
-.p34-glare { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(118deg, rgba(255,255,255,0.075) 0%, rgba(255,255,255,0.02) 28%, transparent 42%); }
+
+/* ───────── Step strip: where we are in a process told one slide per step ───────── */
+.p34-strip { position: absolute; left: 140px; right: 140px; top: 950px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; z-index: 3; }
+.p34-si { position: relative; padding-top: 16px; display: flex; align-items: baseline; gap: 12px; border-top: 2px solid var(--zak-line-strong); }
+.p34-si .label { font-size: 14px; color: var(--zak-stone-2); }
+.p34-si b { font-family: var(--zak-font-text); font-weight: 500; font-size: 21px; letter-spacing: -0.01em; color: var(--zak-stone-2); }
+.p34-si-fill { position: absolute; left: 0; right: 0; top: -2px; height: 2px; transform-origin: 0 50%; transform: scaleX(0); }
+.p34-si.is-done .p34-si-fill { transform: scaleX(1); background: var(--zak-stone); }
+.p34-si.is-done b { color: var(--zak-stone); }
+.p34-si.is-on .p34-si-fill { transform: scaleX(1); background: var(--zak-signal); box-shadow: 0 0 14px rgba(0, 228, 130, 0.45); }
+.p34-si.is-on .label { color: var(--zak-signal); }
+.p34-si.is-on b { color: var(--zak-paper); }
+
+/* ───────── Link to the live work ───────── */
+.p34-link {
+  display: inline-grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; z-index: 5;
+  color: var(--zak-signal); background: rgba(11, 11, 11, 0.72); box-shadow: 0 0 0 1px var(--zak-line-strong);
+  backdrop-filter: blur(8px); transition: box-shadow 0.2s;
+}
+.p34-link svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.p34-link:hover { box-shadow: 0 0 0 1px var(--zak-signal), 0 0 18px rgba(0, 228, 130, 0.35); }
 
 /* ───────── AGO pitch kicker (slides 21–24) ───────── */
 .p34-kicker { display: flex; align-items: center; gap: 14px; }

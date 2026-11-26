@@ -5,8 +5,11 @@
 .pi-phones { position: absolute; right: 150px; top: 112px; display: flex; align-items: center; gap: 36px; }
 .pi-phone { position: relative; }
 .pi-glow {
-  position: absolute; left: 50%; top: 50%; width: 170%; height: 90%; transform: translate(-50%, -50%); opacity: 0; pointer-events: none;
+  position: absolute; left: 50%; top: 50%; width: 170%; height: 90%; transform: translate(-50%, -50%); pointer-events: none;
   background: radial-gradient(closest-side, rgba(77, 120, 220, 0.22), transparent 75%); filter: blur(10px);
 }
 
 .pi-rail { position: absolute; left: 110px; right: 110px; top: 724px; }
+/* the map of what's coming: every step readable at once */
+.pi-rail .p34-step-title, .pi-rail .p34-step-sub { opacity: 1; }
+.pi-rail .p34-node img { filter: grayscale(1) brightness(1.6) opacity(0.75); }

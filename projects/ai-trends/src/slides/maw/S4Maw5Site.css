@@ -1,0 +1,3 @@
+.mx { position: absolute; inset: 0; overflow: hidden; }
+.mx-win { z-index: 2; }
+.mx-link { position: absolute; left: 60px; bottom: 56px; }
