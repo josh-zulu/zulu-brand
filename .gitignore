@@ -24,6 +24,3 @@ projects/*/assets.raw/
 # built preview and local Claude state
 projects/*/dist/
 .claude/settings.local.json
-
-# Silence The Hate: the pitch deck is 57 MB, shared via OneDrive
-projects/silence-the-hate/source/*.pptx
