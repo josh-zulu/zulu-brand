@@ -70,12 +70,14 @@ See `brand/BRAND.md` for the brand system and `.claude/skills/` for step-by-step
 
 ## Working together (Josh and Kyle)
 
-The repo is `wearezulubot/ai-trends` (private, in the Zulubot org). Every change goes in through a pull request, and the **Check** workflow (typecheck + build) must pass before merging. The org's free plan doesn't enforce this on private repos, so it's on us. There's no hosted preview while the repo is private: run the deck locally with `npm run dev`.
+The repo is `wearezulubot/ai-trends` (private, in the Zulubot org). We push straight to `main`: no branches or pull requests needed. There's no hosted preview while the repo is private: run the deck locally with `npm run dev`.
 
 1. Start each session with `git switch main && git pull`.
-2. Work on a branch named for the change: `git switch -c kyle/ago-copy` or `josh/section-5-tweaks`.
-3. Commit small and often. Push the branch and open a pull request (`gh pr create --fill`); fill in the template.
-4. The other person looks, or merges straight away for small changes. Then everyone pulls.
+2. Before pushing, run `npm run build` (typecheck + build). Don't push a broken build.
+3. Commit small and often, with a clear message. Then `git pull && git push`.
+4. The **Check** workflow runs on every push to `main`. If it goes red, fix it straight away.
+
+A branch and pull request is still worth it for a big or risky change you want the other person to look at first.
 
 Conflict hotspots (coordinate in chat before changing them in parallel):
 - `projects/ai-trends/src/deck.ts`: the running order. When resolving a conflict here, keep every slide from both sides in the intended order; never drop an import.

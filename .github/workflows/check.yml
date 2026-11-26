@@ -1,7 +1,9 @@
-# Runs on every pull request: the deck must typecheck and build before it can merge into main.
+# Runs on every push to main (and on any pull request): the deck must typecheck and build.
 name: Check
 
 on:
+  push:
+    branches: [main]
   pull_request:
     branches: [main]
 

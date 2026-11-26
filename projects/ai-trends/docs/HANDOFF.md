@@ -24,7 +24,7 @@ The Zulu AI Working Group's December 2026 company talk, built as a web-native an
 - **Image generation defaults to Codex.** Fal costs money on a limited budget: only use it with Josh's OK.
 
 ## How we work
-- Every change goes through a pull request and the **Check** workflow (typecheck + build) must pass. Branch protection isn't available on the free plan for private repos, so this is by agreement. See "Working together" in `CLAUDE.md`.
+- Push straight to `main` after `npm run build` passes; the **Check** workflow (typecheck + build) runs on every push. Pull requests only for big or risky changes. See "Working together" in `CLAUDE.md`.
 - Each slide is its own file; conflict hotspots are `deck.ts`, `presenters.json` and shared components.
 - When work is split across helper agents, keep one live status page updated for Josh. No need to ask before splitting.
 
