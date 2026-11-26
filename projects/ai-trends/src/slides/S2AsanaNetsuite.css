@@ -86,7 +86,7 @@
 .asn-clip .clip-ph-name { font-size: 14px; }
 .asn-clip .clip-ph-hint { display: none; }
 
-/* thematic header: same look on all four tool slides, matching the S2Connectors map */
+/* thematic header: same look on every tool slide (01 Figma to 05 Google Workspace) */
 .asn-kicker { display: flex; align-items: center; gap: 12px; color: var(--zak-paper-2); }
 .asn-kicker i { width: 8px; height: 8px; border-radius: 50%; background: var(--zak-signal); box-shadow: 0 0 10px rgba(0, 228, 130, 0.7); }
 .asn-kicker b { font-weight: inherit; color: var(--zak-signal); }

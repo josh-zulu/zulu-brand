@@ -17,7 +17,6 @@ import S1HowWeWork from "./slides/S1HowWeWork";
 import S1Goal from "./slides/S1Goal";
 import S1Dictation from "./slides/S1Dictation";
 import S2Divider from "./slides/S2Divider";
-import S2Connectors from "./slides/S2Connectors";
 import S2Figma from "./slides/S2Figma";
 import S2Blender from "./slides/S2Blender";
 import S2Resolve from "./slides/S2Resolve";
@@ -66,9 +65,8 @@ export const slides: SlideDef[] = [
   S1HowWeWork,
   S1Goal,
   S1Dictation,
-  // 2 · It works where we work: connectors, then design, 3D, edit assembly, production
+  // 2 · It works where we work: design, 3D, edit assembly, production
   S2Divider,
-  S2Connectors,
   S2Figma,
   S2Blender,
   S2Resolve,
