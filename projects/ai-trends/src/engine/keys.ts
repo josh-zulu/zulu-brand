@@ -17,5 +17,5 @@ export const KEYS: [string, string][] = [
 export const PANEL_KEYS: [string, string][] = [
   ['J  K  H', 'Assign this slide to Josh, Kyle or Hiep'],
   ['Drag ⋮⋮', 'Move a slide'],
-  ['Hide', 'Leave a slide out of the run'],
+  ['Eye icon', 'Hide a slide (click again to show)'],
 ];

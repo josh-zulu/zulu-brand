@@ -148,8 +148,9 @@ export function DebugPanel({ all, current, onPick }: { all: SlideDef[]; current?
                         <button className={`dbg-copy ${copied === s.id ? 'is-done' : ''}`} title="Copy slide reference for chat"
                           onClick={() => copyRef(s, num)}>{copied === s.id ? '✓' : 'Copy'}</button>
                       )}
-                      <button className={`dbg-hide ${hidden ? 'on' : ''}`} title={hidden ? 'Put back in the run' : 'Leave out of the run'}
-                        onClick={() => order.toggleHidden(s.id)}>{hidden ? 'Show' : 'Hide'}</button>
+                      <button className={`dbg-hide ${hidden ? 'on' : ''}`} title={hidden ? 'Hidden: click to put back in the run' : 'Hide: leave out of the run'}
+                        aria-label={hidden ? `Show ${s.title}` : `Hide ${s.title}`} aria-pressed={hidden}
+                        onClick={() => order.toggleHidden(s.id)}><Eye off={hidden} /></button>
                       <span className="dbg-who">
                         {PRESENTERS.map((p) => (
                           <button key={p} className={`dbg-chip ${map[s.id] === p ? 'on' : ''}`} title={p}
@@ -181,6 +182,17 @@ export function DebugPanel({ all, current, onPick }: { all: SlideDef[]; current?
         </>
       )}
     </>
+  );
+}
+
+/** Eye (in the run) / eye struck through (hidden). */
+function Eye({ off }: { off: boolean }) {
+  return (
+    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z" />
+      <circle cx="12" cy="12" r="3" />
+      {off && <path d="M4 20 20 4" />}
+    </svg>
   );
 }
 

@@ -236,8 +236,10 @@ kbd { font-family: var(--zak-font-mono); font-size: 13px; color: var(--zak-paper
 .dbg-row.drop-after::after { bottom: -1px; }
 .dbg-row.is-hidden .dbg-name { color: var(--zak-stone-2); text-decoration: line-through; text-decoration-color: rgba(158,157,153,.5); }
 .dbg-row.is-hidden .dbg-go { cursor: default; }
-.dbg-hide { flex: none; font-family: var(--zak-font-mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; padding: 5px 8px; border-radius: 999px; border: 1px solid var(--zak-line); background: none; color: var(--zak-stone); cursor: pointer; display: none; }
-.dbg-row:hover .dbg-hide, .dbg-hide.on { display: block; }
+.dbg-hide { flex: none; width: 26px; height: 26px; display: grid; place-items: center; padding: 0; border-radius: 50%; border: 1px solid transparent; background: none; color: var(--zak-stone-2); cursor: pointer; opacity: .55; }
+.dbg-row:hover .dbg-hide { opacity: 1; }
+.dbg-hide:hover { color: var(--zak-paper); border-color: var(--zak-line-strong); }
+.dbg-hide.on { opacity: 1; color: #e9b44c; border-color: rgba(233,180,76,.5); }
 .dbg-hide:hover { color: var(--zak-paper); border-color: var(--zak-line-strong); }
 .dbg-hide.on { color: #e9b44c; border-color: rgba(233,180,76,.5); }
 
