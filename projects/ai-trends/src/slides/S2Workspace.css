@@ -1,7 +1,9 @@
 /* S2Workspace: an app window whose tabs follow the recording (Docs → Sheets → Slides). */
 .ws { position: absolute; inset: 0; }
 .ws-text { position: absolute; left: 140px; top: 0; bottom: 0; width: 580px; display: flex; flex-direction: column; justify-content: center; gap: 30px; }
-.ws-kicker { font-size: 16px; color: var(--zak-signal); }
+.ws-kicker { display: flex; align-items: center; gap: 12px; color: var(--zak-paper-2); }
+.ws-kicker i { width: 8px; height: 8px; border-radius: 50%; background: var(--zak-signal); box-shadow: 0 0 10px rgba(0, 228, 130, 0.7); }
+.ws-kicker b { font-weight: inherit; color: var(--zak-signal); }
 .ws-head { font-size: 80px; }
 .ws-lede { font-size: 30px; }
 

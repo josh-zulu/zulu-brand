@@ -29,7 +29,7 @@ The Zulu AI Working Group's December 2026 company talk, built as a web-native an
 - When work is split across helper agents, keep one live status page updated for Josh. No need to ask before splitting.
 
 ## Deck structure (41+ slides)
-Intro (opener, Digital team, agenda) → **1 The year AI started working** (setup, generative media, agentic context, how we work with it: goal + dictation) → **2 It works where we work** (connectors tee-up; 01 Design · Figma, 02 3D · Blender, 03 Edit assembly · Resolve, 04 Production · Asana + NetSuite, plus Kyle's Google Workspace slide; sameness; taste) → **3 New ways to make things** (blockout to film, end cards) → **4 Work we made** (AGO steps, Make-A-Wish steps) → **5 What's next, ranked** (brand agents, hardware, worlds from a photo, 4DV, real-time) → close (built with AI, the close, questions, Bring us the hard digital problems).
+Intro (opener, Digital team, agenda) → **1 The year AI started working** (setup, generative media, agentic context, how we work with it: goal + dictation) → **2 It works where we work** (connectors tee-up; 01 Design · Figma, 02 3D · Blender, 03 Edit assembly · Resolve, 04 Production · Asana + NetSuite, 05 Office · Google Workspace; sameness; taste) → **3 New ways to make things** (blockout to film, end cards) → **4 Work we made** (AGO steps, Make-A-Wish steps) → **5 What's next, ranked** (brand agents, hardware, worlds from a photo, 4DV, real-time) → close (built with AI, the close, questions, Bring us the hard digital problems).
 
 ## Open items
 1. **Copy approval.** All new copy written during the restructure needs Josh's sign-off:
@@ -37,7 +37,7 @@ Intro (opener, Digital team, agenda) → **1 The year AI started working** (setu
    - section 2: connectors tee-up, Blender's new headline
    - section 5: ranked, brand agents, hardware
    - earlier: the Alder ad line on the taste slide, the sameness slogans, the team slide lines
-2. **Workspace in the connectors index.** Kyle asked whether Google Workspace should be theme 05 on `s2-connectors`. Recommendation: yes, "05 · Office · Google Workspace".
+2. **Workspace in the connectors index.** Done: "05 · Office · Google Workspace" is the fifth socket on `s2-connectors` (five clicks now), and the Workspace slide header matches. Josh approved its copy ("Office", "building docs, sheets and decks") on 26 Nov 2026.
 3. **Missing clips** (they show "clip to add"): the Blender, Figma, Asana, NetSuite and Resolve recordings, `workspace-docs-sheets-slides.mp4`, `blockout.mp4`, `final-film.mp4`, `photo-to-world-marble.mp4`, `genie-world-live.mp4`, and the two hardware clips. They go in `projects/ai-trends/public/media/clips/` (gitignored: share via OneDrive, or commit web-encoded versions).
 4. **Real GPT Image 2 examples.** The generative-media slide's GPT Image 2 and Seedance cards currently show Nano Banana images (captioned). Fix with `codex login` and `npm run codex-image`.
 5. **Live dictation on the shared link.** It only works on the presenting laptop (needs the dev server). For a shared live demo: Vercel functions plus a passcode. Optional: make the offline fallback always show the polished Northline brief.
