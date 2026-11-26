@@ -8,8 +8,8 @@ The Zulu AI Working Group's December 2026 company talk, built as a web-native an
 ## Where things live
 | Thing | Where |
 |---|---|
-| Repo | https://github.com/josh-zulu/zulu-brand (public). Kyle (`kyle-zulubot`) has write access. |
-| Live preview | https://josh-zulu.github.io/zulu-brand/ (open link, no password; republishes on every merge to `main`) |
+| Repo | https://github.com/wearezulubot/ai-trends (private, Zulubot org; moved from `josh-zulu/zulu-brand` on 26 Nov 2026). Org members get write access; Josh and Kyle are org admins. |
+| Live preview | None while the repo is private: the org's free plan has no Pages for private repos. Run `npm run dev`. The `pages.yml` deploy workflow will fail on merges until it's disabled or the org upgrades. |
 | Running order | `projects/ai-trends/src/deck.ts` (one file per slide in `src/slides/`) |
 | Approved outline | `projects/ai-trends/docs/outline.md` (marked where Josh changed it) |
 | Source deck text | `projects/ai-trends/docs/source-deck.md` |
@@ -24,7 +24,7 @@ The Zulu AI Working Group's December 2026 company talk, built as a web-native an
 - **Image generation defaults to Codex.** Fal costs money on a limited budget: only use it with Josh's OK.
 
 ## How we work
-- `main` is protected: every change goes through a pull request and the **Check** workflow (typecheck + build) must pass. See "Working together" in `CLAUDE.md`.
+- Every change goes through a pull request and the **Check** workflow (typecheck + build) must pass. Branch protection isn't available on the free plan for private repos, so this is by agreement. See "Working together" in `CLAUDE.md`.
 - Each slide is its own file; conflict hotspots are `deck.ts`, `presenters.json` and shared components.
 - When work is split across helper agents, keep one live status page updated for Josh. No need to ask before splitting.
 
@@ -43,5 +43,5 @@ Intro (opener, Digital team, agenda) → **1 The year AI started working** (setu
 5. **Live dictation on the shared link.** It only works on the presenting laptop (needs the dev server). For a shared live demo: Vercel functions plus a passcode. Optional: make the offline fallback always show the polished Northline brief.
 6. **Hiep's photo** is 313 px (from LinkedIn). Ask him for a larger black-and-white headshot: `src/assets/team/hiep.jpg`.
 7. **World Labs sample scenes** (forge, painted bedroom) are credited on the slides. Their reuse terms aren't stated, so check before any public use beyond the internal talk.
-8. **Full repo co-ownership** needs a GitHub organization. Josh creates it, then transfer the repo and make Kyle an owner. The Pages link changes with it.
+8. **Repo co-ownership.** Done: moved to `wearezulubot/ai-trends` (private). To get the hosted preview and branch protection back, the org needs GitHub Team, or the repo goes public again.
 9. **Rehearse on the presenting laptop:** allow the microphone for slide 8, check sound levels (`M` mutes), and watch every slide at full speed once.
