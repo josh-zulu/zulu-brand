@@ -80,3 +80,8 @@
 .gl-sweep { position: absolute; top: 28px; bottom: 60px; width: 90px; left: 320px; opacity: 0;
   background: linear-gradient(90deg, transparent, rgba(77,208,225,.16), transparent); }
 .gl-ws .agent-cursor { transform-origin: 0 0; }
+
+/* small heading shared with the next slide: "How we work with it now · 0N" */
+.gl-kicker { position: absolute; left: 140px; top: 78px; display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--zak-paper-2); white-space: nowrap; }
+.gl-kicker b { font-weight: 500; color: var(--zak-signal); }
+.gl-kicker-sep { color: var(--zak-stone-2); }

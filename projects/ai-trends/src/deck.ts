@@ -13,7 +13,6 @@ import S1Throughline from "./slides/S1Throughline";
 import S1Human from "./slides/S1Human";
 import S1GenMedia from "./slides/S1GenMedia";
 import S1Agentic from "./slides/S1Agentic";
-import S1HowWeWork from "./slides/S1HowWeWork";
 import S1Goal from "./slides/S1Goal";
 import S1Dictation from "./slides/S1Dictation";
 import S2Divider from "./slides/S2Divider";
@@ -65,7 +64,6 @@ export const slides: SlideDef[] = [
   S1Human,
   S1GenMedia,
   S1Agentic,
-  S1HowWeWork,
   S1Goal,
   S1Dictation,
   // 2 · It works where we work: design, 3D, edit assembly, production

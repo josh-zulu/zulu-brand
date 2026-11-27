@@ -117,3 +117,8 @@
   padding: 0 0.22em; margin-left: -0.22em; border-radius: 8px;
   background: rgba(0, 228, 130, 0.2); box-shadow: 0 0 0 1px rgba(0, 228, 130, 0.45), 0 14px 30px rgba(0, 0, 0, 0.5);
 }
+
+/* small heading shared with the next slide: "How we work with it now · 0N" */
+.dx-kicker { position: absolute; left: 140px; top: 78px; display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--zak-paper-2); white-space: nowrap; }
+.dx-kicker b { font-weight: 500; color: var(--zak-signal); }
+.dx-kicker-sep { color: var(--zak-stone-2); }

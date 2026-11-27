@@ -316,6 +316,7 @@ function S1Dictation({ step, direction, mode }: SlideProps) {
   useBeats(root, step, (tl) => {
     const q = gsap.utils.selector(root);
     // beat 0
+    tl.from(q('.dx-kicker'), { opacity: 0, y: 10, duration: 0.6 }, 0);
     revealLines(tl, q('.dx-headline')[0], {}, 0.05);
     revealWords(tl, q('.dx-lede')[0], {}, 0.45);
     tl.from(q('.dx-mic'), { y: 50, opacity: 0, duration: 1.2 }, 0.3);
@@ -541,6 +542,7 @@ function S1Dictation({ step, direction, mode }: SlideProps) {
 
   return (
     <div ref={root} className={`dx ${listening ? 'is-listening' : ''}`}>
+      <div className="dx-kicker label"><b>How we work with it now</b><span className="dx-kicker-sep">·</span>02</div>
       <div className="dx-left">
         <h2 className="dx-headline headline">Talk to it like a teammate.</h2>
         <p className="dx-lede lede">Say the brief out loud. AI turns the ramble into a clear, structured request.</p>

@@ -5,12 +5,13 @@ import { useBeats } from '@/engine/useBeats';
 import { revealLines, revealWords, rng } from '@/lib/motion';
 import { generatedUrl } from '@/components/GenArt';
 import { AgentCursor } from '@/components/AgentCursor';
+import { media } from '@/lib/asset';
 import './S1GenMedia.css';
 
 /**
  * Generative media got really good. One motion idea: every example develops out of noise, the way these models render.
  *  beat 0  headline; the release rail draws; Nano Banana (Pro → 2) lands and its example develops.
- *  beat 1  Seedance 2.0 lands: one frame cutting between three shots over a 15s timeline with sound.
+ *  beat 1  Seedance 2.0 lands: a real Seedance clip (Hiep's Thanksgiving gone wrong) plays over its 15s timeline with sound.
  *  beat 2  GPT Image 2 lands: a beat of "thinking", then eight images from one prompt develop.
  *  beat 3  "And agents can call them." An agent cursor calls each model in turn and each example re-renders;
  *          the receipt: this deck's generated images were made that way.
@@ -22,26 +23,25 @@ type Card = { x: number; date: string; maker: string; name: string; facts: strin
 const CARDS: Card[] = [
   {
     x: 140, date: 'Nov 2025 · Feb 2026', maker: 'Google', name: 'Nano Banana Pro → 2',
-    facts: ['Pro quality at Flash speed, up to 4K', 'Keeps five people consistent', 'Blends up to 14 objects'],
+    facts: ['Flash speed, up to 4K', 'Blends up to 14 objects into one scene'],
     src: 'Source: Google (blog.google), TechCrunch',
     call: { model: 'nano-banana-2', job: 'image' },
   },
   {
     x: 700, date: 'Feb 2026', maker: 'ByteDance', name: 'Seedance 2.0',
-    facts: ['15-second multi-shot video, with sound', 'Directed by text, image, audio and video', 'Targeted edits'],
+    facts: ['15-second video, with sound', 'Directed by text, image, audio and video'],
     src: 'Source: ByteDance Seed (seed.bytedance.com)',
     call: { model: 'seedance-2.0', job: 'video' },
   },
   {
     x: 1260, date: 'Apr 2026', maker: 'OpenAI', name: 'GPT Image 2',
-    facts: ['Reasons before it draws', 'Much better text and layouts', 'Up to 2K, eight images per prompt'],
+    facts: ['Reasons before it draws', 'Much better text and layout'],
     src: 'Source: OpenAI (developers.openai.com), TechCrunch, 21 Apr 2026',
     call: { model: 'gpt-image-2', job: '8 images' },
   },
 ];
 const RAIL_W = 1640;
 const WELL = { y: 420, w: 520, h: 270 };
-const SHOTS = ['rv-shot-1', 'rv-shot-3', 'rv-shot-6'];
 const EIGHT = Array.from({ length: 8 }, (_, i) => `campaign-${i + 1}`);
 const SEG_W = 520 - 14 - 72; // seedance timeline width
 const WAVE = (() => {
@@ -55,7 +55,7 @@ const WAVE = (() => {
 const BLUR = { filter: 'blur(26px) saturate(0.15) brightness(1.25)', scale: 1.14 };
 const CLEAR = { filter: 'blur(0px) saturate(1) brightness(1)', scale: 1 };
 
-function S1GenMedia({ step }: SlideProps) {
+function S1GenMedia({ step, mode }: SlideProps) {
   const root = useRef<HTMLDivElement>(null);
 
   useBeats(root, step, (tl) => {
@@ -92,7 +92,6 @@ function S1GenMedia({ step }: SlideProps) {
     tl.from(q('.gm-caption'), { opacity: 0, duration: 0.8 }, 1.2);
     arrive(0, 0.6);
     develop(0, 1.2, 0.12);
-    tl.from(cards[0].querySelector('.gm-tag'), { opacity: 0, y: 6, duration: 0.5 }, 2.4);
 
     // ── beat 1: Seedance 2.0 ──────────────────────────────────
     tl.addLabel('b1');
@@ -109,7 +108,6 @@ function S1GenMedia({ step }: SlideProps) {
     tl.fromTo(q('.gm-think i'), { opacity: 0.2 }, { opacity: 1, duration: 0.2, stagger: { each: 0.1, repeat: 3, yoyo: true }, immediateRender: false }, t + 0.8);
     tl.to(q('.gm-think'), { opacity: 0, duration: 0.3 }, t + 1.75);
     develop(2, t + 1.7, 0.07);
-    tl.from(cards[2].querySelector('.gm-tag'), { opacity: 0, y: 6, duration: 0.5 }, t + 2.6);
 
     // ── beat 3: and agents can call them ──────────────────────
     tl.addLabel('b3');
@@ -125,7 +123,6 @@ function S1GenMedia({ step }: SlideProps) {
       const press = at + (k === 0 ? 0.75 : 0.6);
       tl.to(cursor, { scale: 0.86, duration: 0.08 }, press);
       tl.to(cursor, { scale: 1, duration: 0.12 }, press + 0.1);
-      tl.fromTo(cards[k].querySelector('.gm-call'), { opacity: 0, scale: 0.9, transformOrigin: '0 50%' }, { opacity: 1, scale: 1, duration: 0.4, ease: 'back.out(2)', immediateRender: false }, press + 0.05);
       develop(k, press + 0.1, k === 2 ? 0.05 : 0.08);
       at = press + 0.85;
     });
@@ -134,26 +131,24 @@ function S1GenMedia({ step }: SlideProps) {
     revealWords(tl, q('.gm-receipt-text')[0], { stagger: 0.035, duration: 0.6 }, at + 0.1);
   });
 
-  // Ambient: Seedance's frame cuts between its three shots as the playhead runs 0–15s (not on the beat timeline).
+  // Ambient: the real Seedance clip plays (live only); the playhead and timecode follow it (not on the beat timeline).
+  const clip = useRef<HTMLVideoElement>(null);
   useEffect(() => {
-    const el = root.current;
-    if (!el) return;
-    const shots = Array.from(el.querySelectorAll<HTMLElement>('.gm-shot'));
+    const el = root.current, v = clip.current;
+    if (!el || !v) return;
+    if (mode === 'live' && step >= 1) v.play().catch(() => {}); else v.pause();
     const head = el.querySelector<HTMLElement>('.gm-playhead');
     const time = el.querySelector<HTMLElement>('.gm-time');
-    const s = { v: 0 };
-    let shown = 0;
-    const tween = gsap.to(s, {
-      v: 15, duration: 7.5, ease: 'none', repeat: -1,
-      onUpdate: () => {
-        if (head) head.style.transform = `translateX(${(s.v / 15) * SEG_W}px)`;
-        if (time) time.textContent = `00:${String(Math.floor(s.v)).padStart(2, '0')}`;
-        const n = Math.min(2, Math.floor(s.v / 5));
-        if (n !== shown) { shots.forEach((sh, i) => { sh.style.opacity = i === n ? '1' : '0'; }); shown = n; }
-      },
-    });
-    return () => { tween.kill(); };
-  }, []);
+    let raf = 0;
+    const tick = () => {
+      const d = v.duration || 15;
+      if (head) head.style.transform = `translateX(${(v.currentTime / d) * SEG_W}px)`;
+      if (time) time.textContent = `00:${String(Math.floor(v.currentTime)).padStart(2, '0')}`;
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [mode, step]);
 
   return (
     <div ref={root} className="genmedia">
@@ -174,16 +169,15 @@ function S1GenMedia({ step }: SlideProps) {
                 <div className="gm-img" style={{ left: 0, top: 0, width: 344, height: 270, backgroundImage: img('rv-shot-4') }} />
                 <div className="gm-img" style={{ left: 348, top: 0, width: 172, height: 133, backgroundImage: img('rv-shot-5') }} />
                 <div className="gm-img" style={{ left: 348, top: 137, width: 172, height: 133, backgroundImage: img('rv-shot-2') }} />
-                <span className="gm-tag">One rider · three scenes</span>
               </>
             )}
             {k === 1 && (
               <>
-                {SHOTS.map((id, i) => (
-                  <div key={id} className={`gm-img gm-shot ${i === 0 ? 'is-first' : ''}`} style={{ left: 0, top: 0, width: 520, height: 218, backgroundImage: img(id) }} />
-                ))}
+                <div className="gm-img gm-clip" style={{ left: 0, top: 0, width: 520, height: 218 }}>
+                  <video ref={clip} src={media('hv/thanksgiving-film.mp4')} muted loop playsInline preload={mode === 'live' ? 'auto' : 'metadata'} />
+                </div>
                 <div className="gm-strip">
-                  <div className="gm-segs"><i /><i /><i /></div>
+                  <div className="gm-segs"><i /></div>
                   <svg className="gm-wave" viewBox={`0 0 ${WAVE.length * 7} 16`} preserveAspectRatio="none" aria-hidden>
                     {WAVE.map((h, i) => <rect key={i} x={i * 7} y={(16 - h) / 2} width="4" height={h} rx="2" />)}
                   </svg>
@@ -198,11 +192,9 @@ function S1GenMedia({ step }: SlideProps) {
                   <div key={id} className="gm-img" style={{ left: (i % 4) * 131, top: Math.floor(i / 4) * 137, width: 127, height: 133, backgroundImage: img(id) }} />
                 ))}
                 <div className="gm-think"><span>thinking <i>·</i><i>·</i><i>·</i></span></div>
-                <span className="gm-tag">#1 on Image Arena at launch</span>
               </>
             )}
             <div className="gm-noise" />
-            <div className="gm-call"><i />{c.call.model}<em>{c.call.job}</em></div>
           </div>
           <div className="gm-name headline">{c.name}</div>
           <ul className="gm-facts">{c.facts.map((f) => <li key={f}>{f}</li>)}</ul>
@@ -210,7 +202,7 @@ function S1GenMedia({ step }: SlideProps) {
         </div>
       ))}
 
-      <div className="gm-caption source">Example images: made for this deck with Nano Banana 2 and Pro.</div>
+      <div className="gm-caption source">Example images: made for this deck with Nano Banana 2 and Pro. Seedance clip: Hiep Vu, Thanksgiving gone wrong.</div>
       <AgentCursor label="Agent" />
     </div>
   );
@@ -223,9 +215,9 @@ export default defineSlide({
   steps: 3,
   notes:
     'One click per release, then one for the turn. Keep it brisk: this is context, not a product tour.\n' +
-    'Nano Banana, from Google: Pro last November, then Nano Banana 2 in February. Pro quality at Flash speed, up to 4K, and it keeps the same people consistent across scenes. Every generated image in this deck came from it.\n' +
-    'Seedance 2.0, from ByteDance, in February: 15-second, multi-shot video with sound, directed with text, images, audio and video references, and you can make targeted edits.\n' +
-    'GPT Image 2, from OpenAI, in April: it reasons before it draws, so text and layouts finally hold up. Up to 2K, eight images per prompt, and it went straight to number one on Image Arena.\n' +
+    'Nano Banana, from Google: Pro last November, then Nano Banana 2 in February. Flash speed, up to 4K, and it blends up to 14 objects into one scene.\n' +
+    'Seedance 2.0, from ByteDance, in February: 15 seconds of video with sound, directed with text, images, audio and video. That clip is Hiep’s; you’ll see how he made it later.\n' +
+    'GPT Image 2, from OpenAI, in April: it reasons before it draws, so text and layout finally hold up.\n' +
     'The turn: and agents can call them. An agent can pick the right model for the job and generate as one step in a bigger task. That is how this deck was made: Claude calling image models through scripts.',
   Component: S1GenMedia,
 });

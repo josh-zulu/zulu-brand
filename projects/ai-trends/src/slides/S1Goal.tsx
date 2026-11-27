@@ -55,6 +55,7 @@ function S1Goal({ step, direction, mode }: SlideProps) {
     const lines = q('.gl-line');
 
     // ── beat 0: the setup ─────────────────────────────────────
+    tl.from(q('.gl-kicker'), { opacity: 0, y: 10, duration: 0.6 }, 0);
     revealLines(tl, q('.gl-head')[0], {}, 0.05);
     revealWords(tl, q('.gl-lede')[0], {}, 0.4);
     tl.from(q('.gl-win'), { y: 70, opacity: 0, duration: 1.3 }, 0.3);
@@ -142,6 +143,7 @@ function S1Goal({ step, direction, mode }: SlideProps) {
 
   return (
     <div ref={root} className="gl">
+      <div className="gl-kicker label"><b>How we work with it now</b><span className="gl-kicker-sep">·</span>01</div>
       <h2 className="gl-head headline">Give it a goal, not a prompt.</h2>
       <p className="gl-lede lede">It opens our files, uses our tools, checks its own work and comes back when it's done.</p>
 
