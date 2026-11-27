@@ -12,7 +12,7 @@ import './S1GenMedia.css';
  * Generative media got really good. One motion idea: every example develops out of noise, the way these models render.
  *  beat 0  headline; the release rail draws; Nano Banana (Pro → 2) lands and its example develops.
  *  beat 1  Seedance 2.0 lands: a real Seedance clip (Hiep's Thanksgiving gone wrong) plays over its 15s timeline with sound.
- *  beat 2  GPT Image 2 lands: a beat of "thinking", then eight images from one prompt develop.
+ *  beat 2  GPT Image 2 lands: a beat of "thinking", then a poster and a magazine spread full of text develop.
  *  beat 3  "And agents can call them." An agent cursor calls each model in turn and each example re-renders;
  *          the receipt: this deck's generated images were made that way.
  * Example images are this deck's own (Nano Banana 2 / Pro via tools/fal.mjs); the caption says so.
@@ -42,7 +42,6 @@ const CARDS: Card[] = [
 ];
 const RAIL_W = 1640;
 const WELL = { y: 420, w: 520, h: 270 };
-const EIGHT = Array.from({ length: 8 }, (_, i) => `campaign-${i + 1}`);
 const SEG_W = 520 - 14 - 72; // seedance timeline width
 const WAVE = (() => {
   const r = rng(7);
@@ -188,9 +187,8 @@ function S1GenMedia({ step, mode }: SlideProps) {
             )}
             {k === 2 && (
               <>
-                {EIGHT.map((id, i) => (
-                  <div key={id} className="gm-img" style={{ left: (i % 4) * 131, top: Math.floor(i / 4) * 137, width: 127, height: 133, backgroundImage: img(id) }} />
-                ))}
+                <div className="gm-img" style={{ left: 0, top: 4, width: 196, height: 262, backgroundImage: img('gpt-poster') }} />
+                <div className="gm-img" style={{ left: 200, top: 28, width: 320, height: 213, backgroundImage: img('gpt-spread') }} />
                 <div className="gm-think"><span>thinking <i>·</i><i>·</i><i>·</i></span></div>
               </>
             )}
@@ -202,7 +200,7 @@ function S1GenMedia({ step, mode }: SlideProps) {
         </div>
       ))}
 
-      <div className="gm-caption source">Examples made for this deck: Nano Banana Pro blending two product shots into one 4K scene. Seedance clip: Hiep Vu, Thanksgiving gone wrong.</div>
+      <div className="gm-caption source">Examples made for this deck: Nano Banana Pro blending two product shots into one 4K scene; a poster and spread from ChatGPT’s image tool (via Codex). Seedance clip: Hiep Vu.</div>
       <AgentCursor label="Agent" />
     </div>
   );
