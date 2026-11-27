@@ -15,7 +15,7 @@ import './S5Realtime.css';
  *          blocky at the edge and sharp behind, frame counter running. Then the camera starts walking in. Nothing pre-rendered.
  *  beat 1  the real thing: a live H3 Max Director session (fal's published example) takes over the same frame.
  */
-const WORLD = generatedUrl('realtime-world');
+const WORLD = generatedUrl('realtime-portal');
 const SENTENCE = 'Breaking news: a portal opens over Tokyo.';
 // Frame and bar positions on the 1920×1080 canvas (CSS mirrors these).
 const FRAME = { x: 820, y: 214, w: 960, h: 540 };

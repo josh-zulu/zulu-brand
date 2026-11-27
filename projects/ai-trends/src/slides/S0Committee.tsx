@@ -7,8 +7,8 @@ import './S0Committee.css';
 
 /**
  * The AI Committee: everyone at Zulu in it, right after the Innovation Trio.
- * One idea: the committee assembles. Each person's dot (the pill-and-dot language of the ZAK mark) lands in the grid
- * as the count runs up to 19. The Innovation Trio's dots carry the signal ring, tying back to the slide before.
+ * One idea: the committee assembles. Everyone has an equal seat: each person's dot (the pill-and-dot language of the
+ * ZAK mark) lands in centred rows as the member count runs up to 19.
  *  beat 0  kicker, title, count; the 19 names land in sequence
  */
 const PEOPLE = [
@@ -16,7 +16,6 @@ const PEOPLE = [
   'Kenneth Haz', 'Kyle Collins', 'Matthew Vares', 'Nicole Pagano', 'Ola Stodulska', 'Paulina Marxuach', 'Sarah Dayus',
   'Sarah Yim', 'Sean Bell', 'Spencer MacEachern', 'Sunny Jung', 'Trong Nguyen',
 ];
-const TRIO = new Set(['Josh Maldonado', 'Kyle Collins', 'Hiep Vu']);
 const initials = (n: string) => n.split(' ').map((w) => w[0]).join('').slice(0, 2);
 
 function Committee({ step }: SlideProps) {
@@ -28,21 +27,19 @@ function Committee({ step }: SlideProps) {
     tl.from(q('.cm-head'), { opacity: 0, y: 30, duration: 1.1, ease: 'expo.out' }, 0.05);
     countUp(tl, q('.cm-count-n')[0], PEOPLE.length, { duration: 2.2 }, 0.4);
     tl.from(q('.cm-dot'), { scale: 0, duration: 0.55, ease: 'back.out(2.4)', stagger: 0.09 }, 0.45);
-    tl.from(q('.cm-name'), { opacity: 0, x: -14, duration: 0.6, ease: 'power3.out', stagger: 0.09 }, 0.6);
+    tl.from(q('.cm-name'), { opacity: 0, y: 10, duration: 0.6, ease: 'power3.out', stagger: 0.09 }, 0.6);
   });
 
   return (
     <div ref={root} className="committee">
       <div className="cm-top">
-        <div className="cm-title">
-          <div className="cm-kicker label">Zulu Alpha Kilo</div>
-          <h2 className="cm-head display">AI Committee</h2>
-        </div>
-        <div className="cm-count"><span className="cm-count-n display">{PEOPLE.length}</span><span className="label">people</span></div>
+        <div className="cm-kicker label">Zulu Alpha Kilo</div>
+        <h2 className="cm-head display">AI Committee</h2>
+        <div className="cm-count label"><span className="cm-count-n">{PEOPLE.length}</span> members</div>
       </div>
       <ol className="cm-grid">
         {PEOPLE.map((p) => (
-          <li key={p} className={`cm-person ${TRIO.has(p) ? 'is-trio' : ''}`}>
+          <li key={p} className="cm-person">
             <span className="cm-dot">{initials(p)}</span>
             <span className="cm-name">{p}</span>
           </li>

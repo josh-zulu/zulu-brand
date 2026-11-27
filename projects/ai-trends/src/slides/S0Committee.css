@@ -1,24 +1,21 @@
-/* S0Committee: everyone on the AI Committee. Classes prefixed .cm- */
+/* S0Committee: everyone on the AI Committee, centred, equal seats. Classes prefixed .cm- */
 .committee { position: absolute; inset: 0; }
 
-.cm-top { position: absolute; left: 140px; right: 140px; top: 128px; display: flex; justify-content: space-between; align-items: flex-end; }
-.cm-title { display: grid; gap: 16px; }
+.cm-top { position: absolute; left: 140px; right: 140px; top: 120px; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
 .cm-kicker { color: var(--zak-stone); }
 .cm-head { font-size: 130px; line-height: 0.9; }
-.cm-count { display: flex; align-items: baseline; gap: 16px; color: var(--zak-stone); }
-.cm-count-n { font-size: 130px; line-height: 0.9; color: var(--zak-signal); font-variant-numeric: tabular-nums; }
+.cm-count { color: var(--zak-paper-2); }
+.cm-count-n { color: var(--zak-signal); font-variant-numeric: tabular-nums; display: inline-block; min-width: 1.3em; text-align: right; }
 
-/* five columns, four rows; names read down then across like a roster */
+/* centred rows of five: dot above name, like seats round a table */
 .cm-grid {
-  position: absolute; left: 140px; right: 140px; top: 400px; margin: 0; padding: 0; list-style: none;
-  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)) max-content; grid-template-rows: repeat(4, 112px); grid-auto-flow: column; column-gap: 24px;
-  border-top: 1px solid var(--zak-line-strong);
+  position: absolute; left: 140px; right: 140px; top: 396px; margin: 0; padding: 0; list-style: none;
+  display: flex; flex-wrap: wrap; justify-content: center; row-gap: 26px;
 }
-.cm-person { display: flex; align-items: center; gap: 14px; border-bottom: 1px solid var(--zak-line); min-width: 0; }
+.cm-person { width: 328px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
 .cm-dot {
-  flex: none; width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center;
+  width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center;
   background: rgba(0, 0, 0, 0.32); box-shadow: var(--zak-deboss-dark);
-  font-family: var(--zak-font-mono); font-size: 17px; letter-spacing: 0.06em; color: var(--zak-paper-2);
+  font-family: var(--zak-font-mono); font-size: 18px; letter-spacing: 0.06em; color: var(--zak-paper-2);
 }
-.cm-person.is-trio .cm-dot { color: var(--zak-ink); background: var(--zak-signal); box-shadow: 0 0 18px rgba(0, 228, 130, 0.45); }
-.cm-name { font-family: var(--zak-font-text); font-weight: 500; font-size: 26px; letter-spacing: -0.015em; color: var(--zak-paper); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cm-name { font-family: var(--zak-font-text); font-weight: 500; font-size: 26px; letter-spacing: -0.015em; color: var(--zak-paper); white-space: nowrap; }
