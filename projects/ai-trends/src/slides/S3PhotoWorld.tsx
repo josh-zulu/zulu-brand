@@ -72,10 +72,10 @@ function S3PhotoWorld({ step, mode }: SlideProps) {
 
   return (
     <div ref={root} className="photo-world">
-      <div className="pw-kicker label"><b>On our radar</b></div>
+      <div className="pw-kicker label"><b>On our radar</b><span className="pw-kicker-sep">·</span>World models</div>
       <div className="pw-copy">
         <h2 className="pw-headline headline">Take one photo. Walk around inside it.</h2>
-        <p className="pw-lede lede">AI builds a 3D world from it that we can explore and film.</p>
+        <p className="pw-lede lede">A world model builds a 3D scene from it, stored as a Gaussian splat, that we can explore and film.</p>
       </div>
 
       <div
@@ -103,7 +103,8 @@ export default defineSlide({
   title: 'Photo to 3D world',
   steps: 2,
   notes:
-    'Take one photo. Walk around inside it. AI builds a 3D world from it that we can explore and film.\n' +
+    'Take one photo. Walk around inside it. The tech is called a world model: AI that builds a whole 3D place from an image or a sentence, not just a picture. The best known is World Labs’ Marble.\n' +
+    'What you are looking at is a Gaussian splat: the scene stored as millions of soft, coloured points that render in real time, so the camera can go anywhere, in a browser.\n' +
     'Click 1: the photo opens up and the camera walks inside it. This is a real 3D world made with World Labs Marble (their sample scene, credited on the slide), rendered live. You can steer it with the mouse.\n' +
     'Click 2: the real thing, World Labs Marble. Clip to add: clips/photo-to-world-marble.mp4.',
   Component: S3PhotoWorld,

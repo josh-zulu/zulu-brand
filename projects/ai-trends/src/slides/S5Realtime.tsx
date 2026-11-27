@@ -14,9 +14,21 @@ import './S5Realtime.css';
  *  beat 0  a photo and a sentence go into the prompt bar. The photo drops into the frame and the world grows out of it,
  *          blocky at the edge and sharp behind, frame counter running. Then the camera starts walking in. Nothing pre-rendered.
  *  beat 1  the real thing: a live H3 Max Director session (fal's published example) takes over the same frame.
+ *  beat 2-5 choose your own adventure: each click types a new direction into the bar and the stream jumps to where it
+ *           took the broadcast. Directions are paraphrased from what happens on screen, except the England one, which
+ *           fal quotes. The clip runs a touch fast (1.25x) so it keeps moving.
  */
 const WORLD = generatedUrl('realtime-portal');
 const SENTENCE = 'Breaking news: a portal opens over Tokyo.';
+/** Each click after the clip arrives: a new direction, and where in the stream it lands (seconds). */
+const DIRECTIONS = [
+  { text: SENTENCE, at: 0 },
+  { text: 'Cut to our reporter at the portal.', at: 16 },
+  { text: 'The portal turns violet and starts to pull.', at: 28 },
+  { text: 'Show the readings.', at: 45 },
+  { text: 'Report: something bad happened in England.', at: 57 },
+];
+const RATE = 1.25;
 // Frame and bar positions on the 1920×1080 canvas (CSS mirrors these).
 const FRAME = { x: 820, y: 214, w: 960, h: 540 };
 // The "photo" is a crop of the world it seeds, so the growth is seamless.
@@ -78,31 +90,31 @@ function Realtime({ step, mode }: SlideProps) {
     gsap.set(q('.rt-clone'), { x: THUMB.x - (FRAME.x + SEED.x), y: THUMB.y - (FRAME.y + SEED.y), scale: THUMB.s / SEED.w, transformOrigin: '0 0', opacity: 0 });
 
     // ── beat 0: text, empty frame, the prompt ─────────────────
-    tl.from(q('.rt-kicker'), { opacity: 0, y: 10, duration: 0.8 }, 0);
+    tl.from(q('.rt-kicker'), { opacity: 0, y: 10, duration: 0.6 }, 0);
     revealLines(tl, q('.rt-head')[0], {}, 0);
-    revealWords(tl, q('.rt-lede')[0], {}, 0.4);
-    tl.from(q('.rt-frame'), { opacity: 0, y: 40, duration: 1.2 }, 0.2);
-    tl.from(q('.rt-bar'), { opacity: 0, y: 24, duration: 1 }, 0.4);
-    tl.from(q('.rt-thumb'), { scale: 0.4, opacity: 0, duration: 0.6, ease: 'back.out(2)' }, 0.9);
-    typeInto(tl, q('.rt-typed')[0], SENTENCE, { cps: 30 }, 1.15);
+    revealWords(tl, q('.rt-lede')[0], {}, 0.3);
+    tl.from(q('.rt-frame'), { opacity: 0, y: 40, duration: 0.9 }, 0.15);
+    tl.from(q('.rt-bar'), { opacity: 0, y: 24, duration: 0.7 }, 0.3);
+    tl.from(q('.rt-thumb'), { scale: 0.4, opacity: 0, duration: 0.5, ease: 'back.out(2)' }, 0.55);
+    typeInto(tl, q('.rt-typed')[0], SENTENCE, { cps: 60 }, 0.7);
 
     // ── the photo drops in and the world grows out of it ──────
-    const drop = 1.15 + SENTENCE.length / 30 + 0.25;
+    const drop = 0.7 + SENTENCE.length / 60 + 0.15;
     tl.to(q('.rt-bar-enter'), { opacity: 1, duration: 0.15 }, drop - 0.2);
     tl.to(q('.rt-bar-enter'), { opacity: 0.35, duration: 0.3 }, drop);
     tl.set(q('.rt-clone'), { opacity: 1 }, drop);
-    tl.to(q('.rt-clone'), { x: 0, y: 0, scale: 1, duration: 0.9, ease: 'power3.inOut' }, drop);
-    tl.to(q('.rt-empty'), { opacity: 0, duration: 0.5 }, drop + 0.5);
-    const grow = drop + 0.85;
+    tl.to(q('.rt-clone'), { x: 0, y: 0, scale: 1, duration: 0.6, ease: 'power3.inOut' }, drop);
+    tl.to(q('.rt-empty'), { opacity: 0, duration: 0.4 }, drop + 0.3);
+    const grow = drop + 0.55;
     tl.set(q('.rt-pix, .rt-sharp'), { opacity: 1 }, grow);
     tl.call(() => { counting.current.on = 1; counting.current.start = performance.now(); }, undefined, grow);
     tl.to(q('.rt-hud'), { opacity: 1, duration: 0.4 }, grow);
-    tl.to(q('.rt-pix'), { clipPath: full, duration: 1.3, ease: 'power2.inOut' }, grow);
-    tl.to(q('.rt-sharp'), { clipPath: full, duration: 1.5, ease: 'power2.inOut' }, grow + 0.45);
+    tl.to(q('.rt-pix'), { clipPath: full, duration: 0.9, ease: 'power2.inOut' }, grow);
+    tl.to(q('.rt-sharp'), { clipPath: full, duration: 1.0, ease: 'power2.inOut' }, grow + 0.3);
     tl.set(q('.rt-clone'), { opacity: 0 }, grow + 0.1);
-    tl.set(q('.rt-state-gen'), { opacity: 0 }, grow + 2);
-    tl.set(q('.rt-state-live'), { opacity: 1 }, grow + 2);
-    tl.to(drift.current, { amp: 1, duration: 3, ease: 'power2.inOut' }, grow + 1.6);
+    tl.set(q('.rt-state-gen'), { opacity: 0 }, grow + 1.3);
+    tl.set(q('.rt-state-live'), { opacity: 1 }, grow + 1.3);
+    tl.to(drift.current, { amp: 1, duration: 3, ease: 'power2.inOut' }, grow + 1.1);
     tl.addLabel('b1');
 
     // ── beat 1: the real clip takes the frame ─────────────────
@@ -110,7 +122,34 @@ function Realtime({ step, mode }: SlideProps) {
     tl.to(q('.rt-bar-mode-live'), { opacity: 0, duration: 0.3 }, 'b1');
     tl.fromTo(q('.rt-bar-mode-clip'), { opacity: 0 }, { opacity: 1, duration: 0.4 }, 'b1+=0.25');
     tl.fromTo(q('.rt-credit'), { opacity: 0 }, { opacity: 1, duration: 0.5, immediateRender: false }, 'b1+=0.4');
+
+    // ── beats 2–5: a new direction per click; the stream follows (seek in the effect below) ──
+    const typed = q('.rt-typed')[0];
+    DIRECTIONS.slice(1).forEach((d, i) => {
+      const prev = DIRECTIONS[i].text;
+      tl.addLabel(`b${i + 2}`, '+=0.05');
+      const s = { n: 0 };
+      tl.fromTo(s, { n: 0 }, {
+        n: d.text.length, duration: d.text.length / 70, ease: 'none', immediateRender: false,
+        onUpdate: () => { if (typed) typed.textContent = s.n < 0.5 ? prev : d.text.slice(0, Math.round(s.n)); },
+      }, `b${i + 2}`);
+      tl.fromTo(q('.rt-bar-enter'), { opacity: 1 }, { opacity: 0.35, duration: 0.3, immediateRender: false }, `b${i + 2}+=${d.text.length / 70}`);
+    });
   });
+
+  // The stream follows the directions: each click jumps the clip to where that direction took the broadcast.
+  useEffect(() => {
+    if (mode !== 'live' || step < 1) return;
+    const v = root.current?.querySelector<HTMLVideoElement>('.rt-clip video');
+    if (!v) return;
+    const go = () => {
+      const d = DIRECTIONS[Math.min(step, DIRECTIONS.length) - 1];
+      v.currentTime = d.at + (step >= 2 ? d.text.length / 70 : 0);
+      v.playbackRate = RATE;
+      v.play().catch(() => {});
+    };
+    if (v.readyState >= 1) go(); else v.addEventListener('loadedmetadata', go, { once: true });
+  }, [step, mode]);
 
   return (
     <div ref={root} className="rt">
@@ -145,12 +184,12 @@ function Realtime({ step, mode }: SlideProps) {
         <span className="caret blink" />
         <span className="rt-bar-right label">
           <span className="rt-bar-mode-live">Real time</span>
-          <span className="rt-bar-mode-clip">H3 Max · live</span>
+          <span className="rt-bar-mode-clip">Direction {Math.min(Math.max(step, 1), DIRECTIONS.length)}/{DIRECTIONS.length}</span>
           <span className="rt-bar-enter">↵</span>
         </span>
       </div>
 
-      <div className="rt-credit source">Live session: MiniMax H3 Max Director, via fal (fal.ai).</div>
+      <div className="rt-credit source">Live session: MiniMax H3 Max Director, via fal (fal.ai). Directions paraphrased from the session, played at 1.25x.</div>
 
       {/* the photo on its way from the prompt bar into the frame */}
       <div className="rt-clone" style={{ left: FRAME.x + SEED.x, top: FRAME.y + SEED.y, width: SEED.w, height: SEED.h }}>
@@ -164,10 +203,12 @@ export default defineSlide({
   id: 's5-realtime',
   section: 4,
   title: 'Made as you watch',
-  steps: 1,
+  steps: 5,
   notes:
     'The one to watch: real-time generative video. MiniMax H3, and its fast version H3 Max, stream picture and sound live instead of handing you a finished file.\n' +
     'On arrival: a photo and one sentence go in, and the world grows while you watch. The frame counter is the point: it is made frame by frame, not played back.\n' +
-    'Click: the real thing. A live H3 Max session, an anime news broadcast steered by new prompts while it plays: 24 frames a second, generated as it goes. Impressive now, not ready for client work yet. Hover for sound.',
+    'Click: the real thing. A live H3 Max session, an anime news broadcast, generated as it plays at 24 frames a second.\n' +
+    'Then keep clicking, quickly: it is choose your own adventure. Each click is a new direction typed in mid-stream, and the broadcast goes there: cut to the reporter at the portal, the portal turns violet, show the readings, report that something bad happened in England. Nobody wrote a script; the story is steered live.\n' +
+    'Impressive now, not ready for client work yet. Hover the clip for sound.',
   Component: Realtime,
 });
