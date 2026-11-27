@@ -16,7 +16,7 @@ import './S5Realtime.css';
  *  beat 1  the real thing: a live H3 Max Director session (fal's published example) takes over the same frame.
  */
 const WORLD = generatedUrl('realtime-world');
-const SENTENCE = 'Walk down to the harbour at first light.';
+const SENTENCE = 'Breaking news: a portal opens over Tokyo.';
 // Frame and bar positions on the 1920×1080 canvas (CSS mirrors these).
 const FRAME = { x: 820, y: 214, w: 960, h: 540 };
 // The "photo" is a crop of the world it seeds, so the growth is seamless.
