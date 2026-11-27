@@ -1,4 +1,4 @@
-/* S0Team: the Digital team tee-up. Classes prefixed .dt- */
+/* S0Team: the Innovation Trio tee-up. Classes prefixed .dt- */
 .team { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 80px; }
 .dt-title { display: flex; flex-direction: column; align-items: center; gap: 18px; }
 .dt-kicker { color: var(--zak-stone); }

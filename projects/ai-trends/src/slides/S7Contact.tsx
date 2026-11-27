@@ -8,9 +8,9 @@ import { TEAM, photoFor } from './S0Team';
 import './S7Contact.css';
 
 /**
- * The last slide: ZAK sign-off and the ask. "Bring us the hard digital problems." with the Digital team.
+ * The last slide: ZAK sign-off and the ask. "Bring us the hard digital problems." with the Innovation Trio.
  * One motion idea: the ZAK mark assembles piece by piece (its pills and dots), then the three of us fill our rings.
- * Names, titles and photos come from the Digital team slide (S0Team), so there's one place to edit them.
+ * Names, titles and photos come from the Innovation Trio slide (S0Team), so there's one place to edit them.
  */
 function S7Contact({ step }: SlideProps) {
   const root = useRef<HTMLDivElement>(null);
@@ -34,7 +34,7 @@ function S7Contact({ step }: SlideProps) {
         <h2 className="ct-head headline">Bring us the hard digital problems.</h2>
         <p className="ct-lede lede">Prototypes, motion, 3D and AI workflows, built in-house. We’re the go-to for digital and innovation at Zulu.</p>
       </div>
-      <div className="ct-sign label"><span className="ct-rule" />Zulu Alpha Kilo · Digital team</div>
+      <div className="ct-sign label"><span className="ct-rule" />Zulu Alpha Kilo · Innovation Trio</div>
 
       <div className="ct-team">
         {TEAM.map((p) => {

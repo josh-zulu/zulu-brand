@@ -7,6 +7,7 @@
 import type { SlideDef } from "./engine/types";
 import Opener from "./slides/Opener";
 import S0Team from "./slides/S0Team";
+import S0Committee from "./slides/S0Committee";
 import Agenda from "./slides/Agenda";
 import S1Divider from "./slides/S1Divider";
 import S1Throughline from "./slides/S1Throughline";
@@ -57,6 +58,7 @@ export const slides: SlideDef[] = [
   // Intro
   Opener,
   S0Team,
+  S0Committee,
   Agenda,
   // 1 · The year AI started working: setup, generative, agentic, how we work with it
   S1Divider,

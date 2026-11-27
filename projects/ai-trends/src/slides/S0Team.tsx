@@ -6,7 +6,7 @@ import { revealLines } from '@/lib/motion';
 import './S0Team.css';
 
 /**
- * Tee-up: the Digital team at Zulu Alpha Kilo. Just the title and three circle headshots.
+ * Tee-up: the Innovation Trio at Zulu Alpha Kilo. Just the title and three circle headshots.
  * One motion idea: three rings are carved into the page like the dots of the ZAK mark, and each of us fills one.
  * Photos: src/assets/team/<firstname>.jpg (black and white looks best; any colour photo is shown in greyscale).
  */
@@ -39,7 +39,7 @@ function S0Team({ step }: SlideProps) {
     <div ref={root} className="team">
       <div className="dt-title">
         <div className="dt-kicker label">Zulu Alpha Kilo</div>
-        <h2 className="dt-head display">Digital team</h2>
+        <h2 className="dt-head display">Innovation Trio</h2>
       </div>
       <div className="dt-row">
         {TEAM.map((p) => {
@@ -71,8 +71,8 @@ function S0Team({ step }: SlideProps) {
 export default defineSlide({
   id: 'team',
   section: 0,
-  title: 'The Digital team',
+  title: 'The Innovation Trio',
   chrome: false,
-  notes: 'Introduce the three of us before the talk starts: Josh, Kyle and Hiep, the Digital team. When you have a digital or innovation problem, come to us first.',
+  notes: 'Introduce the three of us before the talk starts: Josh, Kyle and Hiep, the Innovation Trio. When you have a digital or innovation problem, come to us first.',
   Component: S0Team,
 });

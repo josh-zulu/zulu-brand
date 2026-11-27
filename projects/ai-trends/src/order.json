@@ -2,6 +2,7 @@
   "order": [
     "opener",
     "team",
+    "committee",
     "agenda",
     "s1-divider",
     "s1-throughline",
