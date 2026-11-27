@@ -166,9 +166,9 @@ function S1GenMedia({ step, mode }: SlideProps) {
           <div className="gm-well">
             {k === 0 && (
               <>
-                <div className="gm-img" style={{ left: 0, top: 0, width: 344, height: 270, backgroundImage: img('rv-shot-4') }} />
-                <div className="gm-img" style={{ left: 348, top: 0, width: 172, height: 133, backgroundImage: img('rv-shot-5') }} />
-                <div className="gm-img" style={{ left: 348, top: 137, width: 172, height: 133, backgroundImage: img('rv-shot-2') }} />
+                <div className="gm-img" style={{ left: 0, top: 0, width: 344, height: 270, backgroundImage: img('nb-blend') }} />
+                <div className="gm-img" style={{ left: 348, top: 0, width: 172, height: 133, backgroundImage: img('nb-camera') }} />
+                <div className="gm-img" style={{ left: 348, top: 137, width: 172, height: 133, backgroundImage: img('nb-bag') }} />
               </>
             )}
             {k === 1 && (
@@ -202,7 +202,7 @@ function S1GenMedia({ step, mode }: SlideProps) {
         </div>
       ))}
 
-      <div className="gm-caption source">Example images: made for this deck with Nano Banana 2 and Pro. Seedance clip: Hiep Vu, Thanksgiving gone wrong.</div>
+      <div className="gm-caption source">Examples made for this deck: Nano Banana Pro blending two product shots into one 4K scene. Seedance clip: Hiep Vu, Thanksgiving gone wrong.</div>
       <AgentCursor label="Agent" />
     </div>
   );

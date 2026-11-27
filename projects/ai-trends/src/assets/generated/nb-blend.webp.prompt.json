@@ -1,0 +1,16 @@
+{
+  "createdAt": "2026-11-27T15:55:51.831Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-pro/edit",
+  "input": {
+    "prompt": "Use the green camera from the first image and the orange weekender bag from the second image, keeping them exactly as they look. Editorial travel photograph on 35mm film: a woman in a cream knit sweater stands on an empty seaside railway platform at golden hour, raising the green camera to her eye, the orange weekender bag on the bench beside her. Warm low sun, long shadows, the sea and a lighthouse soft in the background, natural colour, fine film grain, shallow depth of field. No text, no logos.",
+    "aspect_ratio": "4:3",
+    "image_urls": [
+      "projects/ai-trends/src/assets/generated/nb-camera.png",
+      "projects/ai-trends/src/assets/generated/nb-bag.png"
+    ],
+    "resolution": "4K"
+  },
+  "requestId": "01a21db7-c3db-7b42-bdff-74cd236fa72e",
+  "seconds": 40
+}

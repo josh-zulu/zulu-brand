@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-27T15:55:02.629Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-pro",
+  "input": {
+    "prompt": "Studio product photograph of a rust-orange waxed canvas weekender bag with dark brown leather handles and brass buckles, three-quarter view, on a seamless warm grey paper background, soft window light from the left, gentle shadow, crisp detail, editorial catalogue style. No text.",
+    "aspect_ratio": "4:3"
+  },
+  "requestId": "01a21db7-57b9-7401-a989-2d73f4d73463",
+  "seconds": 18
+}

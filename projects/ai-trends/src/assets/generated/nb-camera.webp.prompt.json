@@ -1,0 +1,11 @@
+{
+  "createdAt": "2026-11-27T15:55:00.648Z",
+  "tool": "fal",
+  "model": "fal-ai/nano-banana-pro",
+  "input": {
+    "prompt": "Studio product photograph of a vintage rangefinder film camera with a sage-green leatherette body and brushed steel top plate, three-quarter view, on a seamless warm grey paper background, soft window light from the left, gentle shadow, crisp detail, editorial catalogue style. No text.",
+    "aspect_ratio": "4:3"
+  },
+  "requestId": "01a21db7-57ed-7c71-8b81-efe0f0bad009",
+  "seconds": 16
+}
