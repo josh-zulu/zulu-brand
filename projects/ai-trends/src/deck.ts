@@ -39,6 +39,10 @@ import S4Maw2Clips from "./slides/maw/S4Maw2Clips";
 import S4Maw3Figma from "./slides/maw/S4Maw3Figma";
 import S4Maw4Animatic from "./slides/maw/S4Maw4Animatic";
 import S4Maw5Site from "./slides/maw/S4Maw5Site";
+import S4HvThanksgiving from "./slides/hv/S4HvThanksgiving";
+import S4HvBloomberg from "./slides/hv/S4HvBloomberg";
+import S4HvLyft from "./slides/hv/S4HvLyft";
+import S4HvPcOptimum from "./slides/hv/S4HvPcOptimum";
 import S5Divider from "./slides/S5Divider";
 import S4Watching from "./slides/S4Watching";
 import S5Context from "./slides/S5Context";
@@ -73,7 +77,7 @@ export const slides: SlideDef[] = [
   S2Workspace,
   S2Sameness,
   S2Taste,
-  // 3 · Work we made: AGO, Make-A-Wish
+  // 3 · Work we made: AGO, Make-A-Wish, Hiep's four projects
   S4Divider,
   S3Pitches,
   S3AgoBrief,
@@ -88,6 +92,10 @@ export const slides: SlideDef[] = [
   S4Maw3Figma,
   S4Maw4Animatic,
   S4Maw5Site,
+  S4HvThanksgiving,
+  S4HvBloomberg,
+  S4HvLyft,
+  S4HvPcOptimum,
   // 4 · What's next: what we're paying attention to at Zulu, then one slide each
   S5Divider,
   S4Watching,

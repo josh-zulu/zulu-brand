@@ -1,0 +1,51 @@
+/* Hiep's four projects in Work we made (prefix hv-). Same frame on every slide: text left, the work right. */
+.hv { position: absolute; inset: 0; }
+
+.hv-kicker { position: absolute; left: 140px; top: 132px; display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--zak-paper-2); white-space: nowrap; }
+.hv-kicker b { font-weight: 500; color: var(--zak-signal); }
+.hv-kicker-sep { color: var(--zak-stone-2); }
+
+.hv-text { position: absolute; left: 140px; top: 210px; width: 600px; display: flex; flex-direction: column; gap: 28px; }
+.hv-head { font-size: 80px; }
+.hv-lede { font-size: 30px; }
+
+/* the work */
+.hv-frame {
+  position: absolute; left: 820px; top: 210px; width: 960px; height: 540px; border-radius: 14px; overflow: hidden;
+  background: #0b0b0b; box-shadow: 0 40px 110px rgba(0, 0, 0, 0.55), 0 0 0 1px var(--zak-line);
+}
+.hv-frame video, .hv-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* stage chips under the frame: what made each look */
+.hv-stages { position: absolute; left: 820px; top: 782px; display: flex; align-items: center; gap: 14px; }
+.hv-chip {
+  font-family: var(--zak-font-mono); font-size: 15px; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap;
+  padding: 10px 16px; border-radius: 999px; color: var(--zak-stone); box-shadow: inset 0 0 0 1.5px var(--zak-line-strong);
+  transition: color 300ms, background 300ms, box-shadow 300ms;
+}
+.hv-chip.on { color: var(--zak-ink); background: var(--zak-signal); box-shadow: 0 0 22px rgba(0, 228, 130, 0.4); }
+.hv-arrow { width: 28px; height: 1.5px; background: var(--zak-stone-2); }
+
+/* labels sitting on the footage */
+.hv-tag {
+  position: absolute; z-index: 3; font-family: var(--zak-font-mono); font-size: 14px; letter-spacing: .12em; text-transform: uppercase;
+  padding: 8px 12px; border-radius: 999px; background: rgba(0, 0, 0, 0.62); color: var(--zak-paper); backdrop-filter: blur(6px); white-space: nowrap;
+}
+.hv-tag.is-ai { color: var(--zak-signal); }
+
+.hv-sound {
+  position: absolute; right: 16px; bottom: 16px; z-index: 4; border: 0; cursor: pointer;
+  font-family: var(--zak-font-mono); font-size: 13px; letter-spacing: .12em; padding: 8px 12px; border-radius: 999px; background: rgba(0,0,0,.6); color: var(--zak-paper);
+  opacity: 0; transition: opacity 200ms;
+}
+.hv-frame:hover .hv-sound, .hv-sound.on { opacity: 1; }
+
+/* 01 Thanksgiving: the wipe seam */
+.tg-seam { position: absolute; top: 0; bottom: 0; z-index: 2; width: 3px; margin-left: -1.5px; background: var(--zak-signal); box-shadow: 0 0 18px rgba(0, 228, 130, 0.8); }
+
+/* 03 Lyft: the seam between the two halves */
+.ly-seam { position: absolute; left: 50%; top: 0; bottom: 0; z-index: 2; width: 2px; margin-left: -1px; background: var(--zak-signal); box-shadow: 0 0 14px rgba(0, 228, 130, 0.6); transform-origin: 50% 0; }
+
+/* 04 PC Optimum: storyboard pages stacked where the film will play */
+.pc-boards { position: absolute; left: 820px; top: 210px; width: 960px; height: 540px; }
+.pc-board { position: absolute; width: 860px; height: 380px; object-fit: cover; object-position: top; border-radius: 10px; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55), 0 0 0 1px var(--zak-line); background: #fff; }
