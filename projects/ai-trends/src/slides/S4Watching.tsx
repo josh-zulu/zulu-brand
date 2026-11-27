@@ -17,7 +17,7 @@ const ITEMS = [
   { name: 'Blockout to film', why: 'We block out the shot in Blender. AI renders the final look.' },
   { name: 'Agents that build hardware', why: 'Agents write the firmware, so we can prototype physical work fast.' },
   { name: 'Worlds from a photo', why: 'One photo becomes a 3D world we can explore and film.' },
-  { name: 'Made as you watch', why: 'Video and worlds generated in real time, from a sentence.' },
+  { name: 'Made as you watch', why: 'MiniMax H3: real-time video you steer while it plays.' },
 ] as const;
 
 function Watching({ step }: SlideProps) {

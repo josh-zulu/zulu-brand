@@ -9,10 +9,11 @@ import { ClipFrame } from '@/components/ClipFrame';
 import './S5Realtime.css';
 
 /**
- * Made as you watch.
+ * Made as you watch: real-time generative video, MiniMax H3 (H3 Max Director streams video and sound live, steered by
+ * prompts mid-session; 24 fps, 768p, 10-second chunks, per fal).
  *  beat 0  a photo and a sentence go into the prompt bar. The photo drops into the frame and the world grows out of it,
  *          blocky at the edge and sharp behind, frame counter running. Then the camera starts walking in. Nothing pre-rendered.
- *  beat 1  the real thing: the Genie clip takes over the same frame.
+ *  beat 1  the real thing: a live H3 Max Director session (fal's published example) takes over the same frame.
  */
 const WORLD = generatedUrl('realtime-world');
 const SENTENCE = 'Walk down to the harbour at first light.';
@@ -108,14 +109,15 @@ function Realtime({ step, mode }: SlideProps) {
     tl.fromTo(q('.rt-clip'), { opacity: 0, scale: 0.985 }, { opacity: 1, scale: 1, duration: 0.9, ease: 'power2.out' }, 'b1');
     tl.to(q('.rt-bar-mode-live'), { opacity: 0, duration: 0.3 }, 'b1');
     tl.fromTo(q('.rt-bar-mode-clip'), { opacity: 0 }, { opacity: 1, duration: 0.4 }, 'b1+=0.25');
+    tl.fromTo(q('.rt-credit'), { opacity: 0 }, { opacity: 1, duration: 0.5, immediateRender: false }, 'b1+=0.4');
   });
 
   return (
     <div ref={root} className="rt">
-      <div className="rt-kicker label"><b>On our radar</b></div>
+      <div className="rt-kicker label"><b>On our radar</b><span className="rt-kicker-sep">·</span>MiniMax H3</div>
       <div className="rt-text">
         <h2 className="rt-head headline">Made as you watch.</h2>
-        <p className="rt-lede lede">Video and 3D worlds generated in real time from a sentence or a photo.</p>
+        <p className="rt-lede lede">Real-time generative video. MiniMax H3 streams picture and sound live, and you steer it with prompts while it plays.</p>
       </div>
 
       <div className="rt-frame">
@@ -132,7 +134,7 @@ function Realtime({ step, mode }: SlideProps) {
           <span className="rt-frame-count">Frame <span className="rt-frame-n">00000</span> <span className="rt-sep">·</span> 24 fps</span>
         </div>
         <div className="rt-clip fill">
-          <ClipFrame src="clips/genie-world-live.mp4" label="genie-world-live.mp4" duration="clip to add" mode={mode} playing={step >= 1} className="rt-clipframe" />
+          <ClipFrame src="realtime/h3max-broadcast.mp4" label="h3max-broadcast.mp4" duration="80s" mode={mode} playing={step >= 1} className="rt-clipframe" />
         </div>
       </div>
 
@@ -143,10 +145,12 @@ function Realtime({ step, mode }: SlideProps) {
         <span className="caret blink" />
         <span className="rt-bar-right label">
           <span className="rt-bar-mode-live">Real time</span>
-          <span className="rt-bar-mode-clip">Project Genie · clip</span>
+          <span className="rt-bar-mode-clip">H3 Max · live</span>
           <span className="rt-bar-enter">↵</span>
         </span>
       </div>
+
+      <div className="rt-credit source">Live session: MiniMax H3 Max Director, via fal (fal.ai).</div>
 
       {/* the photo on its way from the prompt bar into the frame */}
       <div className="rt-clone" style={{ left: FRAME.x + SEED.x, top: FRAME.y + SEED.y, width: SEED.w, height: SEED.h }}>
@@ -162,8 +166,8 @@ export default defineSlide({
   title: 'Made as you watch',
   steps: 1,
   notes:
-    'The one to watch: impressive now, not ready for client work yet.\n' +
-    'On arrival: a photo and one sentence go in, and the world grows out of the photo while you watch. The frame counter is the point: it is being made frame by frame, not played back.\n' +
-    'Click: the real thing. A world generated live with Genie (clip to add: genie-world-live.mp4).',
+    'The one to watch: real-time generative video. MiniMax H3, and its fast version H3 Max, stream picture and sound live instead of handing you a finished file.\n' +
+    'On arrival: a photo and one sentence go in, and the world grows while you watch. The frame counter is the point: it is made frame by frame, not played back.\n' +
+    'Click: the real thing. A live H3 Max session, an anime news broadcast steered by new prompts while it plays: 24 frames a second, generated as it goes. Impressive now, not ready for client work yet. Hover for sound.',
   Component: Realtime,
 });
